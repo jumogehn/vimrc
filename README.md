@@ -25,7 +25,7 @@ Feedback would include
 	- some good vim plugin,
 	- your opinion about the current vimrc file and 
 	- bug report, 
-	- etc.
+	- etc. (lunch or coffee is possible ^^)
 
 Your happy use of this small script also welcomed.
 
