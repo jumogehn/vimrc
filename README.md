@@ -14,7 +14,7 @@ http://www.iamroot.org/xe/
 
 This means that the original author of this script is uncertain.
 
-So the license is uncertain but I preffer BSD.
+So the license is uncertain but I prefer BSD.
 
 Feedback is highly welcomed.
 
