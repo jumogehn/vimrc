@@ -32,7 +32,7 @@ Your happy use of this small script also welcomed.
 
 === Install Guide ===
 
-0. Backup you .vim/ and .vimrc
+0. Backup your .vim/ and .vimrc
 
 1. Place Journeyer's .vimrc in your home directory
 
