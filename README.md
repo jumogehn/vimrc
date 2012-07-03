@@ -29,5 +29,21 @@ Feedback would include
 
 Your happy use of this small script also welcomed.
 
+
+=== Install Guide ===
+
+0. Backup you .vim/ and .vimrc
+
+1. Place Journeyer's .vimrc in your home directory
+
+2. Install the very cool vim plugin Vundle
+
+	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+	(Refer to https://github.com/gmarik/vundle)
+
+3. Open vim and :BundleInstall
+
+
 Journeyer J. Joh
 
