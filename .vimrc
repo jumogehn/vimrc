@@ -309,9 +309,20 @@ func! Make()
 endfunc
 nmap ,mk :call Make()<cr><cr>
 
+"============ hexViewer setting =============
+let b:hexViewer = 0
+func! Hv()
+        if (b:hexViewer == 0)
+                let b:hexViewer = 1
+                exe "%!xxd"
+        else
+                let b:hexViewer = 0
+                exe "%!xxd -r"
+        endif
+endfunc
+nmap ,h :call Hv()<cr>
 
-"============ misc setting =============
-
+"============ file buffer CleanClose =============
 func! CleanClose(tosave)
 if (a:tosave == 1)
 	w!
@@ -332,5 +343,7 @@ endfunc
 
 nmap ,cf :call CleanClose(0)<cr>
 
+"============ open CWD =============
 nmap ,od :e ./<cr>
+
 
