@@ -12,7 +12,7 @@ http://kldp.org/
 
 http://stackoverflow.com/
 
-This means that the original author of this script is uncertain except Changwoo Baek(www.iamroot.org)
+This means that the original authors of this script are uncertain except Changwoo Baek(www.iamroot.org)
 
 So the license is uncertain.
 
