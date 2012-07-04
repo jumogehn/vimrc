@@ -1,7 +1,6 @@
 vimrc
 =====
 
-
 This small script is copied and pasted from the sources below.
 
 http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
