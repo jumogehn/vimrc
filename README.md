@@ -5,9 +5,11 @@ This small script is copied and pasted from the sources below.
 
 http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
-http://www.iamroot.org/
+http://kldp.org/node/125263
 
 http://kldp.org/
+
+http://www.iamroot.org/
 
 http://stackoverflow.com/
 
