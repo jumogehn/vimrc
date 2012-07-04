@@ -37,7 +37,7 @@ Your happy use of this small script also welcome.
 
 1. Place Journeyer's .vimrc in your home directory
 
-2. Install the very cool vim plugin Vundle
+2. Install the vim plugin Vundle
 
 	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
