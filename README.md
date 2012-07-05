@@ -1,5 +1,4 @@
-vimrc
-=====
+## Sources
 
 This small script is copied and pasted from the sources below.
 
@@ -20,28 +19,28 @@ So the license is uncertain.
 Feedback is highly welcome.
 
 Feedback would include 
-	- some good vim script snippets, 
-	- some good settings, 
-	- configurations, 
-	- some good vim plugin,
-	- your opinion about the current vimrc file and 
-	- bug report, 
-	- etc. (lunch or coffee is possible ^^)
+- some good vim script snippets, 
+- some good settings, 
+- configurations, 
+- some good vim plugin,
+- your opinion about the current vimrc file and 
+- bug report, 
+- etc. (lunch or coffee is possible ^^)
 
 Your happy use of this small script also welcome.
 
 
-=== Install Guide ===
+## Install Guide
 
 0. Backup your .vim/ and .vimrc
 
 1. Place Journeyer's .vimrc in your home directory
 
 2. Install the vim plugin Vundle
-
-	git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-
-	(Refer to https://github.com/gmarik/vundle)
+```
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+(Refer to https://github.com/gmarik/vundle)
 
 3. Open vim and :BundleInstall
 
