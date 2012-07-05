@@ -19,13 +19,13 @@ So the license is uncertain.
 Feedback is highly welcome.
 
 Feedback would include 
-- some good vim script snippets, 
-- some good settings, 
-- configurations, 
-- some good vim plugin,
-- your opinion about the current vimrc file and 
-- bug report, 
-- etc. (lunch or coffee is possible ^^)
+- Some good vim script snippets, 
+- Some good settings, 
+- Some good configurations, 
+- Some good vim plugin,
+- Your opinion about the current vimrc file and 
+- Bug report, 
+- etc. (Lunch or coffee is possible ^^)
 
 Your happy use of this small script also welcome.
 
