@@ -12,13 +12,9 @@ http://www.iamroot.org/
 
 http://stackoverflow.com/
 
-This means that the original authors of this script are uncertain except Changwoo Baek(www.iamroot.org)
+Thanks to these contributors(known and unknown), we could happy vim.
 
-So the license is uncertain.
-
-Feedback is highly welcome.
-
-Feedback would include 
+Any feedback including contributing is highly welcome.
 - Some good vim script snippets, 
 - Some good settings, 
 - Some good configurations, 
@@ -27,7 +23,7 @@ Feedback would include
 - Bug report, 
 - etc. (Lunch or coffee is possible ^^)
 
-Your happy use of this small script also welcome.
+Your happy use of this small script is surely welcome.
 
 
 ## Install Guide
