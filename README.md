@@ -12,7 +12,7 @@ http://www.iamroot.org/
 
 http://stackoverflow.com/
 
-Thanks to these contributors(known and unknown), we could happy vim.
+Thanks to the contributors(known and unknown) from the above, we could happy vim.
 
 Any feedback including contributing is highly welcome.
 - Some good vim script snippets, 
