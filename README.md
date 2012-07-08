@@ -14,7 +14,7 @@ http://stackoverflow.com/
 
 Thanks to the contributors(known and unknown) from the above, we could happy vim.
 
-Any feedback including contributing is highly welcome.
+Any feedback including contributing is highly hunted.
 - Some good vim script snippets, 
 - Some good settings, 
 - Some good configurations, 
