@@ -1,3 +1,23 @@
+## About
+
+.vimrc
+- Makes vim more useful to work on C/C++/Java projects (and possibly other projects too)
+- Includes many useful short-cut key mappings
+- Includes many useful vim plugins (via Vundle)
+mkcscope.sh
+- Good script to generate cscope.out
+mkctags.sh
+- Good script to generate ctags
+
+Testing environment
+- Ubuntu 12.04
+
+Prerequisite
+- sudo apt-get install vim exuberant-ctags cscope
+
+Note
+- .inc file is treated as CPlusPlus source file
+
 ## Sources
 
 This small script is copied and pasted from the sources below.
@@ -28,6 +48,8 @@ Your happy use of this small script is surely welcome.
 
 ## Install Guide
 
+.vimrc
+
 0. Backup your .vim/ and .vimrc
 
 1. Place Journeyer's .vimrc in your home directory
@@ -40,6 +62,14 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 3. Open vim and :BundleInstall
 
+mkcscope.sh & mkctags.sh
+
+1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin
+
+2. Provide proper execution permission (to others) or change the owner of the file so that these can run by your call
+```
+for example) sudo chmod o+x mkcscope.sh mkctags.sh
+```
 
 Journeyer J. Joh
 
