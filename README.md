@@ -18,7 +18,7 @@ Prerequisite
 - sudo apt-get install vim exuberant-ctags cscope
 
 Note
-- .inc file is treated as CPlusPlus source file
+- .inc file is treated as C++ source file
 
 
 ## Install Guide
