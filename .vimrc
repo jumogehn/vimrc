@@ -347,3 +347,6 @@ nmap ,cf :call CleanClose(0)<cr>
 nmap ,od :e ./<cr>
 
 
+" Add a mapping rule for *.inc files
+au BufRead,BufNewFile {*.inc}       set ft=cpp
+
