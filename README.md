@@ -20,6 +20,40 @@ Prerequisite
 Note
 - .inc file is treated as CPlusPlus source file
 
+
+## Install Guide
+
+.vimrc
+
+0. Backup your .vim/ and .vimrc
+
+1. Place Journeyer's .vimrc in your home directory
+
+2. Install the vim plugin Vundle
+```
+git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+```
+(Refer to https://github.com/gmarik/vundle)
+
+3. Open vim and :BundleInstall
+
+mkcscope.sh & mkctags.sh
+
+1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin
+
+2. Provide proper execution permission (to others) or change the owner of the file so that these can run by your call
+```
+for example) sudo chmod o+x mkcscope.sh mkctags.sh
+```
+
+## Using scripts
+
+There is a rule to use these scripts.
+- Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh) in a top directory of your project
+- Open vim from the top directory of your project
+
+
+
 ## Sources
 
 This small scripts are copied and pasted from the sources below.
@@ -48,36 +82,6 @@ Any feedback including contributing is highly hunted.
 Your happy use of this small script is surely welcome.
 
 
-## Install Guide
-
-.vimrc
-
-0. Backup your .vim/ and .vimrc
-
-1. Place Journeyer's .vimrc in your home directory
-
-2. Install the vim plugin Vundle
-```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
-(Refer to https://github.com/gmarik/vundle)
-
-3. Open vim and :BundleInstall
-
-mkcscope.sh & mkctags.sh
-
-1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin
-
-2. Provide proper execution permission (to others) or change the owner of the file so that these can run by your call
-```
-for example) sudo chmod o+x mkcscope.sh mkctags.sh
-```
-
-## Using scripts how-to
-
-There is a rule to use these scripts.
-- Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh) in a top directory of your project
-- Open vim from the top directory of your project
 
 Journeyer J. Joh
 
