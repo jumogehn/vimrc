@@ -79,7 +79,7 @@ Any feedback including contributing is highly hunted.
 - Bug report, 
 - etc. (Lunch or coffee is possible ^^)
 
-Your happy use of this small scripts is surely welcome.
+Your happy use of this small scripts is surely welcomed.
 
 
 
