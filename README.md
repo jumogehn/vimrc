@@ -4,8 +4,10 @@
 - Makes vim more useful to work on C/C++/Java projects (and possibly other projects too)
 - Includes many useful short-cut key mappings
 - Includes many useful vim plugins (via Vundle)
+
 mkcscope.sh
 - Good script to generate cscope.out
+
 mkctags.sh
 - Good script to generate ctags
 
@@ -20,7 +22,7 @@ Note
 
 ## Sources
 
-This small script is copied and pasted from the sources below.
+This small scripts are copied and pasted from the sources below.
 
 http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
