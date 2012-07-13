@@ -73,5 +73,11 @@ mkcscope.sh & mkctags.sh
 for example) sudo chmod o+x mkcscope.sh mkctags.sh
 ```
 
+## Using scripts how-to
+
+There is a rule to use these script.
+- Generate ctags and cscope.out files(run mkcscope.sh and mkctags.sh) in a top directory of your project
+- Open vim from the top directory of your project
+
 Journeyer J. Joh
 
