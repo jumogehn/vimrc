@@ -56,7 +56,7 @@ There is a rule to use these scripts.
 
 ## Sources
 
-This small scripts are copied and pasted from the sources below.
+These small scripts are copied and pasted from the sources below.
 
 http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
