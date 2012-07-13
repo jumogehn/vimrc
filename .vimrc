@@ -10,9 +10,9 @@ set ruler
 set number
 set modifiable
 set hlsearch
-set ts=8
-set sw=8
-set sts=8
+set ts=2
+set sw=2
+set sts=2
 set mouse=c
 set formatoptions+=ro
 set backupdir=./.backup,.,/tmp
