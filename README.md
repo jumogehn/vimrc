@@ -57,9 +57,7 @@ There is a rule to use these scripts.
 
 
 
-## Sources
-
-These small scripts are copied and pasted from the sources below.
+## References
 
 http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
@@ -71,7 +69,10 @@ http://www.iamroot.org/
 
 http://stackoverflow.com/
 
-Thanks to the contributors(known and unknown) from the above, we could happy vim.
+Thanks to the authors and contributors (known and unknown) above, we could happy vim.
+
+
+## Feedback Hunted
 
 Any feedback including contributing is highly hunted.
 - Some good vim script snippets, 
