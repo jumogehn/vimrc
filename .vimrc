@@ -19,11 +19,6 @@ set directory=.,./.backup,/tmp
 set incsearch
 set ignorecase
 
-set laststatus=2  " status bar display (0:display, 1:a window of two or more, 2:always)
-set statusline=%<%F%h%m%r%h%w%y>\ col:%c%V\ ascii:%b\ pos:%o\ lin:%l\,%L\ %P
-set hls
-set wmnu
-
 
 "========= vundle setting =========
 set nocompatible               " be iMproved
