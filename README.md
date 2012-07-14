@@ -19,7 +19,10 @@ Prerequisite
 
 Note
 - .inc file is treated as C++ source file
-
+-- .vimrc : au BufRead,BufNewFile {*.inc}       set ft=cpp
+-- mkcscope.mk : -o -name '*.inc'
+-- mkctags.mk : --langmap=C++:.inc
+-- You can remove this personal configuration by removing those configurations above.
 
 ## Install Guide
 
