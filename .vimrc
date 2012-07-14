@@ -157,7 +157,7 @@ map ,0 :b!0<CR>	  " Switch to File Buffer #0
 "========= ctags setting ========
 "Upon vim open a file buffer, CWD is switched to the position of the current
 "file
-autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
+"autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
 
 set tags=./tags;/.
 
