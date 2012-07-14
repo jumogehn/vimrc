@@ -1,4 +1,3 @@
-
 "========= default variables setting =========
 set cindent
 set smartindent
@@ -98,7 +97,7 @@ let g:SrcExpl_isUpdateTags = 0
 
 " // Use 'Exuberant Ctags' with '--sort=foldcase -R .' or '-L cscope.files' to 
 " //  create/update a tags file 
-let g:SrcExpl_updateTagsCmd = "ctags --c++-kinds=+p --fields=+iaS --extra=+q --sort=foldcase -R ." 
+let g:SrcExpl_updateTagsCmd = "ctags --langmap=C++:.inc --c++-kinds=+p --fields=+iaS --extra=+q --sort=foldcase -R ." 
 
 " // Set "<F12>" key for updating the tags file artificially 
 let g:SrcExpl_updateTagsKey = "<F12>" 
