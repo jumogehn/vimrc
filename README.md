@@ -56,6 +56,19 @@ There is a rule to use these scripts.
 - Open vim from the top directory of your project
 
 
+## Feedback Hunted
+
+Any feedback including contributing is highly hunted.
+- Some good vim script snippets, 
+- Some good settings, 
+- Some good configurations, 
+- Some good vim plugin,
+- Your opinion about the current vimrc file and 
+- Bug report, 
+- etc. (Lunch or coffee is possible ^^)
+
+Your happy use of these small scripts is surely welcome.
+
 
 ## References
 
@@ -70,21 +83,6 @@ http://www.iamroot.org/
 http://stackoverflow.com/
 
 Thanks to the authors and contributors (known and unknown) above, we could happy vim.
-
-
-## Feedback Hunted
-
-Any feedback including contributing is highly hunted.
-- Some good vim script snippets, 
-- Some good settings, 
-- Some good configurations, 
-- Some good vim plugin,
-- Your opinion about the current vimrc file and 
-- Bug report, 
-- etc. (Lunch or coffee is possible ^^)
-
-Your happy use of these small scripts is surely welcome.
-
 
 
 Journeyer J. Joh
