@@ -30,7 +30,7 @@ Note
 
 0. Backup your .vim/ and .vimrc
 
-1. Place Journeyer's .vimrc in your home directory
+1. Place Journeyer's .vimrc in your home directory (You'd better ln -s from the check out from .git/ instead of copying)
 
 2. Install the vim plugin Vundle
 ```
@@ -42,7 +42,7 @@ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 mkcscope.sh & mkctags.sh
 
-1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin
+1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin (You'd better ln -s from the check out from .git/ instead of copying)
 
 2. Provide proper execution permission (to others) or change the owner of the file so that these can run by your call
 ```
@@ -69,6 +69,9 @@ Any feedback including contributing is highly hunted.
 
 Your happy use of these small scripts is surely welcome.
 
+
+## TODO:
+- Symbolic linking scripts from .git directory instead of current copy method have to be documented.
 
 ## References
 
