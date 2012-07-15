@@ -37,7 +37,7 @@ Note
 
 ### .vimrc
 
-1. Backup your .vim/ and .vimrc from your home directory.
+1. Backup your .vim/ and .vimrc in your home directory if they exist.
    ```
    $ mv .vim/ vim_backup/
    $ mv .vimrc vimrc_backup
