@@ -24,30 +24,49 @@ Note
  - mkcscope.mk : -o -name '*.inc'
  - mkctags.mk : --langmap=C++:.inc
 
+
 ## Install Guide
+
+0. Clone Journeyer's repository in any place. (let's assume you are in your home directory)
+```
+$ git clone https://github.com/Journeyer/vimrc.git
+```
+This makes new directory 'vimrc' ,which is your local reposiory clone.
 
 .vimrc
 
-0. Backup your .vim/ and .vimrc
+1. Backup your .vim/ and .vimrc from your home directory.
 
-1. Place Journeyer's .vimrc in your home directory (You'd better ln -s from the check out from .git/ instead of copying)
-
-2. Install the vim plugin Vundle
+2. Create a symbolic link to the check-outted .vimrc file.
 ```
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+$ ln -s -T vimrc/.vimrc .vimrc
+```
+3. Install Vundle.
+```
+$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 ```
 (Refer to https://github.com/gmarik/vundle)
 
-3. Open vim and :BundleInstall
+4. Open vim and :BundleInstall.
+```
+$ vim
+:BundleInstall
+```
+
 
 mkcscope.sh & mkctags.sh
 
-1. Place Journeyer's scripts(mkcscope.sh & mkctags.sh) under /usr/local/bin (You'd better ln -s from the check out from .git/ instead of copying)
+1. Go to /usr/local/bin.
+```
+$ cd /usr/local/bin
+```
 
-2. Provide proper execution permission (to others) or change the owner of the file so that these can run by your call
+2. Create a symbolic links to the check-outted files, mkcscope.sh and mkctags.sh.
 ```
-for example) sudo chmod o+x mkcscope.sh mkctags.sh
+sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
+sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
 ```
+
 
 ## Using scripts
 
@@ -65,13 +84,10 @@ Any feedback including contributing is highly hunted.
 - Some good vim plugin,
 - Your opinion about the current vimrc file and 
 - Bug report, 
-- etc. (Lunch or coffee is possible ^^)
+- etc. (Lunch or coffee is a possible Mandatory!! ^^;)
 
 Your happy use of these small scripts is surely welcome.
 
-
-## TODO:
-- Symbolic linking scripts from .git directory instead of current copy method have to be documented.
 
 ## References
 
