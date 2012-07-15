@@ -29,52 +29,56 @@ Note
 
 0. Clone Journeyer's repository in any place. (let's assume you are in your home directory)
 
-```
-$ git clone https://github.com/Journeyer/vimrc.git
-```
+   ```
+   $ git clone https://github.com/Journeyer/vimrc.git
+   ```
 
-This makes new directory 'vimrc' ,which is your local reposiory clone.
+   This makes new directory 'vimrc', which is your local reposiory clone.
 
 ### .vimrc
 
 1. Backup your .vim/ and .vimrc from your home directory.
+   ```
+   $ mv .vim/ vim_backup/
+   $ mv .vimrc vimrc_backup
+   ```
 
 2. Create a symbolic link to the check-outted .vimrc file.
 
-```
-$ ln -s -T vimrc/.vimrc .vimrc
-```
+   ```
+   $ ln -s -T vimrc/.vimrc .vimrc
+   ```
 
 3. Install Vundle.
 
-```
-$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
+   ```
+   $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+   ```
 
-(Refer to https://github.com/gmarik/vundle)
+   (Refer to https://github.com/gmarik/vundle)
 
 4. Open vim and :BundleInstall.
 
-```
-$ vim
-:BundleInstall
-```
+   ```
+   $ vim
+   :BundleInstall
+   ```
 
 
 ### mkcscope.sh & mkctags.sh
 
 1. Go to /usr/local/bin.
 
-```
-$ cd /usr/local/bin
-```
+   ```
+   $ cd /usr/local/bin
+   ```
 
 2. Create a symbolic links to the check-outted files, mkcscope.sh and mkctags.sh.
 
-```
-$ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
-$ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
-```
+   ```
+   $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
+   $ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
+   ```
 
 
 ## Using scripts
