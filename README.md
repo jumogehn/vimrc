@@ -27,7 +27,7 @@ Note
 
 ## Install Guide
 
-0. Clone Journeyer's repository in any place of your system. (Let's assume you do this in your home directory.)
+0. Clone Journeyer's repository in any place of your system (Let's assume you do this in your home directory)
 
    ```
    $ git clone https://github.com/Journeyer/vimrc.git
@@ -37,19 +37,19 @@ Note
 
 ### .vimrc
 
-1. Backup your .vim/ and .vimrc in your home directory if they exist.
+1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
    $ mv .vim/ vim_backup/
    $ mv .vimrc vimrc_backup
    ```
 
-2. Create a symbolic link to the check-outted .vimrc file.
+2. Create a symbolic link to the check-outted .vimrc file
 
    ```
    $ ln -s -T vimrc/.vimrc .vimrc
    ```
 
-3. Install Vundle.
+3. Install Vundle
 
    ```
    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -57,7 +57,7 @@ Note
 
    (Refer to https://github.com/gmarik/vundle)
 
-4. Open vim and :BundleInstall.
+4. Open vim and :BundleInstall
 
    ```
    $ vim
@@ -67,13 +67,13 @@ Note
 
 ### mkcscope.sh & mkctags.sh
 
-1. Go to /usr/local/bin.
+1. Go to /usr/local/bin
 
    ```
    $ cd /usr/local/bin
    ```
 
-2. Create a symbolic links to the check-outted files, mkcscope.sh and mkctags.sh.
+2. Create a symbolic links to the check-outted files, mkcscope.sh and mkctags.sh
 
    ```
    $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
