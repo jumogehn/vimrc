@@ -85,8 +85,15 @@ Let's assume you do this in your home directory
 
 There is a rule to use these scripts.
 - Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh) in a top directory of your project
-- Open vim from the top directory of your project
+   ```
+   $ mkctags.sh
+   $ mkcscope.sh
+   ```
 
+   To finish cscope you need to press CTRL+D.
+
+- Open vim from the top directory of your project
+   If you open vim other places than where those tags files exist, vim cannot use those tags files.
 
 ## Feedback Hunted
 
