@@ -15,7 +15,7 @@ Testing environment
 - Ubuntu 12.04
 
 Prerequisite
-- (sudo apt-get install) git-core vim exuberant-ctags cscope
+- git-core vim exuberant-ctags cscope
 
 Note
 
