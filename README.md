@@ -18,11 +18,12 @@ Prerequisite
 - (sudo apt-get install) vim exuberant-ctags cscope
 
 Note
-- .inc file is treated as C++ source file
- - .vimrc : let g:SrcExpl_updateTagsCmd ...
- - .vimrc : au BufRead,BufNewFile {*.inc}       set ft=cpp
- - mkcscope.mk : -o -name '*.inc'
- - mkctags.mk : --langmap=C++:.inc
+
+.inc file is treated as C++ source file. All the places related this is listed below.
+- .vimrc : let g:SrcExpl_updateTagsCmd ...
+- .vimrc : au BufRead,BufNewFile {*.inc}       set ft=cpp
+- mkcscope.mk : -o -name '*.inc'
+- mkctags.mk : --langmap=C++:.inc
 
 
 ## Install Guide
