@@ -32,6 +32,7 @@ $ git clone https://github.com/Journeyer/vimrc.git
 ```
 
 This makes new directory 'vimrc', which is your local reposiory clone.
+
 Let's assume you do this in your home directory
 
 ### Install .vimrc
