@@ -91,7 +91,7 @@ There is a rule to use these scripts.
    $ mkcscope.sh
    ```
 
-   To finish cscope you need to press CTRL+D.
+   To close cscope after cscope finished it's job, press CTRL+D.
 
 - Open vim from the top directory of your project
 
