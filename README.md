@@ -74,7 +74,7 @@ Let's assume you do this in your home directory
    $ cd /usr/local/bin
    ```
 
-2. Create a symbolic links to the check-outted files, mkcscope.sh and mkctags.sh
+2. Create symbolic links to the check-outted files, mkcscope.sh and mkctags.sh
 
    ```
    $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
@@ -94,6 +94,7 @@ There is a rule to use these scripts.
    To finish cscope you need to press CTRL+D.
 
 - Open vim from the top directory of your project
+
    If you open vim other places than where those tags files exist, vim cannot use those tags files.
 
 ## Feedback Hunted
