@@ -26,7 +26,7 @@ Note
 
 
 ## Install Guide
-### Clone Journeyer's repository in any place of your system
+### Clone Journeyer's repository
 ```
 $ git clone https://github.com/Journeyer/vimrc.git
 ```
