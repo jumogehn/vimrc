@@ -96,6 +96,8 @@ There is a rule to use these scripts.
 - Open vim from the top directory of your project
 
    If you open vim other places than where those tags files exist, vim cannot use those tags files.
+   
+   If you don't need to use tags files along with vim, you can open vim anywhere you want.
 
 ## Feedback Hunted
 
