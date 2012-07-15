@@ -26,8 +26,8 @@ Note
 
 
 ## Install Guide
-
-0. Clone Journeyer's repository in any place of your system (Let's assume you do this in your home directory)
+### Clone Journeyer's repository in any place of your system
+   Let's assume you do this in your home directory
 
    ```
    $ git clone https://github.com/Journeyer/vimrc.git
@@ -35,7 +35,7 @@ Note
 
    This makes new directory 'vimrc', which is your local reposiory clone.
 
-### .vimrc
+### Install .vimrc
 
 1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
@@ -65,7 +65,7 @@ Note
    ```
 
 
-### mkcscope.sh & mkctags.sh
+### Install mkcscope.sh & mkctags.sh
 
 1. Go to /usr/local/bin
 
