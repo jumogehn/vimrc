@@ -14,8 +14,8 @@ set sw=2
 set sts=2
 set mouse=c
 set formatoptions+=ro
-set backupdir=./.backup,.,/tmp
-set directory=.,./.backup,/tmp
+"set backupdir=./.backup,.,/tmp
+"set directory=.,./.backup,/tmp
 set incsearch
 set ignorecase
 
