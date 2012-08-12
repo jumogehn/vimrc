@@ -15,7 +15,7 @@ Testing environment
 - Ubuntu 12.04
 
 Prerequisite
-- (sudo apt-get install) vim exuberant-ctags cscope
+- git-core vim exuberant-ctags cscope
 
 Note
 
@@ -91,7 +91,7 @@ There is a rule to use these scripts.
    $ mkcscope.sh
    ```
 
-   To finish cscope you need to press CTRL+D.
+   To close cscope after cscope finished it's job, press CTRL+D.
 
 - Open vim from the top directory of your project
 
