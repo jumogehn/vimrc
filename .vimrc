@@ -18,6 +18,7 @@ set formatoptions+=ro
 "set directory=.,./.backup,/tmp
 set incsearch
 set ignorecase
+set printoptions=portrait:n,wrap:n,duplex:off
 
 
 "========= vundle setting =========
