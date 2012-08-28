@@ -2,6 +2,6 @@
 
 rm -rf tags
 
-ctags --langmap=C++:+.inc --c++-kinds=+p --fields=+iaS --extra=+fq --sort=foldcase -R .
+ctags --langmap=C++:+.inc+.def --c++-kinds=+p --fields=+iaS --extra=+fq --sort=foldcase -R .
 
 

@@ -296,5 +296,5 @@ nmap ,od :e ./<cr>
 
 
 " Add a mapping rule for *.inc files
-au BufRead,BufNewFile {*.inc}       set ft=cpp
+au BufRead,BufNewFile *.inc,*.def       set ft=cpp
 
