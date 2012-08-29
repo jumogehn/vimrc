@@ -20,9 +20,18 @@ Prerequisite
 Note
 
 .inc file and .def file are treated as C++ source file. All the places related this is listed below.
-- .vimrc : au BufRead,BufNewFile *.inc,*.def       set ft=cpp
-- mkcscope.sh : -o -name '*.inc' -o -name '*.def'
-- mkctags.sh : --langmap=C++:+.inc+.def
+- .vimrc : 
+   ```
+   au BufRead,BufNewFile *.inc,*.def       set ft=cpp
+   ```
+- mkcscope.sh : 
+   ```
+   -o -name '*.inc' -o -name '*.def'
+   ```
+- mkctags.sh : 
+   ```
+   --langmap=C++:+.inc+.def
+   ```
 
 
 ## Install Guide
