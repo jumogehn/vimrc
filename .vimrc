@@ -102,6 +102,7 @@ map ,8 :b!8<CR>	  " Switch to File Buffer #8
 map ,9 :b!9<CR>	  " Switch to File Buffer #9
 map ,0 :b!0<CR>	  " Switch to File Buffer #0
 
+
 "========= ctags setting ========
 "Upon vim open a file buffer, CWD is switched to the position of the current
 "file
@@ -295,6 +296,8 @@ nmap ,cf :call CleanClose(0)<cr>
 nmap ,od :e ./<cr>
 
 
-" Add a mapping rule for *.inc files
-au BufRead,BufNewFile *.inc,*.def       set ft=cpp
+"============ project specific settings =============
+if filereadable(".project.vimrc")
+	source .project.vimrc
+endif
 
