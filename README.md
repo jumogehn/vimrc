@@ -117,6 +117,9 @@ Any feedback including contributing is highly hunted.
 Your happy use of these small scripts is surely welcome.
 
 
+## TODO
+- Project specific settings in mkctags.sh and mkcscope.sh have to be seperated into project specific another files so that open scripts only contains common general settings
+
 ## References
 
 - http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
