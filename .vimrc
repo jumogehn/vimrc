@@ -106,7 +106,7 @@ map ,0 :b!0<CR>	  " Switch to File Buffer #0
 "file
 "autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
 
-set tags=./tags;/.
+"set tags=./tags;/.
 
 if filereadable("cscope.out")
 	set nocsverb
