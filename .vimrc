@@ -13,9 +13,7 @@ set ts=2
 set sw=2
 set sts=2
 set mouse=c
-set formatoptions+=ro
-"set backupdir=./.backup,.,/tmp
-"set directory=.,./.backup,/tmp
+"set formatoptions+=ro
 set incsearch
 set ignorecase
 set printoptions=portrait:n,wrap:n,duplex:off
