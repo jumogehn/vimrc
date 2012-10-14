@@ -14,14 +14,12 @@ set sw=2
 set sts=2
 set mouse=c
 "set formatoptions-=ro
-"vim 시작시 formatoptions 가 croql로 되는데 .vimrc 상에서 이와 같은
-"방법으로 초기값을 바꾸려 해도 잘 되지 않는다...
-"개행시 자동 주석처리 기능을 사용하려면 +=ro
-"자동 주석처리 기능을 사용치 않으려면 -=ro 인데 그때그때 수동으로
-"설정해줘야만 한다.
-"
-"NOTICE : .vimrc 상에서 자동으로 이 기능을 제대로 설정할 수 있는 
-"방법을 누군가 공유해주신다면 정말 감사하겠습니다.
+"- remove ro from the formatoptions setting if you want to switch off auto 
+"  comment (:set formatoptions-=ro)
+"- add ro to the formatoptions setting if you want to switch of auto comment 
+"  (:set formatoptions+=ro)
+"NOTICE : If you know how to make formatoptions default to switch off the 
+"         auto comment, please share us!
 set incsearch
 set ignorecase
 set printoptions=portrait:n,wrap:n,duplex:off
