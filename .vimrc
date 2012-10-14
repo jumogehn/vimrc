@@ -108,12 +108,6 @@ map ,0 :b!0<CR>	  " Switch to File Buffer #0
 
 "set tags=./tags;/.
 
-if filereadable("cscope.out")
-	set nocsverb
-	cs add cscope.out
-	set csverb
-endif
-
 if version >= 500
 
 func! Sts()
@@ -239,6 +233,14 @@ func! Cst()
 	endif
 endfunc
 nmap ,cst :call Cst()<cr>
+
+
+if filereadable("cscope.out")
+	set nocsverb
+	cs add cscope.out
+	set csverb
+endif
+
 
 
 "============ man page setting =============
