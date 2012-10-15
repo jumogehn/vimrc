@@ -14,9 +14,9 @@ set sw=2
 set sts=2
 set mouse=c
 "set formatoptions-=ro
-"- remove ro from the formatoptions setting if you want to switch off auto 
+"- remove 'ro' from the formatoptions setting if you want to switch off auto 
 "  comment (:set formatoptions-=ro)
-"- add ro to the formatoptions setting if you want to switch of auto comment 
+"- add 'ro' to the formatoptions setting if you want to switch on auto comment 
 "  (:set formatoptions+=ro)
 "NOTICE : If you know how to make formatoptions default to switch off the 
 "         auto comment, please share us!
