@@ -114,6 +114,7 @@ map ,0 :b!0<CR>	  " Switch to File Buffer #0
 
 "set tags=./tags;/.
 
+" function definition is supported only after version 5 of vim
 if version >= 500
 
 func! Sts()
