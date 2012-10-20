@@ -155,6 +155,8 @@ set csprg=/usr/bin/cscope
 set csto=0
 set cst
 
+if version >= 500
+
 func! Csw()
 	exe "cs show"
 endfunc
@@ -240,6 +242,7 @@ func! Cst()
 endfunc
 nmap ,cst :call Cst()<cr>
 
+endif
 
 if filereadable("cscope.out")
 	set nocsverb
@@ -248,6 +251,8 @@ if filereadable("cscope.out")
 endif
 
 
+
+if version >= 500
 
 "============ man page setting =============
 func! Man()
@@ -301,6 +306,7 @@ nmap ,cf :call CleanClose(0)<cr>
 "============ open CWD =============
 nmap ,od :e ./<cr>
 
+endif
 
 "============ project specific settings =============
 if filereadable(".project.vimrc")
