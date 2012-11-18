@@ -22,6 +22,7 @@ set mouse=c
 "         auto comment, please share us!
 set incsearch
 set ignorecase
+set smartcase
 set printoptions=portrait:n,wrap:n,duplex:off
 
 
