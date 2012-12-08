@@ -2,6 +2,12 @@
 set cindent
 set smartindent
 set autoindent
+
+"http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+nnoremap <F6> :set invpaste paste?<CR>
+set pastetoggle=<F6>
+set showmode
+
 "set nowrap
 set ff=unix
 set bg=dark
@@ -13,13 +19,6 @@ set ts=2
 set sw=2
 set sts=2
 set mouse=c
-"set formatoptions-=ro
-"- remove 'ro' from the formatoptions setting if you want to switch off auto 
-"  comment (:set formatoptions-=ro)
-"- add 'ro' to the formatoptions setting if you want to switch on auto comment 
-"  (:set formatoptions+=ro)
-"NOTICE : If you know how to make formatoptions default to switch off the 
-"         auto comment, please share us!
 set incsearch
 set ignorecase
 set smartcase
