@@ -118,7 +118,6 @@ Your happy use of these small scripts is surely welcome.
 
 
 ## TODO
-- Setting of 'formatoptions' on .vimrc is highly hunted! Please share us!
 - Project specific settings in mkctags.sh and mkcscope.sh have to be seperated into project specific different files so that open scripts only contains common general settings
 
 ## References
