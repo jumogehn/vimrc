@@ -22,7 +22,7 @@ set mouse=c
 set incsearch
 set ignorecase
 set smartcase
-set printoptions=portrait:n,wrap:n,duplex:off
+set printoptions=portrait:y,wrap:y,duplex:off
 
 
 "========= vundle setting =========
