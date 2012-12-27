@@ -44,7 +44,7 @@ Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'DirDiff.vim'
-
+Bundle 'clang-complete'
 filetype plugin indent on     " required!
 "
 " Brief help
