@@ -122,11 +122,10 @@ Your happy use of these small scripts is surely welcome.
 
 ## References
 
-- http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 - http://kldp.org/node/125263
 - http://kldp.org/
-- http://www.iamroot.org/
 - http://stackoverflow.com/
+- http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
 Thanks to the authors and contributors (known and unknown) above, we could happy vim.
 
