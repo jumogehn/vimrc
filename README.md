@@ -1,7 +1,13 @@
+## News
+- LLVM vimrc is added                     2013.1.30
+- LICENSE of LLVM is added and applied    2013.1.30
+- Install Guide is updated                2013.1.30
+
 ## About
 
 ### .vimrc
-- Makes vim more useful to work on C/C++/Java projects (and possibly other projects too)
+- Makes vim more useful to work on C/C++/Java projects
+  (and possibly other projects too)
 - Includes many useful short-cut key mappings
 - Includes many useful vim plugins (via Vundle)
 
@@ -19,12 +25,13 @@ Prerequisite
 
 Note
 
-.inc file and .def file are treated as C++ source file. All the places related this is listed below.
-- mkcscope.sh : 
+.inc file and .def file are treated as C++ source file.
+All the places related this is listed below.
+- mkcscope.sh :
    ```
    -o -name '*.inc' -o -name '*.def'
    ```
-- mkctags.sh : 
+- mkctags.sh :
    ```
    --langmap=C++:+.inc+.def
    ```
@@ -48,10 +55,11 @@ Let's assume you do this in your home directory
    $ mv .vimrc vimrc_backup
    ```
 
-2. Create a symbolic link to the check-outted .vimrc file
+2. Create symbolic links to the .vimrc files checked-out
 
    ```
    $ ln -s -T vimrc/.vimrc .vimrc
+   $ ln -s -T vimrc/.llvm.vimrc .llvm.vimrc
    ```
 
 3. Install Vundle
@@ -89,7 +97,8 @@ Let's assume you do this in your home directory
 ## Using scripts
 
 There is a rule to use these scripts.
-- Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh) in a top directory of your project
+- Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh)
+  in a top directory of your project
    ```
    $ mkctags.sh
    $ mkcscope.sh
@@ -99,26 +108,30 @@ There is a rule to use these scripts.
 
 - Open vim from the top directory of your project
 
-   If you open vim other places than where those tags files exist, vim cannot use those tags files.
-   
-   If you don't need to use tags files along with vim, you can open vim anywhere you want.
+   If you open vim other places than where those tags files exist,
+   vim cannot use those tags files.
+
+   If you don't need to use tags files along with vim,
+   you can open vim anywhere you want.
 
 ## Feedback Hunted
 
 Any feedback including contributing is highly hunted.
-- Some good vim script snippets, 
-- Some good settings, 
-- Some good configurations, 
+- Some good vim script snippets,
+- Some good settings,
+- Some good configurations,
 - Some good vim plugin,
-- Your opinion about the current vimrc file and 
-- Bug report, 
+- Your opinion about the current vimrc file and
+- Bug report,
 - etc. (Lunch or coffee is a possible Mandatory!! ^^;)
 
 Your happy use of these small scripts is surely welcome.
 
 
 ## TODO
-- Project specific settings in mkctags.sh and mkcscope.sh have to be seperated into project specific different files so that open scripts only contains common general settings
+- Project specific settings in mkctags.sh and mkcscope.sh have to be seperated
+  into project specific different files so that
+  open scripts only contains common general settings
 
 ## References
 
@@ -126,8 +139,10 @@ Your happy use of these small scripts is surely welcome.
 - http://kldp.org/
 - http://stackoverflow.com/
 - http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
+- http://llvm.org/
 
-Thanks to the authors and contributors (known and unknown) above, we could happy vim.
+Thanks to the authors and contributors (known and unknown) above,
+we could happy vim.
 
 
 Journeyer J. Joh
