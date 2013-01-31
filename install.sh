@@ -17,14 +17,12 @@ fi
 
 # Backup your .vim/ and .vimrc in your home directory if they exist
 if [ -e "$HOME/.vim" ]; then
-  if [ -e "$HOME/.vim_backup" ]; then
-  else
+  if ! [ -e "$HOME/.vim_backup" ]; then
     mv $HOME/.vim $HOME/.vim_backup
   fi
 fi
 if [ -e "$HOME/.vimrc" ]; then
-  if [ -e "$HOME/.vimrc_backup" ]; then
-  else
+  if ! [ -e "$HOME/.vimrc_backup" ]; then
     mv $HOME/.vimrc $HOME/.vimrc_backup
   fi
 fi
@@ -34,6 +32,9 @@ ln -s -T `pwd`/.vimrc $HOME/.vimrc
 ln -s -T `pwd`/.llvm.vimrc $HOME/.llvm.vimrc
 
 # Install Vundle
+if [ -e "$HOME/.vim/bundle/vundle" ]; then
+  rm -rf $HOME/.vim/bundle/vundle
+fi
 git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
 # Open vim and :BundleInstall
