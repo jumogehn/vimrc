@@ -18,15 +18,15 @@ fi
 # Backup your .vim/ and .vimrc in your home directory if they exist
 if [ -e "$HOME/.vim" ]; then
   if [ -e "$HOME/.vim_backup" ]; then
-    rm -rf $HOME/.vim_backup
+  else
+    mv $HOME/.vim $HOME/.vim_backup
   fi
-  mv $HOME/.vim $HOME/.vim_backup
 fi
 if [ -e "$HOME/.vimrc" ]; then
   if [ -e "$HOME/.vimrc_backup" ]; then
-    rm -f $HOME/.vimrc_backup
+  else
+    mv $HOME/.vimrc $HOME/.vimrc_backup
   fi
-  mv $HOME/.vimrc $HOME/.vimrc_backup
 fi
 
 # Create new symbolic links to the .vimrc files checked-out
