@@ -130,8 +130,8 @@ If you want to install manually follow instructions below.
 3. Change file owner to you
 
    ```
-   $ sudo chown `whoami`:`whoami` mkctags.sh
-   $ sudo chown `whoami`:`whoami` mkcscope.sh
+   $ sudo chown -h `whoami`:`whoami` mkctags.sh
+   $ sudo chown -h `whoami`:`whoami` mkcscope.sh
    ```
 
 ## Using scripts
