@@ -75,9 +75,9 @@ This makes new directory 'vimrc', which is your local reposiory clone.
    :BundleInstall
    ```
 
-   If you want to install manually follow instructions below.
-   - Install .vimrc by manual
-   - Install mkcscope.sh & mkctags.sh by manual
+If you want to install manually follow instructions below.
+- Install .vimrc by manual
+- Install mkcscope.sh & mkctags.sh by manual
 
 ### Install .vimrc by manual
 
