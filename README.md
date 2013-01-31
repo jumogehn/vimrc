@@ -127,6 +127,12 @@ If you want to install manually follow instructions below.
    $ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
    ```
 
+3. Change file owner to you
+
+   ```
+   $ sudo chown `whoami`:`whoami` mkctags.sh
+   $ sudo chown `whoami`:`whoami` mkcscope.sh
+   ```
 
 ## Using scripts
 
