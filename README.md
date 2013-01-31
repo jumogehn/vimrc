@@ -1,4 +1,5 @@
 ## News
+- Install script(install.sh) is added     2013.1.31
 - LLVM vimrc is added                     2013.1.30
 - LICENSE of LLVM is added and applied    2013.1.30
 - Install Guide is updated                2013.1.30
@@ -44,13 +45,38 @@ $ git clone git://github.com/Journeyer/vimrc.git
 ```
 
 This makes new directory 'vimrc', which is your local reposiory clone.
+If you are on Ubuntu, you can simply install using install script.
 
-Let's assume you do this in your home directory
+```
+cd vimrc
+./install.sh
+```
+
+You must provide sudo password for doing this DURING the install.
+But DO NOT invoke this script under sudo command your self.
+Just run it without sudo and provide sudo password when you are asked.
+
+```
+provide sudo password
+```
+
+And after the script finished it's job, you Open vim and :BundleInstall
+your self.
+
+```
+vim
+:BundleInstall
+```
+
+If you are not on Ubuntu or want to install manually
+follow instructions below.
+
 
 ### Install .vimrc
 
 1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
+   $ cd ~
    $ mv .vim/ vim_backup/
    $ mv .vimrc vimrc_backup
    ```
@@ -86,7 +112,7 @@ Let's assume you do this in your home directory
    $ cd /usr/local/bin
    ```
 
-2. Create symbolic links to the check-outted files, mkcscope.sh and mkctags.sh
+2. Create symbolic links to mkcscope.sh and mkctags.sh
 
    ```
    $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
@@ -129,9 +155,12 @@ Your happy use of these small scripts is surely welcome.
 
 
 ## TODO
+- Install script must support other linux distributions
+  and Unix, Mac, and even Windows hopely.
 - Project specific settings in mkctags.sh and mkcscope.sh have to be seperated
   into project specific different files so that
   open scripts only contains common general settings
+
 
 ## References
 
@@ -139,7 +168,7 @@ Your happy use of these small scripts is surely welcome.
 - http://kldp.org/
 - http://stackoverflow.com/
 - http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
-- http://llvm.org/
+- http://llvm.org/docs/CodingStandards.html#coding-standards
 
 Thanks to the authors and contributors (known and unknown) above,
 we could happy vim.
