@@ -165,6 +165,7 @@ Your happy use of these small scripts is surely welcome.
 
 ## Recommended Coding Style from LLVM
 - http://llvm.org/docs/CodingStandards.html#coding-standards
+
 Journeyer's vimrc is now dependent on LLVM's. For this reason,
 LLVM coding style is recommended.
 
