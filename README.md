@@ -6,6 +6,11 @@
 
 ## About
 
+### .llvm.vimrc
+- copied from llvm project(llvm/utils/vim/vimrc)
+- forces LLVM coding style guideline(for example, 80 column width, no tab, ...)
+- check 'Recommended Coding Style from LLVM' below
+
 ### .vimrc
 - Makes vim more useful to work on C/C++/Java projects
   (and possibly other projects too)
