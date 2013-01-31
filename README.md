@@ -45,34 +45,36 @@ $ git clone git://github.com/Journeyer/vimrc.git
 ```
 
 This makes new directory 'vimrc', which is your local reposiory clone.
-If you are on Ubuntu, you can simply install using install script.
 
-```
-cd vimrc
-./install.sh
-```
+### Install with script
+1. You can simply install using install script. (Only tested on Ubuntu)
 
-You must provide sudo password for doing this DURING the install.
-But DO NOT invoke this script under sudo command your self.
-Just run it without sudo and provide sudo password when you are asked.
+   ```
+   cd vimrc
+   ./install.sh
+   ```
 
-```
-provide sudo password
-```
+2. You must provide sudo password for doing this DURING the install.
+   But DO NOT INVOKE this script under sudo command your self.
+   Just run it WITHOUT sudo and provide sudo password **when you are asked**.
 
-And after the script finished it's job, you Open vim and :BundleInstall
-your self.
+   ```
+   provide sudo password
+   ```
 
-```
-vim
-:BundleInstall
-```
+3. And after the script finished it's job, you Open vim and :BundleInstall
+   your self.
 
-If you are not on Ubuntu or want to install manually
-follow instructions below.
+   ```
+   vim
+   :BundleInstall
+   ```
 
+   If you want to install manually follow instructions below.
+   - Install .vimrc by manual
+   - Install mkcscope.sh & mkctags.sh by manual
 
-### Install .vimrc
+### Install .vimrc by manual
 
 1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
@@ -105,7 +107,7 @@ follow instructions below.
    ```
 
 
-### Install mkcscope.sh & mkctags.sh
+### Install mkcscope.sh & mkctags.sh by manual
 
 1. Go to /usr/local/bin
 
