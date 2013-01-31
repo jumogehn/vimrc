@@ -64,7 +64,7 @@ This makes new directory 'vimrc', which is your local reposiory clone.
    Just run it WITHOUT sudo and provide sudo password **when you are asked**.
 
    ```
-   provide sudo password
+   provide sudo password only you are asked
    ```
 
 3. And after the script finished it's job, you Open vim and :BundleInstall
