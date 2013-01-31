@@ -87,6 +87,7 @@ follow instructions below.
    $ ln -s -T vimrc/.vimrc .vimrc
    $ ln -s -T vimrc/.llvm.vimrc .llvm.vimrc
    ```
+   It is assumed that you cloned Journeyer's vimrc under your home directory
 
 3. Install Vundle
 
@@ -162,13 +163,19 @@ Your happy use of these small scripts is surely welcome.
   open scripts only contains common general settings
 
 
+## Recommended Coding Style from LLVM
+- http://llvm.org/docs/CodingStandards.html#coding-standards
+Journeyer's vimrc is now dependent on LLVM's. For this reason,
+LLVM coding style is recommended.
+
+
 ## References
 
 - http://kldp.org/node/125263
 - http://kldp.org/
 - http://stackoverflow.com/
 - http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
-- http://llvm.org/docs/CodingStandards.html#coding-standards
+
 
 Thanks to the authors and contributors (known and unknown) above,
 we could happy vim.
