@@ -154,6 +154,14 @@ There is a rule to use these scripts.
    If you don't need to use tags files along with vim,
    you can open vim anywhere you want.
 
+
+## Recommended Coding Style from LLVM
+- http://llvm.org/docs/CodingStandards.html#coding-standards
+
+Journeyer's vimrc is now dependent on LLVM's. For this reason,
+LLVM coding style is recommended.
+
+
 ## Feedback Hunted
 
 Any feedback including contributing is highly hunted.
@@ -174,13 +182,6 @@ Your happy use of these small scripts is surely welcome.
 - Project specific settings in mkctags.sh and mkcscope.sh have to be seperated
   into project specific different files so that
   open scripts only contains common general settings
-
-
-## Recommended Coding Style from LLVM
-- http://llvm.org/docs/CodingStandards.html#coding-standards
-
-Journeyer's vimrc is now dependent on LLVM's. For this reason,
-LLVM coding style is recommended.
 
 
 ## References
