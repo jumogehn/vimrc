@@ -45,9 +45,9 @@ All the places related this is listed below.
 
 ## Install Guide
 ### Clone Journeyer's repository
-   ```
-   $ git clone git://github.com/Journeyer/vimrc.git
-   ```
+```
+$ git clone git://github.com/Journeyer/vimrc.git
+```
 
 This makes new directory 'vimrc', which is your local reposiory clone.
 
