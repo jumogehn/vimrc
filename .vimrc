@@ -64,6 +64,8 @@ map <F3> zo
 
 map <F4> :Tlist<cr><C-W><C-W>
 map <F5> :NERDTreeToggle<CR>
+"   <F6> is the pastetoggle above
+map <F7> :call clearmatches()<CR>
 
 map <F9> :BufExplorer<cr>
 
