@@ -65,8 +65,18 @@ map <F3> zo
 map <F4> :Tlist<cr><C-W><C-W>
 map <F5> :NERDTreeToggle<CR>
 "   <F6> See above there is the pastetoggle
-map <F7> :call matchdelete(w:m0)<CR>
-"   map<F7> is dependent on .llvm.vimrc
+
+let g:hitog = 0
+function! Ht() "Highlight toggle
+  if (g:hitog == 0)
+    let g:hitog = 1
+    execute ("highlight LongLine ctermbg=8")
+  else
+    let g:hitog = 0
+    execute ("highlight LongLine ctermbg=DarkYellow guibg=DarkYellow")
+  endif
+endfunction
+map <F7> :call Ht()<cr>
 
 map <F9> :BufExplorer<cr>
 
@@ -273,13 +283,13 @@ if version >= 500
   nmap ,mk :call Make()<cr><cr>
 
   "============ hexViewer setting =============
-  let b:hexViewer = 0
+  let g:hexViewer = 0
   func! Hv()
-    if (b:hexViewer == 0)
-      let b:hexViewer = 1
+    if (g:hexViewer == 0)
+      let g:hexViewer = 1
       exe "%!xxd"
     else
-      let b:hexViewer = 0
+      let g:hexViewer = 0
       exe "%!xxd -r"
     endif
   endfunc
