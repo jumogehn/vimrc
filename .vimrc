@@ -64,8 +64,9 @@ map <F3> zo
 
 map <F4> :Tlist<cr><C-W><C-W>
 map <F5> :NERDTreeToggle<CR>
-"   <F6> is the pastetoggle above
-map <F7> :call clearmatches()<CR>
+"   <F6> See above there is the pastetoggle
+map <F7> :call matchdelete(w:m0)<CR>
+"   map<F7> is dependent on .llvm.vimrc
 
 map <F9> :BufExplorer<cr>
 
