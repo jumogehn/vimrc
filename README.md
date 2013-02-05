@@ -23,6 +23,9 @@
 ### mkctags.sh
 - Good script to generate ctags
 
+### rmtags.sh
+- Good script to remove ctags, cscope.out and cscope.files
+
 Testing environment
 - Ubuntu 12.04
 
@@ -125,6 +128,7 @@ If you want to install manually follow instructions below.
    ```
    $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
    $ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
+   $ sudo ln -s -T ~/vimrc/rmtags.sh rmtags.sh
    ```
 
 3. Change file owner to you
@@ -132,6 +136,7 @@ If you want to install manually follow instructions below.
    ```
    $ sudo chown -h `whoami`:`whoami` mkctags.sh
    $ sudo chown -h `whoami`:`whoami` mkcscope.sh
+   $ sudo chown -h `whoami`:`whoami` rmtags.sh
    ```
 
 ## Using scripts
