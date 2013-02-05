@@ -6,6 +6,7 @@ if [ -e ".vimrc" ]; then
 if [ -e ".llvm.vimrc" ]; then
 if [ -e "mkctags.sh" ]; then
 if [ -e "mkcscope.sh" ]; then
+if [ -e "rmtags.sh" ]; then
 
 # Remove previously installed symbolic links
 if [ -L "$HOME/.vimrc" ]; then
@@ -19,11 +20,15 @@ fi
 if [ -e "$HOME/.vim" ]; then
   if ! [ -e "$HOME/.vim_backup" ]; then
     mv $HOME/.vim $HOME/.vim_backup
+  else
+    rm -rf $HOME/.vim
   fi
 fi
 if [ -e "$HOME/.vimrc" ]; then
   if ! [ -e "$HOME/.vimrc_backup" ]; then
     mv $HOME/.vimrc $HOME/.vimrc_backup
+  else
+    rm -rf $HOME/.vimrc
   fi
 fi
 
@@ -51,13 +56,19 @@ fi
 if [ -L "/usr/local/bin/mkcscope.sh" ]; then
   sudo rm -f /usr/local/bin/mkcscope.sh
 fi
+if [ -L "/usr/local/bin/rmtags.sh" ]; then
+  sudo rm -f /usr/local/bin/rmtags.sh
+fi
 
-# Create new symbolic links to mkcscope.sh and mkctags.sh
+# Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
 sudo ln -s -T `pwd`/mkctags.sh /usr/local/bin/mkctags.sh
 sudo ln -s -T `pwd`/mkcscope.sh /usr/local/bin/mkcscope.sh
+sudo ln -s -T `pwd`/rmtags.sh /usr/local/bin/rmtags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkctags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkcscope.sh
+sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
 
+fi
 fi
 fi
 fi
