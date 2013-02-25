@@ -24,6 +24,13 @@ set ignorecase
 set smartcase
 set printoptions=portrait:y,wrap:y,duplex:off
 
+"========= Additional Filetypes =========
+" Enable syntax highlighting for reStructuredText files. To use, copy
+" rest.vim (http://www.vim.org/scripts/script.php?script_id=973)
+" to ~/.vim/syntax .
+augroup filetype
+  au! BufRead,BufNewFile *.rst     set filetype=rest
+augroup END
 
 "========= vundle setting =========
 filetype off                   " required!
