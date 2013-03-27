@@ -163,7 +163,7 @@ if version >= 500
 endif
 
 "======== cscope setting ========
-set csprg=/usr/bin/cscope
+"set csprg=/usr/bin/cscope
 set csto=0
 set cst
 
