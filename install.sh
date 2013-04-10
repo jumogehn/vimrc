@@ -4,6 +4,7 @@
 # Must run where those files exist
 if [ -e ".vimrc" ]; then
 if [ -e ".llvm.vimrc" ]; then
+if [ -e ".system.vimrc" ]; then
 if [ -e "mkctags.sh" ]; then
 if [ -e "mkcscope.sh" ]; then
 if [ -e "rmtags.sh" ]; then
@@ -14,6 +15,9 @@ if [ -L "$HOME/.vimrc" ]; then
 fi
 if [ -L "$HOME/.llvm.vimrc" ]; then
   rm -f $HOME/.llvm.vimrc
+fi
+if [ -L "$HOME/.system.vimrc" ]; then
+  rm -f $HOME/.system.vimrc
 fi
 
 # Backup your .vim/ and .vimrc in your home directory if they exist
@@ -35,6 +39,7 @@ fi
 # Create new symbolic links to the .vimrc files checked-out
 ln -s -T `pwd`/.vimrc $HOME/.vimrc
 ln -s -T `pwd`/.llvm.vimrc $HOME/.llvm.vimrc
+ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
 
 # Install Vundle
 if [ -e "$HOME/.vim/bundle/vundle" ]; then
@@ -68,6 +73,7 @@ sudo chown -h `whoami`:`whoami` /usr/local/bin/mkctags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkcscope.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
 
+fi
 fi
 fi
 fi

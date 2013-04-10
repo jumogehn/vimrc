@@ -320,6 +320,12 @@ if version >= 500
 
 endif
 
+"============ system specific settings if any =============
+"Make sure c++ include path in included in this.
+if filereadable(expand('~/.system.vimrc')) "need for c++ include path setting
+  source ~/.system.vimrc
+endif
+
 "============ project specific settings if any =============
 if filereadable(".project.vimrc") "this is an option
   source .project.vimrc
