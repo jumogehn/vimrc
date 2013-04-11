@@ -4,7 +4,7 @@
 # Must run where those files exist
 if ( -e .vimrc ) then
 if ( -e .llvm.vimrc ) then
-if ( -e .system.vimrc ) then
+if ( -e .system_centos.vimrc ) then
 if ( -e mkctags.sh ) then
 if ( -e mkcscope.sh ) then
 if ( -e rmtags.sh ) then
@@ -39,7 +39,7 @@ endif
 # Create new symbolic links to the .vimrc files checked-out
 ln -s -T `pwd`/.vimrc $home/.vimrc
 ln -s -T `pwd`/.llvm.vimrc $home/.llvm.vimrc
-ln -s -T `pwd`/.system.vimrc $home/.system.vimrc
+ln -s -T `pwd`/.system_centos.vimrc $home/.system.vimrc
 
 # Install Vundle
 if ( -e $home/.vim/bundle/vundle ) then
