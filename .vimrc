@@ -282,6 +282,14 @@ if version >= 500
   endfunc
   nmap ,mk :call Make()<cr><cr>
 
+  "============ clean make setting =============
+  func! CleanMake()
+    exe "!cd ".startdir
+    exe "make clean"
+    exe "make"
+  endfunc
+  nmap ,cmk :call CleanMake()<cr><cr>
+
   "============ hexViewer setting =============
   let g:hexViewer = 0
   func! Hv()
