@@ -161,7 +161,7 @@ doxygen:
 	mkdir -p $(BUILDDIR)/html/doxygen
 	doxygen # doxygen automatically looks for `Doxyfile`.
 
-gh-pages: html doxygen
+gh-pages: html
 	git checkout gh-pages; cd ..; git rm -rf .; \
 	mv docs/_build/html/* .; rm -rf docs/; \
 	touch .nojekyll; git add -A; \
