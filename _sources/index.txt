@@ -1,7 +1,3 @@
-.. vimrc documentation master file, created by
-   sphinx-quickstart on Tue May   19 00:23:29 2013.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 Welcome to vimrc's documentation!
 =================================
@@ -10,8 +6,13 @@ Welcome to vimrc's documentation!
 Contents:
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
 
+  _static/installing.rst
+  _static/windows.rst
+  _static/settings.rst
+  _static/plugins.rst
+  _static/keys.rst
 
 
 Indices and tables
