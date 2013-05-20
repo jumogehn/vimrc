@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'vimrc'
-copyright = u'2013 Uncertain'
+copyright = u'2013 Journeyer J. Joh'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -248,7 +248,7 @@ texinfo_documents = [
 epub_title = u'vimrc'
 epub_author = u'Journeyer J. Joh'
 epub_publisher = u'Journeyer J. Joh'
-epub_copyright = u'2013, Uncertain'
+epub_copyright = u'2013, Journeyer J. Joh'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.
