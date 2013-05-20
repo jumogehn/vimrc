@@ -13,6 +13,7 @@ Contents:
   _static/settings.rst
   _static/plugins.rst
   _static/keys.rst
+  _static/license.rst
 
 
 Indices and tables

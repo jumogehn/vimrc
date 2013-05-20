@@ -9,7 +9,7 @@ By Using Scripts
 Class Diagram
 -------------
 
-.. image:: imgs/installing.jpg
+.. image:: imgs/screen.jpg
    :scale: 50 %
    :alt: installing
 
