@@ -173,15 +173,15 @@ There is a rule to use these scripts.
  $ mkctags.sh
  $ mkcscope.sh
 
- To close cscope after cscope finished it's job, press CTRL+D.
+To close cscope after cscope finished it's job, press CTRL+D.
 
 - Open vim from the top directory of your project
 
-   If you open vim other places than where those tags files exist,
-   vim cannot use those tags files.
+If you open vim other places than where those tags files exist,
+vim cannot use those tags files.
 
-   If you don't need to use tags files along with vim,
-   you can open vim anywhere you want.
+If you don't need to use tags files along with vim,
+you can open vim anywhere you want.
 
 
 Recommended Coding Style from LLVM
