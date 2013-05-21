@@ -1,36 +1,47 @@
 
-
 .. image:: docs/_static/imgs/screen_.jpg
    :scale: 50 %
    :alt: screen capture
 
 
-## News
+News
+====
+
 - Install script(install.sh) is added     2013.1.31
 - LLVM vimrc is added                     2013.1.30
 - LICENSE of LLVM is added and applied    2013.1.30
 - Install Guide is updated                2013.1.30
 
-## About
+About
+=====
 
-### .llvm.vimrc
+.llvm.vimrc
+-----------
+
 - copied from llvm project(llvm/utils/vim/vimrc)
 - forces LLVM coding style guideline(for example, 80 column width, no tab, ...)
 - check 'Recommended Coding Style from LLVM' below
 
-### .vimrc
+.vimrc
+------
+
 - Makes vim more useful to work on C/C++/Java projects
   (and possibly other projects too)
 - Includes many useful short-cut key mappings
 - Includes many useful vim plugins (via Vundle)
 
-### mkcscope.sh
+mkcscope.sh
+-----------
+
 - Good script to generate cscope.out
 
-### mkctags.sh
+mkctags.sh
+----------
+
 - Good script to generate ctags
 
-### rmtags.sh
+rmtags.sh
+---------
 - Good script to remove ctags, cscope.out and cscope.files
 
 Testing environment
@@ -53,15 +64,21 @@ All the places related this is listed below.
    ```
 
 
-## Install Guide
-### Clone Journeyer's repository
+Install Guide
+=============
+
+Clone Journeyer's repository
+----------------------------
+
 ```
 $ git clone git://github.com/Journeyer/vimrc.git
 ```
 
 This makes new directory 'vimrc', which is your local reposiory clone.
 
-### Install with script
+Install with script
+-------------------
+
 1. You can simply install using install script. (Only tested on Ubuntu)
 
    ```
@@ -89,7 +106,8 @@ If you want to install manually follow instructions below.
 - Install .vimrc by manual
 - Install mkcscope.sh & mkctags.sh by manual
 
-### Install .vimrc by manual
+Install .vimrc by manual
+------------------------
 
 1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
@@ -122,7 +140,8 @@ If you want to install manually follow instructions below.
    ```
 
 
-### Install mkcscope.sh & mkctags.sh by manual
+Install mkcscope.sh & mkctags.sh by manual
+------------------------------------------
 
 1. Go to /usr/local/bin
 
@@ -146,7 +165,8 @@ If you want to install manually follow instructions below.
    $ sudo chown -h `whoami`:`whoami` rmtags.sh
    ```
 
-## Using scripts
+Using scripts
+=============
 
 There is a rule to use these scripts.
 - Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh)
@@ -167,14 +187,17 @@ There is a rule to use these scripts.
    you can open vim anywhere you want.
 
 
-## Recommended Coding Style from LLVM
+Recommended Coding Style from LLVM
+==================================
+
 - http://llvm.org/docs/CodingStandards.html#coding-standards
 
 Journeyer's vimrc is now dependent on LLVM's. For this reason,
 LLVM coding style is recommended.
 
 
-## Feedback Hunted
+Feedback Hunted
+===============
 
 Any feedback including contributing is highly hunted.
 - Some good vim script snippets,
@@ -188,7 +211,9 @@ Any feedback including contributing is highly hunted.
 Your happy use of these small scripts is surely welcome.
 
 
-## TODO
+TODO
+====
+
 - Install script must support other linux distributions
   and Unix, Mac, and even Windows hopely.
 - Project specific settings in mkctags.sh and mkcscope.sh have to be seperated
@@ -196,7 +221,8 @@ Your happy use of these small scripts is surely welcome.
   open scripts only contains common general settings
 
 
-## References
+References
+==========
 
 - http://kldp.org/node/125263
 - http://kldp.org/
