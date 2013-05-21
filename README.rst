@@ -169,6 +169,7 @@ Using scripts
 =============
 
 There is a rule to use these scripts.
+
 - Generate ctags and cscope.out (by running mkcscope.sh and mkctags.sh)
   in a top directory of your project
    ```
