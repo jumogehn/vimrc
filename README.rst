@@ -1,3 +1,8 @@
+
+.. image:: docs/_static/imgs/screen.jpg
+   :scale: 50 %
+   :alt: screen capture
+
 ## News
 - Install script(install.sh) is added     2013.1.31
 - LLVM vimrc is added                     2013.1.30
