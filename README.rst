@@ -1,7 +1,9 @@
 
+
 .. image:: docs/_static/imgs/screen_.jpg
    :scale: 50 %
    :alt: screen capture
+
 
 ## News
 - Install script(install.sh) is added     2013.1.31
