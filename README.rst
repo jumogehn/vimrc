@@ -42,18 +42,22 @@ mkctags.sh
 
 rmtags.sh
 ---------
+
 - Good script to remove ctags, cscope.out and cscope.files
 
 Testing environment
+
 - Ubuntu 12.04
 
 Prerequisite
+
 - git-core vim exuberant-ctags cscope
 
 Note
 
 .inc file and .def file are treated as C++ source file.
 All the places related this is listed below.
+
 - mkcscope.sh :
    ```
    -o -name '*.inc' -o -name '*.def'
@@ -83,6 +87,7 @@ Install with script
 
    ```
    cd vimrc
+
    ./install.sh
    ```
 
@@ -99,10 +104,12 @@ Install with script
 
    ```
    vim
+
    :BundleInstall
    ```
 
 If you want to install manually follow instructions below.
+
 - Install .vimrc by manual
 - Install mkcscope.sh & mkctags.sh by manual
 
@@ -112,7 +119,9 @@ Install .vimrc by manual
 1. Backup your .vim/ and .vimrc in your home directory if they exist
    ```
    $ cd ~
+
    $ mv .vim/ vim_backup/
+
    $ mv .vimrc vimrc_backup
    ```
 
@@ -120,7 +129,9 @@ Install .vimrc by manual
 
    ```
    $ ln -s -T vimrc/.vimrc .vimrc
+
    $ ln -s -T vimrc/.llvm.vimrc .llvm.vimrc
+
    ```
    It is assumed that you cloned Journeyer's vimrc under your home directory
 
@@ -136,6 +147,7 @@ Install .vimrc by manual
 
    ```
    $ vim
+
    :BundleInstall
    ```
 
@@ -153,7 +165,9 @@ Install mkcscope.sh & mkctags.sh by manual
 
    ```
    $ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
+
    $ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
+
    $ sudo ln -s -T ~/vimrc/rmtags.sh rmtags.sh
    ```
 
@@ -161,7 +175,9 @@ Install mkcscope.sh & mkctags.sh by manual
 
    ```
    $ sudo chown -h `whoami`:`whoami` mkctags.sh
+
    $ sudo chown -h `whoami`:`whoami` mkcscope.sh
+
    $ sudo chown -h `whoami`:`whoami` rmtags.sh
    ```
 
@@ -174,6 +190,7 @@ There is a rule to use these scripts.
   in a top directory of your project
    ```
    $ mkctags.sh
+
    $ mkcscope.sh
    ```
 
@@ -201,6 +218,7 @@ Feedback Hunted
 ===============
 
 Any feedback including contributing is highly hunted.
+
 - Some good vim script snippets,
 - Some good settings,
 - Some good configurations,
