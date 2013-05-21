@@ -1,5 +1,5 @@
 
-.. image:: docs/_static/imgs/screen.jpg
+.. image:: docs/_static/imgs/screen_.jpg
    :scale: 50 %
    :alt: screen capture
 
