@@ -2,6 +2,8 @@
 Welcome to vimrc's documentation!
 =================================
 
+Welcome to vimrc's documentation!
+---------------------------------
 
 Contents:
 
