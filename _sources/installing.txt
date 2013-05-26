@@ -22,14 +22,12 @@ Install with script
 
 2. You must provide sudo password for doing this DURING the install.
    But DO NOT INVOKE this script under sudo command your self.
-   Just run it WITHOUT sudo and provide sudo password **when you are asked**.
-::
+   Just run it WITHOUT sudo and provide sudo password **when you are asked**.::
 
  provide sudo password only when you are asked
 
 3. And after the script finished it's job, you Open vim and :BundleInstall
-   your self.
-::
+   your self.::
 
  $ vim
  $ :BundleInstall
