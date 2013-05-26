@@ -25,14 +25,14 @@ Install with script
    Just run it WITHOUT sudo and provide sudo password **when you are asked**.
    ::
 
- provide sudo password only when you are asked
+    provide sudo password only when you are asked
 
 3. And after the script finished it's job, you Open vim and :BundleInstall
    your self.
    ::
 
- $ vim
- $ :BundleInstall
+    $ vim
+    $ :BundleInstall
 
 If you want to install manually follow instructions below.
 
