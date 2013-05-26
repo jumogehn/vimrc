@@ -10,12 +10,12 @@ Contents:
 .. toctree::
   :maxdepth: 1
 
-  _static/installing.rst
-  _static/windows.rst
-  _static/settings.rst
-  _static/plugins.rst
-  _static/keys.rst
-  _static/license.rst
+  installing.rst
+  windows.rst
+  settings.rst
+  plugins.rst
+  keys.rst
+  license.rst
 
 
 Indices and tables
