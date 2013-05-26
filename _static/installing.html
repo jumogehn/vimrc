@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Installing &mdash; vimrc 0.1 documentation</title>
+    <title>Install Guide &mdash; vimrc 0.1 documentation</title>
     
     <link rel="stylesheet" href="haiku.css" type="text/css" />
     <link rel="stylesheet" href="pygments.css" type="text/css" />
@@ -35,7 +35,7 @@
   <body>
       <div class="header"><h1 class="heading"><a href="../index.html">
           <span>vimrc 0.1 documentation</span></a></h1>
-        <h2 class="heading"><span>Installing</span></h2>
+        <h2 class="heading"><span>Install Guide</span></h2>
       </div>
       <div class="topnav">
       
@@ -51,13 +51,75 @@
       <div class="content">
         
         
-  <div class="section" id="installing">
-<h1>Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="by-using-scripts">
-<h2>By Using Scripts<a class="headerlink" href="#by-using-scripts" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="class-diagram">
-<h3>Class Diagram<a class="headerlink" href="#class-diagram" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../_images/screen_.jpg"><img alt="installing" src="../_images/screen_.jpg" style="width: 639.5px; height: 499.5px;" /></a>
+  <div class="section" id="install-guide">
+<h1>Install Guide<a class="headerlink" href="#install-guide" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="clone-journeyer-s-repository">
+<h2>Clone Journeyer&#8217;s repository<a class="headerlink" href="#clone-journeyer-s-repository" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><pre>$ git clone git://github.com/Journeyer/vimrc.git</pre>
+</div>
+<p>This makes new directory &#8216;vimrc&#8217;, which is your local reposiory clone.</p>
+</div>
+<div class="section" id="install-with-script">
+<h2>Install with script<a class="headerlink" href="#install-with-script" title="Permalink to this headline">¶</a></h2>
+<p>1. You can simply install using install script. (Only tested on Ubuntu)</p>
+<div class="highlight-python"><pre>$ cd vimrc
+$ ./install.sh</pre>
+</div>
+<ol class="arabic simple" start="2">
+<li>You must provide sudo password for doing this DURING the install.
+But DO NOT INVOKE this script under sudo command your self.
+Just run it WITHOUT sudo and provide sudo password <strong>when you are asked</strong>.</li>
+</ol>
+<div class="highlight-python"><pre>provide sudo password only when you are asked</pre>
+</div>
+<ol class="arabic simple" start="3">
+<li>And after the script finished it&#8217;s job, you Open vim and :BundleInstall
+your self.</li>
+</ol>
+<div class="highlight-python"><pre>$ vim
+$ :BundleInstall</pre>
+</div>
+<p>If you want to install manually follow instructions below.</p>
+<ul class="simple">
+<li>Install .vimrc by manual</li>
+<li>Install mkcscope.sh &amp; mkctags.sh by manual</li>
+</ul>
+</div>
+<div class="section" id="install-vimrc-by-manual">
+<h2>Install .vimrc by manual<a class="headerlink" href="#install-vimrc-by-manual" title="Permalink to this headline">¶</a></h2>
+<p>1. Backup your .vim/ and .vimrc in your home directory if they exist</p>
+<div class="highlight-python"><pre>$ cd ~
+$ mv .vim/ vim_backup/
+$ mv .vimrc vimrc_backup</pre>
+</div>
+<p>2. Create symbolic links to the .vimrc files checked-out</p>
+<div class="highlight-python"><pre>$ ln -s -T vimrc/.vimrc .vimrc
+$ ln -s -T vimrc/.llvm.vimrc .llvm.vimrc</pre>
+</div>
+<p>It is assumed that you cloned Journeyer&#8217;s vimrc under your home directory</p>
+<p>3. Install Vundle</p>
+<div class="highlight-python"><pre>$ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</pre>
+</div>
+<p>(Refer to <a class="reference external" href="https://github.com/gmarik/vundle">https://github.com/gmarik/vundle</a>)</p>
+<p>4. Open vim and :BundleInstall</p>
+<div class="highlight-python"><pre>$ vim
+:BundleInstall</pre>
+</div>
+</div>
+<div class="section" id="install-mkcscope-sh-mkctags-sh-by-manual">
+<h2>Install mkcscope.sh &amp; mkctags.sh by manual<a class="headerlink" href="#install-mkcscope-sh-mkctags-sh-by-manual" title="Permalink to this headline">¶</a></h2>
+<p>1. Go to /usr/local/bin</p>
+<div class="highlight-python"><pre>$ cd /usr/local/bin</pre>
+</div>
+<p>2. Create symbolic links to mkcscope.sh and mkctags.sh</p>
+<div class="highlight-python"><pre>$ sudo ln -s -T ~/vimrc/mkctags.sh mkctags.sh
+$ sudo ln -s -T ~/vimrc/mkcscope.sh mkcscope.sh
+$ sudo ln -s -T ~/vimrc/rmtags.sh rmtags.sh</pre>
+</div>
+<p>3. Change file owner to you</p>
+<div class="highlight-python"><pre>$ sudo chown -h `whoami`:`whoami` mkctags.sh
+$ sudo chown -h `whoami`:`whoami` mkcscope.sh
+$ sudo chown -h `whoami`:`whoami` rmtags.sh</pre>
 </div>
 </div>
 </div>
