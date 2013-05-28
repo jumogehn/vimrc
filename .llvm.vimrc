@@ -12,21 +12,21 @@
 set nocompatible
 
 " A tab produces a 2-space indentation
-if filereadable(expand('~/.cshrc')) "Indentation to 4 spaces
+"if filereadable(expand('~/.cshrc')) "Indentation to 4 spaces
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
-else
-set softtabstop=2
-set shiftwidth=2
-endif
+"else
+"set softtabstop=2
+"set shiftwidth=2
+"endif
 set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
 "Indentation to 4 spaces
-if filereadable(expand('~/.cshrc'))
+"if filereadable(expand('~/.cshrc'))
   "Testing of ignoring highlight to see if this causes slow down
-else
+"else
 highlight LongLine ctermbg=DarkYellow guibg=DarkYellow
 highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
 if v:version >= 702
@@ -45,7 +45,7 @@ else
   au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
   au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 endif
-endif
+"endif
 
 " Enable filetype detection
 filetype on
@@ -82,11 +82,11 @@ autocmd FileType make set noexpandtab
 command! DeleteTrailingWs :%s/\s\+$//
 
 " Convert all tab characters to two spaces
-if filereadable(expand('~/.cshrc')) "Tab to 4 spaces
+"if filereadable(expand('~/.cshrc')) "Tab to 4 spaces
 command! Untab :%s/\t/    /g
-else
-command! Untab :%s/\t/  /g
-endif
+"else
+"command! Untab :%s/\t/  /g
+"endif
 
 """"" Enable syntax highlighting for LLVM files. To use, copy
 """"" utils/vim/llvm.vim to ~/.vim/syntax .
