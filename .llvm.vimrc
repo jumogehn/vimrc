@@ -24,9 +24,9 @@ set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
 "Indentation to 4 spaces
-"if filereadable(expand('~/.cshrc'))
+if 1
   "Testing of ignoring highlight to see if this causes slow down
-"else
+else
 highlight LongLine ctermbg=DarkYellow guibg=DarkYellow
 highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
 if v:version >= 702
@@ -45,7 +45,7 @@ else
   au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
   au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 endif
-"endif
+endif
 
 " Enable filetype detection
 filetype on
