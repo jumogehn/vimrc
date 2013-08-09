@@ -69,9 +69,13 @@ fi
 sudo ln -s -T `pwd`/mkctags.sh /usr/local/bin/mkctags.sh
 sudo ln -s -T `pwd`/mkcscope.sh /usr/local/bin/mkcscope.sh
 sudo ln -s -T `pwd`/rmtags.sh /usr/local/bin/rmtags.sh
+sudo ln -s -T `pwd`/svndiff-meld.sh /usr/local/bin/svndiff-meld.sh
+sudo ln -s -T `pwd`/svndiff-vim.sh /usr/local/bin/svndiff-vim.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkctags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkcscope.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
+sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-meld.sh
+sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-vim.sh
 
 fi
 fi
