@@ -64,6 +64,12 @@ fi
 if [ -L "/usr/local/bin/rmtags.sh" ]; then
   sudo rm -f /usr/local/bin/rmtags.sh
 fi
+if [ -L "/usr/local/bin/svndiff-meld.sh" ]; then
+  sudo rm -f /usr/local/bin/svndiff-meld.sh
+fi
+if [ -L "/usr/local/bin/svndiff-vim.sh" ]; then
+  sudo rm -f /usr/local/bin/svndiff-vim.sh
+fi
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
 sudo ln -s -T `pwd`/mkctags.sh /usr/local/bin/mkctags.sh
