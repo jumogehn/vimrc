@@ -42,7 +42,6 @@ Bundle 'The-NERD-tree'
 Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'DirDiff.vim'
-Bundle 'lua.vim'
 Bundle 'rmartinho/vim-cpp11'
 " Bundle 'clang-complete'
 filetype plugin indent on     " required!
