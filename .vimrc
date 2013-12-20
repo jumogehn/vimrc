@@ -7,6 +7,7 @@ source ~/.llvm.vimrc       " this is a must!
 nnoremap <F6> :set invpaste paste?<CR>
 set pastetoggle=<F6>
 set showmode
+set fencs=ucs-bom,utf-8,cp949,euc-kr
 
 "set nowrap
 "set ff=unix  "you can set dos or mac for line ending
