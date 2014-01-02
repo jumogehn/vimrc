@@ -12,14 +12,14 @@
 set nocompatible
 
 " A tab produces a 2-space indentation
-"if filereadable(expand('~/.cshrc')) "Indentation to 4 spaces
-"set softtabstop=4
-"set tabstop=4
-"set shiftwidth=4
-"else
+if 1
+set softtabstop=8
+set tabstop=8
+set shiftwidth=8
+else
 set softtabstop=2
 set shiftwidth=2
-"endif
+endif
 set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
