@@ -1,5 +1,4 @@
 #!/bin/bash
-# This script needs sudoer's right to work correctly
 
 # Must run where those files exist
 if [ -e ".vimrc" ]; then

@@ -11,6 +11,16 @@ Clone Journeyer's repository
 
 This makes new directory 'vimrc', which is your local reposiory clone.
 
+
+Prerequisites
+-------------
+::
+
+ vim
+ exuberant-ctags
+ cscope
+
+
 Install with script
 -------------------
 
