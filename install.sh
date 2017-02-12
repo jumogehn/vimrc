@@ -5,6 +5,7 @@ if [ -e ".vimrc" ]; then
 if [ -e ".llvm.vimrc" ]; then
 if [ -e ".system.vimrc" ]; then
 if [ -e "mkctags.sh" ]; then
+if [ -e "mkptags.sh" ]; then
 if [ -e "mkcscope.sh" ]; then
 if [ -e "rmtags.sh" ]; then
 
@@ -57,6 +58,11 @@ echo
 if [ -L "/usr/local/bin/mkctags.sh" ]; then
   sudo rm -f /usr/local/bin/mkctags.sh
 fi
+
+if [ -L "/usr/local/bin/mkptags.sh" ]; then
+  sudo rm -f /usr/local/bin/mkptags.sh
+fi
+
 if [ -L "/usr/local/bin/mkcscope.sh" ]; then
   sudo rm -f /usr/local/bin/mkcscope.sh
 fi
@@ -72,16 +78,19 @@ fi
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
 sudo ln -s -T `pwd`/mkctags.sh /usr/local/bin/mkctags.sh
+sudo ln -s -T `pwd`/mkptags.sh /usr/local/bin/mkptags.sh
 sudo ln -s -T `pwd`/mkcscope.sh /usr/local/bin/mkcscope.sh
 sudo ln -s -T `pwd`/rmtags.sh /usr/local/bin/rmtags.sh
 sudo ln -s -T `pwd`/svndiff-meld.sh /usr/local/bin/svndiff-meld.sh
 sudo ln -s -T `pwd`/svndiff-vim.sh /usr/local/bin/svndiff-vim.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkctags.sh
+sudo chown -h `whoami`:`whoami` /usr/local/bin/mkptags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/mkcscope.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-meld.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-vim.sh
 
+fi
 fi
 fi
 fi
