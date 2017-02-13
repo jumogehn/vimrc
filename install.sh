@@ -48,6 +48,9 @@ if [ -e "$HOME/.vim/bundle/vundle" ]; then
 fi
 git clone https://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
 
+mkdir -p $HOME/.vim/syntax
+ln -s -T `pwd`/php.vim $HOME/.vim/syntax/php.vim
+
 # Open vim and :BundleInstall
 echo
 echo ==============================================
