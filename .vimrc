@@ -1,6 +1,7 @@
 "============ sourcing LLVM vimrc =============
 source ~/.llvm.vimrc       " this is a must!
                            " Journeyer's vimrc is dependent on llvm's
+source ~/.php.vimrc
 
 "============ now Journeyer's vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste

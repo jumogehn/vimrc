@@ -41,6 +41,7 @@ fi
 ln -s -T `pwd`/.vimrc $HOME/.vimrc
 ln -s -T `pwd`/.llvm.vimrc $HOME/.llvm.vimrc
 ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
+#ln -s -T `pwd`/.php.vimrc $HOME/.php.vimrc
 
 # Install Vundle
 if [ -e "$HOME/.vim/bundle/vundle" ]; then
