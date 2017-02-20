@@ -4,6 +4,7 @@
 if [ -e ".vimrc" ]; then
 if [ -e ".llvm.vimrc" ]; then
 if [ -e ".system.vimrc" ]; then
+if [ -e ".php.vimrc" ]; then
 if [ -e "mkctags.sh" ]; then
 if [ -e "mkptags.sh" ]; then
 if [ -e "mkcscope.sh" ]; then
@@ -19,6 +20,9 @@ if [ -L "$HOME/.llvm.vimrc" ]; then
 fi
 if [ -L "$HOME/.system.vimrc" ]; then
   rm -f $HOME/.system.vimrc
+fi
+if [ -L "$HOME/.php.vimrc" ]; then
+  rm -f $HOME/.php.vimrc
 fi
 
 # Backup your .vim/ and .vimrc in your home directory if they exist
@@ -41,7 +45,7 @@ fi
 ln -s -T `pwd`/.vimrc $HOME/.vimrc
 ln -s -T `pwd`/.llvm.vimrc $HOME/.llvm.vimrc
 ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
-#ln -s -T `pwd`/.php.vimrc $HOME/.php.vimrc
+ln -s -T `pwd`/.php.vimrc $HOME/.php.vimrc
 
 # Install Vundle
 if [ -e "$HOME/.vim/bundle/vundle" ]; then
@@ -100,6 +104,7 @@ sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-meld.sh
 sudo chown -h `whoami`:`whoami` /usr/local/bin/svndiff-vim.sh
 
+fi
 fi
 fi
 fi
