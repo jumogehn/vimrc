@@ -45,6 +45,7 @@ Bundle 'taglist.vim'
 Bundle 'bufexplorer.zip'
 Bundle 'DirDiff.vim'
 Bundle 'rmartinho/vim-cpp11'
+Bundle 'XDebug-DBGp-client-for-PHP'
 " Bundle 'clang-complete'
 filetype plugin indent on     " required!
 "
