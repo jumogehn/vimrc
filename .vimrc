@@ -5,8 +5,8 @@ source ~/.php.vimrc
 
 "============ now Journeyer's vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
-nnoremap <F6> :set invpaste paste?<CR>
-set pastetoggle=<F6>
+nmap ,6 :set invpaste paste?<CR>
+set pastetoggle=,6
 set showmode
 set fencs=ucs-bom,utf-8,cp949,euc-kr
 
@@ -25,6 +25,8 @@ set incsearch
 set ignorecase
 set smartcase
 set printoptions=portrait:y,wrap:y,duplex:off
+
+let g:debuggerMapDefaultKeys = 1
 
 "========= vundle setting =========
 filetype off                   " required!
@@ -62,12 +64,11 @@ let NERDTreeWinPos='right'
 
 "========= key mapping ==========
 
-map <F2> v]}zf
-map <F3> zo
+nmap ,2 v]}zf
+nmap ,3 zo
 
-map <F4> :Tlist<cr><C-W><C-W>
-map <F5> :NERDTreeToggle<CR>
-"   <F6> See above there is the pastetoggle
+nmap ,4 :Tlist<CR><C-W><C-W>
+nmap ,5 :NERDTreeToggle<CR>
 
 let g:hitog = 0
 function! Ht() "Highlight toggle
@@ -79,9 +80,9 @@ function! Ht() "Highlight toggle
     execute ("highlight LongLine ctermbg=DarkYellow guibg=DarkYellow")
   endif
 endfunction
-map <F7> :call Ht()<cr>
+nmap ,7 :call Ht()<cr>
 
-map <F9> :BufExplorer<cr>
+nmap ,9 :BufExplorer<cr>
 
 map <PageUp> <C-U><C-U>
 map <PageDown> <C-D><C-D>
@@ -110,16 +111,16 @@ map ,x :bn!<CR>	  " Switch to Next File Buffer
 map ,z :bp!<CR>	  " Switch to Previous File Buffer
 map ,w :bw<CR>	  " Close Current File Buffer
 
-map ,1 :b!1<CR>	  " Switch to File Buffer #1
-map ,2 :b!2<CR>	  " Switch to File Buffer #2
-map ,3 :b!3<CR>	  " Switch to File Buffer #3
-map ,4 :b!4<CR>	  " Switch to File Buffer #4
-map ,5 :b!5<CR>	  " Switch to File Buffer #5
-map ,6 :b!6<CR>	  " Switch to File Buffer #6
-map ,7 :b!7<CR>	  " Switch to File Buffer #7
-map ,8 :b!8<CR>	  " Switch to File Buffer #8
-map ,9 :b!9<CR>	  " Switch to File Buffer #9
-map ,0 :b!0<CR>	  " Switch to File Buffer #0
+"map ,1 :b!1<CR>	  " Switch to File Buffer #1
+"map ,2 :b!2<CR>	  " Switch to File Buffer #2
+"map ,3 :b!3<CR>	  " Switch to File Buffer #3
+"map ,4 :b!4<CR>	  " Switch to File Buffer #4
+"map ,5 :b!5<CR>	  " Switch to File Buffer #5
+"map ,6 :b!6<CR>	  " Switch to File Buffer #6
+"map ,7 :b!7<CR>	  " Switch to File Buffer #7
+"map ,8 :b!8<CR>	  " Switch to File Buffer #8
+"map ,9 :b!9<CR>	  " Switch to File Buffer #9
+"map ,0 :b!0<CR>	  " Switch to File Buffer #0
 
 
 "========= ctags setting ========
