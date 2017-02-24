@@ -87,24 +87,29 @@ nmap ,9 :BufExplorer<cr>
 map <PageUp> <C-U><C-U>
 map <PageDown> <C-D><C-D>
 
-nmap <C-Left> <C-W><<C-W><<C-W><<C-W><
-nmap <S-Left> <C-W><
+"nmap <C-Left> <C-W><<C-W><<C-W><<C-W><
+"nmap <S-Left> <C-W><
 
-nmap <C-Right> <C-W>><C-W>><C-W>><C-W>>
-nmap <S-Right> <C-W>>
-nmap <A-Right> <C-W>\|
+"nmap <C-Right> <C-W>><C-W>><C-W>><C-W>>
+"nmap <S-Right> <C-W>>
+"nmap <A-Right> <C-W>\|
 
-nmap <C-Up> <C-W>+<C-W>+<C-W>+<C-W>+
-nmap <S-Up> <C-W>+
-nmap <A-Up> <C-W>_
+"nmap <C-Up> <C-W>+<C-W>+<C-W>+<C-W>+
+"nmap <S-Up> <C-W>+
+"nmap <A-Up> <C-W>_
 
-nmap <C-Down> <C-W>-<C-W>-<C-W>-<C-W>-
-nmap <S-Down> <C-W>-
+"nmap <C-Down> <C-W>-<C-W>-<C-W>-<C-W>-
+"nmap <S-Down> <C-W>-
 
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
+
+nmap <S-H> <C-W><<C-W><<C-W><<C-W><
+nmap <S-J> <C-W>-<C-W>-<C-W>-<C-W>-
+nmap <S-K> <C-W>+<C-W>+<C-W>+<C-W>+
+nmap <S-L> <C-W>><C-W>><C-W>><C-W>>
 
 "========= switch between file buffers ========
 map ,x :bn!<CR>	  " Switch to Next File Buffer
