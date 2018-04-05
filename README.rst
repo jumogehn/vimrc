@@ -108,7 +108,7 @@ Recommended Coding Style from LLVM
 
 - http://llvm.org/docs/CodingStandards.html#coding-standards
 
-Journeyer's vimrc is now dependent on LLVM's. For this reason,
+Jeonghum's vimrc is now dependent on LLVM's. For this reason,
 LLVM coding style is recommended.
 
 
@@ -151,5 +151,5 @@ Thanks to the authors and contributors (known and unknown) above,
 we could happy vim.
 
 
-Journeyer J. Joh
+Jeonghum Joh
 
