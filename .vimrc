@@ -1,9 +1,10 @@
-"============ sourcing LLVM vimrc =============
-source ~/.llvm.vimrc       " this is a must!
-                           " Journeyer's vimrc is dependent on llvm's
-source ~/.php.vimrc
+"============ sourcing LLVM and 3rd partie's vimrc =============
+source ~/.llvm.vimrc
+"source ~/.php.vim
+"
+"System and Project specific vimrcs are being sourced at the bottom
 
-"============ now Journeyer's vimrc begins =============
+"============ now vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 nmap ,6 :set invpaste paste?<CR>
 set pastetoggle=,6
@@ -31,34 +32,32 @@ let g:debuggerMapDefaultKeys = 1
 "========= vundle setting =========
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
 
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
+call vundle#begin()
 
-" vim-scripts repos
-Bundle 'snipMate'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'The-NERD-tree'
-Bundle 'taglist.vim'
-Bundle 'bufexplorer.zip'
-Bundle 'DirDiff.vim'
-Bundle 'rmartinho/vim-cpp11'
-Bundle 'XDebug-DBGp-client-for-PHP'
-" Bundle 'clang-complete'
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'taglist.vim'
+Plugin 'bufexplorer.zip'
+"Plugin 'snipMate'
+"Plugin 'L9'
+"Plugin 'FuzzyFinder'
+"Plugin 'DirDiff.vim'
+"Plugin 'rmartinho/vim-cpp11'
+"Plugin 'XDebug-DBGp-client-for-PHP'
+
+call vundle#end()
+
 filetype plugin indent on     " required!
 "
 " Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install(update) plugins
+" :PluginSearch(!) foo - search(or refresh cache first) for foo
+" :PluginClean(!)      - confirm(or auto-approve) removal of unused plugins
 "
 " see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 
 let NERDTreeWinPos='right'
 
