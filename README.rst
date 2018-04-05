@@ -16,7 +16,7 @@ On Windows
 News
 ====
 
-- `Wiki <https://github.com/Jeonghum/vimrc/wiki`_ is added   2013.5.26
+- `Wiki <https://github.com/Jeonghum/vimrc/wiki>`_ is added   2018.4.5
 - `Github Page <http://jeonghum.github.io/vimrc/>`_ is added   2013.5.26
 - Install script(install.sh) is added     2013.1.31
 - LLVM vimrc is added                     2013.1.30
