@@ -1,4 +1,6 @@
 
+source ~/.llvm.vimrc       " this is a must!
+
 set guifont=Consolas:h16:cANSI:qDRAFT
 
 nmap ,6 :set invpaste paste?<CR>
@@ -23,11 +25,13 @@ filetype off                   " required!
 
 set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin('~/.vim/bundle')
+"call vundle#begin('~/.vim/bundle')
+call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'taglist.vim'
+Plugin 'bufexplorer.zip'
 
 call vundle#end()
 
@@ -54,19 +58,19 @@ nmap ,3 zo
 nmap ,4 :Tlist<CR><C-W><C-W>
 nmap ,5 :NERDTreeToggle<CR>
 
-"let g:hitog = 0
-"function! Ht() "Highlight toggle
-"  if (g:hitog == 0)
-"    let g:hitog = 1
-"    execute ("highlight LongLine ctermbg=8")
-"  else
-"    let g:hitog = 0
-"    execute ("highlight LongLine ctermbg=DarkYellow guibg=DarkYellow")
-"  endif
-"endfunction
-"nmap ,7 :call Ht()<cr>
-"
-""nmap ,9 :BufExplorer<cr>
+let g:hitog = 0
+function! Ht() "Highlight toggle
+  if (g:hitog == 0)
+    let g:hitog = 1
+    execute ("highlight LongLine ctermbg=8")
+  else
+    let g:hitog = 0
+    execute ("highlight LongLine ctermbg=DarkYellow guibg=DarkYellow")
+  endif
+endfunction
+nmap ,7 :call Ht()<cr>
+
+nmap ,9 :BufExplorer<cr>
 
 map <PageUp> <C-U><C-U>
 map <PageDown> <C-D><C-D>
@@ -81,9 +85,9 @@ nmap <S-J> <C-W>-<C-W>-<C-W>-<C-W>-
 nmap <S-K> <C-W>+<C-W>+<C-W>+<C-W>+
 nmap <S-L> <C-W>><C-W>><C-W>><C-W>>
 
-"map ,x :bn!<CR>	  " Switch to Next File Buffer
-"map ,z :bp!<CR>	  " Switch to Previous File Buffer
-"map ,w :bw<CR>	  " Close Current File Buffer
+map ,x :bn!<CR>	  " Switch to Next File Buffer
+map ,z :bp!<CR>	  " Switch to Previous File Buffer
+map ,w :bw<CR>	  " Close Current File Buffer
 
 if version >= 500
 
