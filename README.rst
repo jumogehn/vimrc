@@ -1,7 +1,13 @@
 
+On Ubuntu
+---------
+
 .. image:: docs/_static/imgs/screen_.jpg
    :scale: 50 %
    :alt: screen capture in ubuntu
+
+On Windows
+---------
 
 .. image:: docs/_static/imgs/screen_windows.png
    :scale: 50 %
