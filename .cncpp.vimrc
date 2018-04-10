@@ -95,3 +95,177 @@ augroup filetype
  au! BufRead,BufNewFile *.rst     set filetype=rest
 augroup END
 
+
+
+"========= ctags setting ========
+"Upon vim open a file buffer, CWD is switched to the position of the current
+"file
+"autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
+
+"set tags=./tags;/.
+
+" function definition is supported only after version 5 of vim
+if version >= 500
+
+  func! Sts()
+    let st = expand("<cword>")
+    exe "sts ".st
+  endfunc
+  nmap ,st :call Sts()<cr>
+
+  func! Tj()
+    let st = expand("<cword>")
+    exe "tj ".st
+  endfunc
+  nmap ,tj :call Tj()<cr>
+
+  func! Tn()
+    exe "tn"
+  endfunc
+  nmap ,tn :call Tn()<cr>
+
+  func! Tp()
+    exe "tp"
+  endfunc
+  nmap ,tp :call Tp()<cr>
+
+  func! Tr()
+    exe "tr"
+  endfunc
+  nmap ,tr :call Tr()<cr>
+
+  func! Tl()
+    exe "tl"
+  endfunc
+  nmap ,tl :call Tl()<cr>
+
+endif
+
+"======== cscope setting ========
+"set csprg=/usr/bin/cscope
+set csto=0
+set cst
+
+if version >= 500
+
+  func! Csw()
+    exe "cs show"
+  endfunc
+  nmap ,csw :call Csw()<cr>
+
+  func! Csc()
+    let csc = expand("<cword>")
+    new
+    exe "cs find c ".csc
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,csc :call Csc()<cr>
+
+  func! Csd()
+    let csd = expand("<cword>")
+    new
+    exe "cs find d ".csd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,csd :call Csd()<cr>
+
+  func! Cse()
+    let cse = expand("<cword>")
+    new
+    exe "cs find e ".cse
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,cse :call Cse()<cr>
+
+  func! Csf()
+    let csf = expand("<cword>")
+    new
+    exe "cs find f ".csf
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,csf :call Csf()<cr>
+
+  func! Csg()
+    let csg = expand("<cword>")
+    new
+    exe "cs find g ".csg
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,csg :call Csg()<cr>
+
+  func! Csi()
+    let csi = expand("<cword>")
+    new
+    exe "cs find i ".csi
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,csi :call Csi()<cr>
+
+  func! Css()
+    let css = expand("<cword>")
+    new
+    exe "cs find s ".css
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,css :call Css()<cr>
+
+  func! Cst()
+    let cst = expand("<cword>")
+    new
+    exe "cs find t ".cst
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  nmap ,cst :call Cst()<cr>
+
+endif
+
+if filereadable("cscope.out")
+  set nocsverb
+  cs add cscope.out
+  set csverb
+endif
+
+
+if version >= 500
+
+  "============ man page setting =============
+  func! Man()
+    let sm = expand("<cword>")
+    exe "!man -S 2:3:4:5:6:7:8:9:tcl:n:l:p:o ".sm
+  endfunc
+  nmap ,ma :call Man()<cr><cr>
+
+  "============ make setting =============
+  let startdir = getcwd()
+  func! Make()
+    exe "!cd ".startdir
+    exe "make"
+  endfunc
+  nmap ,mk :call Make()<cr><cr>
+
+  "============ clean make setting =============
+  func! CleanMake()
+    exe "!cd ".startdir
+    exe "make clean"
+    exe "make"
+  endfunc
+  nmap ,cmk :call CleanMake()<cr><cr>
+
+endif
+
