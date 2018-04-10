@@ -1,7 +1,6 @@
 "============ sourcing LLVM and 3rd partie's vimrc =============
 source ~/.llvm.vimrc
-"source ~/.php.vim
-"
+
 "System and Project specific vimrcs are being sourced at the bottom
 
 "============ now vimrc begins =============
@@ -10,12 +9,6 @@ nmap ,6 :set invpaste paste?<CR>
 set pastetoggle=,6
 set showmode
 set fencs=ucs-bom,utf-8,cp949,euc-kr
-
-"set nowrap
-"set ff=unix  "you can set dos or mac for line ending
-"http://vim.wikia.com/wiki/File_format
-"set showcmd
-"set showmatch
 set bg=dark
 set ruler
 set number
@@ -26,8 +19,6 @@ set incsearch
 set ignorecase
 set smartcase
 set printoptions=portrait:y,wrap:y,duplex:off
-
-let g:debuggerMapDefaultKeys = 1
 
 "========= vundle setting =========
 filetype off                   " required!
@@ -50,14 +41,6 @@ Plugin 'bufexplorer.zip'
 call vundle#end()
 
 filetype plugin indent on     " required!
-"
-" Brief help
-" :PluginList          - list configured plugins
-" :PluginInstall(!)    - install(update) plugins
-" :PluginSearch(!) foo - search(or refresh cache first) for foo
-" :PluginClean(!)      - confirm(or auto-approve) removal of unused plugins
-"
-" see :h vundle for more details or wiki for FAQ
 
 let NERDTreeWinPos='right'
 
@@ -69,36 +52,10 @@ nmap ,3 zo
 nmap ,4 :Tlist<CR><C-W><C-W>
 nmap ,5 :NERDTreeToggle<CR>
 
-let g:hitog = 0
-function! Ht() "Highlight toggle
-  if (g:hitog == 0)
-    let g:hitog = 1
-    execute ("highlight LongLine ctermbg=8")
-  else
-    let g:hitog = 0
-    execute ("highlight LongLine ctermbg=DarkYellow guibg=DarkYellow")
-  endif
-endfunction
-nmap ,7 :call Ht()<cr>
-
 nmap ,9 :BufExplorer<cr>
 
 map <PageUp> <C-U><C-U>
 map <PageDown> <C-D><C-D>
-
-"nmap <C-Left> <C-W><<C-W><<C-W><<C-W><
-"nmap <S-Left> <C-W><
-
-"nmap <C-Right> <C-W>><C-W>><C-W>><C-W>>
-"nmap <S-Right> <C-W>>
-"nmap <A-Right> <C-W>\|
-
-"nmap <C-Up> <C-W>+<C-W>+<C-W>+<C-W>+
-"nmap <S-Up> <C-W>+
-"nmap <A-Up> <C-W>_
-
-"nmap <C-Down> <C-W>-<C-W>-<C-W>-<C-W>-
-"nmap <S-Down> <C-W>-
 
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
@@ -114,18 +71,6 @@ nmap <S-L> <C-W>><C-W>><C-W>><C-W>>
 map ,x :bn!<CR>	  " Switch to Next File Buffer
 map ,z :bp!<CR>	  " Switch to Previous File Buffer
 map ,w :bw<CR>	  " Close Current File Buffer
-
-"map ,1 :b!1<CR>	  " Switch to File Buffer #1
-"map ,2 :b!2<CR>	  " Switch to File Buffer #2
-"map ,3 :b!3<CR>	  " Switch to File Buffer #3
-"map ,4 :b!4<CR>	  " Switch to File Buffer #4
-"map ,5 :b!5<CR>	  " Switch to File Buffer #5
-"map ,6 :b!6<CR>	  " Switch to File Buffer #6
-"map ,7 :b!7<CR>	  " Switch to File Buffer #7
-"map ,8 :b!8<CR>	  " Switch to File Buffer #8
-"map ,9 :b!9<CR>	  " Switch to File Buffer #9
-"map ,0 :b!0<CR>	  " Switch to File Buffer #0
-
 
 "========= ctags setting ========
 "Upon vim open a file buffer, CWD is switched to the position of the current
