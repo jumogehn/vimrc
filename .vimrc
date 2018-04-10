@@ -3,9 +3,10 @@ source ~/.cncpp.vimrc
 
 "System and Project specific vimrcs are being sourced at the bottom
 
-"============ now vimrc begins =============
+"============ now general vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
 nmap ,6 :set invpaste paste?<CR>
+
 set pastetoggle=,6
 set showmode
 set fencs=ucs-bom,utf-8,cp949,euc-kr
@@ -51,6 +52,8 @@ nmap ,3 zo
 
 nmap ,4 :Tlist<CR><C-W><C-W>
 nmap ,5 :NERDTreeToggle<CR>
+"nmap ,6 :look at the beginning
+"nmap ,7 :look at .cncpp.vimrc
 
 nmap ,9 :BufExplorer<cr>
 

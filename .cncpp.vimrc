@@ -1,12 +1,5 @@
-" LLVM coding guidelines conformance for VIM
-" $Revision: 176235 $
-"
-" Maintainer: The LLVM Team, http://llvm.org
-" WARNING:    Read before you source in all these commands and macros!  Some
-"             of them may change VIM behavior that you depend on.
-"
-" You can run VIM with these settings without changing your current setup with:
-" $ vim -u /path/to/llvm/utils/vim/vimrc
+" VIMRC for C & C++
+" from LLVM coding guidelines conformance for VIM
 
 " It's VIM, not VI
 set nocompatible
@@ -23,29 +16,30 @@ set shiftwidth=2
 set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
-"Indentation to 4 spaces
-if 1
-  "Testing of ignoring highlight to see if this causes slow down
-else
-highlight LongLine ctermbg=DarkYellow guibg=DarkYellow
-highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
-if v:version >= 702
-  " Lines longer than 80 columns.
-  au BufWinEnter * let w:m0=matchadd('LongLine', '\%>80v.\+', -1)
-
+if v:version >= 730
+  let g:hitog = 0
+  function! Ht() "Highlight toggle
+    if (g:hitog == 0)
+      let g:hitog = 1
+      set cc=81
+    else
+      let g:hitog = 0
+      set cc=
+    endif
+  endfunction
+  nmap ,7 :call Ht()<cr>
+  highlight ColorColumn ctermbg=DarkYellow guibg=DarkYellow
   " Whitespace at the end of a line. This little dance suppresses
   " whitespace that has just been typed.
+  " Disable if this is too heavy
+  highlight WhitespaceEOL ctermbg=DarkYellow guibg=DarkYellow
   au BufWinEnter * let w:m1=matchadd('WhitespaceEOL', '\s\+$', -1)
   au InsertEnter * call matchdelete(w:m1)
   au InsertEnter * let w:m2=matchadd('WhitespaceEOL', '\s\+\%#\@<!$', -1)
   au InsertLeave * call matchdelete(w:m2)
   au InsertLeave * let w:m1=matchadd('WhitespaceEOL', '\s\+$', -1)
-else
-  au BufRead,BufNewFile * syntax match LongLine /\%>80v.\+/
-  au InsertEnter * syntax match WhitespaceEOL /\s\+\%#\@<!$/
-  au InsertLeave * syntax match WhitespaceEOL /\s\+$/
 endif
-endif
+
 
 " Enable filetype detection
 filetype on
