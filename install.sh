@@ -2,7 +2,7 @@
 
 # Must run where those files exist
 if [ -e ".vimrc" ]; then
-if [ -e ".llvm.vimrc" ]; then
+if [ -e ".cncpp.vimrc" ]; then
 if [ -e ".system.vimrc" ]; then
 if [ -e ".php.vimrc" ]; then
 if [ -e "mkctags.sh" ]; then
@@ -15,8 +15,8 @@ if [ -e "rmtags.sh" ]; then
 if [ -L "$HOME/.vimrc" ]; then
   rm -f $HOME/.vimrc
 fi
-if [ -L "$HOME/.llvm.vimrc" ]; then
-  rm -f $HOME/.llvm.vimrc
+if [ -L "$HOME/.cncpp.vimrc" ]; then
+  rm -f $HOME/.cncpp.vimrc
 fi
 if [ -L "$HOME/.system.vimrc" ]; then
   rm -f $HOME/.system.vimrc
@@ -43,7 +43,7 @@ fi
 
 # Create new symbolic links to the .vimrc files checked-out
 ln -s -T `pwd`/.vimrc $HOME/.vimrc
-ln -s -T `pwd`/.llvm.vimrc $HOME/.llvm.vimrc
+ln -s -T `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
 ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
 ln -s -T `pwd`/.php.vimrc $HOME/.php.vimrc
 
