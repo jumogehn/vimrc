@@ -1,5 +1,5 @@
-"============ sourcing LLVM and 3rd partie's vimrc =============
-source ~/.llvm.vimrc
+"============ sourcing vimrc for C & C++ =============
+source ~/.cncpp.vimrc
 
 "System and Project specific vimrcs are being sourced at the bottom
 
