@@ -26,12 +26,11 @@ News
 About
 =====
 
-.llvm.vimrc
+.cncpp.vimrc
 -----------
 
-- copied from llvm project(llvm/utils/vim/vimrc)
-- forces LLVM coding style guideline(for example, 80 column width, no tab, ...)
-- check 'Recommended Coding Style from LLVM' below
+- based on llvm project(llvm/utils/vim/vimrc) but added many more custom settings
+- forces many LLVM coding style guideline(for example, 80 column width, no tab, ...)
 
 .vimrc
 ------
@@ -44,17 +43,17 @@ About
 mkcscope.sh
 -----------
 
-- Good script to generate cscope.out
+- Script to generate cscope.out
 
 mkctags.sh
 ----------
 
-- Good script to generate ctags
+- Script to generate ctags
 
 rmtags.sh
 ---------
 
-- Good script to remove ctags, cscope.out and cscope.files
+- Script to remove ctags, cscope.out and cscope.files
 
 Testing environment
 
@@ -65,19 +64,6 @@ Prerequisite
 - git-core vim exuberant-ctags cscope
 
 Note
-
-.inc file and .def file are treated as C++ source file.
-All the places related this is listed below.
-
-- mkcscope.sh
-::
-
- -o -name '*.inc' -o -name '*.def'
-
-- mkctags.sh
-::
-
- --langmap=C++:+.inc+.def
 
 
 Using scripts
@@ -103,41 +89,6 @@ If you don't need to use tags files along with vim,
 you can open vim anywhere you want.
 
 
-Recommended Coding Style from LLVM
-==================================
-
-- http://llvm.org/docs/CodingStandards.html#coding-standards
-
-Jeonghum's vimrc is now dependent on LLVM's. For this reason,
-LLVM coding style is recommended.
-
-
-Feedback Hunted
-===============
-
-Any feedback including contributing is highly hunted.
-
-- Some good vim script snippets,
-- Some good settings,
-- Some good configurations,
-- Some good vim plugin,
-- Your opinion about the current vimrc file and
-- Bug report,
-- etc. (Lunch or coffee is a possible Mandatory!! ^^;)
-
-Your happy use of these small scripts is surely welcome.
-
-
-TODO
-====
-
-- Install script must support other linux distributions
-  and Unix, Mac, and even Windows hopely.
-- Project specific settings in mkctags.sh and mkcscope.sh have to be seperated
-  into project specific different files so that
-  open scripts only contains common general settings
-
-
 References
 ==========
 
@@ -145,11 +96,6 @@ References
 - http://kldp.org/
 - http://stackoverflow.com/
 - http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
-
-
-Thanks to the authors and contributors (known and unknown) above,
-we could happy vim.
-
 
 Jeonghum Joh
 
