@@ -6,7 +6,6 @@ rem Prerequisites:
 rem gvim, 7zip
 rem Windows 10 or above
 rem %HOME% has be set to C:\Users\{your windows user directory}
-rem %HOME%\.vim_tools has to be included in %PATH%
 rem
 
 
