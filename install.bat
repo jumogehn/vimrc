@@ -60,8 +60,8 @@ if not exist "%HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip" (
   echo DOWNLOADING OF CSCOPE HAS BEEN FAILED!
   goto quit
   )
-C:\"Program Files"\7-Zip\7z x C:\Users\hum\.vim_tools\cscope-15.8a-win64rev1-static.zip -oC:\Users\hum\.vim_tools
-if not exist C:\Users\hum\.vim_tools\cscope.exe (
+C:\"Program Files"\7-Zip\7z x %HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip -o%HOME%\.vim_tools
+if not exist %HOME%\.vim_tools\cscope.exe (
   echo UNZIPPING CSCOPE HAS BEEN FAILED!
   goto quit
   )
@@ -71,13 +71,13 @@ if not exist "%HOME%\.vim_tools\ctags58.zip" (
   echo DOWNLOADING OF CTAGS HAS BEEN FAILED!
   goto quit
   )
-C:\"Program Files"\7-Zip\7z x %HOME%\.vim_tools\ctags58.zip -oC:\Users\hum\.vim_tools
-if not exist C:\Users\hum\.vim_tools\ctags58 (
+C:\"Program Files"\7-Zip\7z x %HOME%\.vim_tools\ctags58.zip -o%HOME%\.vim_tools
+if not exist %HOME%\.vim_tools\ctags58 (
   echo UNZIPPING CTAGS HAS BEEN FAILED!
   goto quit
   )
 echo F | xcopy %HOME%\.vim_tools\ctags58\ctags.exe %HOME%\.vim_tools\ctags.exe
-if not exist C:\Users\hum\.vim_tools\ctags.exe (
+if not exist %HOME%\.vim_tools\ctags.exe (
   echo COPYING CTAGS HAS BEEN FAILED!
   goto quit
   )
