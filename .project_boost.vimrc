@@ -1,15 +1,15 @@
 
-if isdirectory('/home/hum/local/include')
-  set path+=/home/hum/local/include
+if isdirectory('$HOME/local/include')
+  set path+=$HOME/local/include
 endif
 
-if filereadable("/home/hum/local/include/boost/tags")
-  set tags+=/home/hum/local/include/boost/tags
+if filereadable("$HOME/local/include/boost/tags")
+  set tags+=$HOME/local/include/boost/tags
 endif
 
-if filereadable("/home/hum/local/include/boost/cscope.out")
+if filereadable("$HOME/local/include/boost/cscope.out")
   set nocsverb
-  cs add /home/hum/local/include/boost/cscope.out
+  cs add $HOME/local/include/boost/cscope.out
   set csverb
 endif
 
