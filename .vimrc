@@ -30,8 +30,12 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'taglist.vim'
+"Plugin 'taglist.vim'
 Plugin 'bufexplorer.zip'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-airline/vim-airline'
+"Plugin 'tpope/vim-fugitive'
+
 "Plugin 'snipMate'
 "Plugin 'L9'
 "Plugin 'FuzzyFinder'
@@ -44,13 +48,16 @@ call vundle#end()
 filetype plugin indent on     " required!
 
 let NERDTreeWinPos='right'
+let g:tagbar_left = 1
+let g:tagbar_width = 30
 
 "========= key mapping ==========
 
 nmap ,2 v]}zf
 nmap ,3 zo
 
-nmap ,4 :Tlist<CR><C-W><C-W>
+"nmap ,4 :Tlist<CR><C-W><C-W>
+nmap ,4 :TagbarToggle<CR>
 nmap ,5 :NERDTreeToggle<CR>
 "nmap ,6 :look at the beginning
 "nmap ,7 :look at .cncpp.vimrc
