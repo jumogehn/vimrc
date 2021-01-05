@@ -1,3 +1,3 @@
-#!/bin/sh
+#!/bin/bash
 
 vimdiff "$6" "$7"

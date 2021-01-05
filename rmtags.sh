@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [ -e "tags" ]; then
   rm -rf tags
