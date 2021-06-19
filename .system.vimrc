@@ -6,3 +6,7 @@ endif
 if isdirectory('/usr/include/c++/5.4.0')
   set path+=/usr/include/c++/5.4.0
 endif
+
+if isdirectory('/usr/include/c++/8')
+  set path+=/usr/include/c++/8
+endif
