@@ -1,7 +1,19 @@
-set tags+=/usr/include/pcl-1.8/tags
-set tags+=/usr/include/ifm3d/tags
-set tags+=/usr/include/eigen3/tags
-set tags+=/usr/include/opencv/tags
+
+if filereadable("/usr/include/pcl-1.8/tags")
+  set tags+=/usr/include/pcl-1.8/tags
+endif
+
+if filereadable("/usr/include/ifm3d/tags")
+  set tags+=/usr/include/ifm3d/tags
+endif
+
+if filereadable("/usr/include/eigen3/tags")
+  set tags+=/usr/include/eigen3/tags
+endif
+
+if filereadable("/usr/include/opencv/tags")
+  set tags+=/usr/include/opencv/tags
+endif
 
 if filereadable("/usr/include/pcl-1.8/cscope.out")
   set nocsverb
