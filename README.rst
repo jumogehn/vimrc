@@ -26,12 +26,6 @@ News
 About
 =====
 
-.cncpp.vimrc
------------
-
-- based on llvm project(llvm/utils/vim/vimrc) but added many more custom settings
-- forces many LLVM coding style guideline(for example, 80 column width, no tab, ...)
-
 .vimrc
 ------
 
@@ -55,16 +49,41 @@ rmtags.sh
 
 - Script to remove ctags, cscope.out and cscope.files
 
-Testing environment
+.cncpp.vimrc
+-----------
 
-- Ubuntu 12.04
+- Place anything related with C/C++ programming
+
+.project.vimrc
+--------------
+
+- Place anything related with a certain project i.e. include directory and
+  paths for tags and cscope.out for libraries related with a certain project
+
+.system.vimrc
+--------------
+
+- Place anything related with a certain OS system i.e. the paths for C++
+  standard header files
+
+
+Testing environment
+-------------------
+
+- Ubuntu and Windows
 
 Prerequisite
+------------
 
-- git-core vim exuberant-ctags cscope
+- on Linux : git-core vim cscope (exuberant-ctags or universal-ctags: universal
+             one seems better but sometimes it is unstable so I prefer
+             exuberant one)
+- on Windows : gvim, 7zip and git
 
 Note
+----
 
+How to install is explained in wiki.
 
 Using scripts
 =============
