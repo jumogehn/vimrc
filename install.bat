@@ -39,7 +39,7 @@ if exist %HOME%\.vim rd /S /Q %HOME%\.vim
 rem *COPYING* .vimrc files
 echo F | xcopy .vimrc        /A /Y %HOME%\.vimrc
 echo F | xcopy .cncpp.vimrc  /A /Y %HOME%\.cncpp.vimrc
-echo F | xcopy .system.vimrc /A /Y %HOME%\.system.vimrc
+echo F | xcopy .system.vimrc.windows /A /Y %HOME%\.system.vimrc
 
 rem Install Vundle
 git clone https://github.com/VundleVim/Vundle.vim.git %HOME%/.vim/bundle/Vundle.vim
