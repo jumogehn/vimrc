@@ -76,8 +76,7 @@ Prerequisite
 ------------
 
 - on Linux : git-core vim cscope (exuberant-ctags or universal-ctags: universal
-             one seems better but sometimes it is unstable so I prefer
-             exuberant one)
+  one seems better but sometimes it is unstable so I prefer exuberant one)
 - on Windows : gvim, 7zip and git
 
 Note
