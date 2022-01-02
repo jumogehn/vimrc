@@ -21,8 +21,8 @@ if not exist .system.vimrc goto quit
 if not exist mkctags.sh   goto quit
 if not exist mkcscope.sh  goto quit
 if not exist rmtags.sh    goto quit
-if not exist vim.bat      goto quit
-if not exist vi.bat       goto quit
+rem if not exist vim.bat      goto quit
+rem if not exist vi.bat       goto quit
 
 rem accessible %HOME% is needed
 rem recommeded %HOME% is C:\Users\{your windows user directory}
@@ -51,8 +51,8 @@ mkdir %HOME%\.vim_tools
 echo F | xcopy mkctags.bat /A /Y  %HOME%\.vim_tools\mkctags.bat
 echo F | xcopy mkcscope.bat /A /Y %HOME%\.vim_tools\mkcscope.bat
 echo F | xcopy rmtags.bat /A /Y   %HOME%\.vim_tools\rmtags.bat
-echo F | xcopy vim.bat /A /Y      %HOME%\.vim_tools\vim.bat
-echo F | xcopy vi.bat /A /Y       %HOME%\.vim_tools\vi.bat
+rem echo F | xcopy vim.bat /A /Y      %HOME%\.vim_tools\vim.bat
+rem echo F | xcopy vi.bat /A /Y       %HOME%\.vim_tools\vi.bat
 
 rem curl -o %HOME%\.vim_tools\cscope-15.8a-win32rev1-static.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cscope-win32/cscope-15.8a-win32rev1-static.zip
 curl -o %HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cscope-win32/cscope-15.8a-win64rev1-static.zip
