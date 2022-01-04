@@ -1,3 +1,3 @@
 @echo off
 
-start C:\"Program Files (x86)"\Vim\vim82\gvim.exe %*
+start C:\"Program Files"\Vim\vim82\gvim.exe %*
