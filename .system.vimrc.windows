@@ -1,3 +1,8 @@
+colorscheme darkblue
+set belloff=all
+set guifont=굴림체:h16:cHANGEUL:qDRAFT
+
+
 if isdirectory('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include')
   set path+=C:\\Program\\\ Files\\\ (x86)\\Microsoft\\\ Visual\\\ Studio\\\ 14.0\\VC\\include
 endif
@@ -5,4 +10,5 @@ endif
 if isdirectory('C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt')
   set path+=C:\\Program\\\ Files\\\ (x86)\\Windows\\\ Kits\\10\\Include\\10.0.10240.0\\ucrt
 endif
+
 
