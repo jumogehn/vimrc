@@ -111,9 +111,6 @@ References
 ==========
 
 - http://kldp.org/node/125263
-- http://kldp.org/
-- http://stackoverflow.com/
-- http://kangcom.com/sub/view.asp?sku=201008310017&mcd=571
 
 Jeonghum Joh
 
