@@ -1,30 +1,36 @@
-
-if filereadable("/usr/include/pcl-1.8/tags")
-  set tags+=/usr/include/pcl-1.8/tags
+"opencv-2.4
+if filereadable("/home/hum/Projects/opencv-2.4/build/tags")
+  set tags+=/home/hum/Projects/opencv-2.4/build/tags
 endif
 
-if filereadable("/usr/include/ifm3d/tags")
-  set tags+=/usr/include/ifm3d/tags
+if filereadable("/home/hum/Projects/opencv-2.4/build/cscope.out")
+  set nocsverb
+  cs add /home/hum/Projects/opencv-2.4/build/cscope.out
+  set csverb
 endif
 
+if isdirectory('/home/hum/Projects/opencv-2.4/build')
+  set path+=/home/hum/Projects/opencv-2.4/build
+endif
+
+"pcl-1.10
+if filereadable("/usr/include/pcl-1.10/tags")
+  set tags+=/usr/include/pcl-1.10/tags
+endif
+
+if filereadable("/usr/include/pcl-1.10/cscope.out")
+  set nocsverb
+  cs add /usr/include/pcl-1.10/cscope.out
+  set csverb
+endif
+
+if isdirectory('/usr/include/pcl-1.10')
+  set path+=/usr/include/pcl-1.10
+endif
+
+"eigen3
 if filereadable("/usr/include/eigen3/tags")
   set tags+=/usr/include/eigen3/tags
-endif
-
-if filereadable("/usr/include/opencv/tags")
-  set tags+=/usr/include/opencv/tags
-endif
-
-if filereadable("/usr/include/pcl-1.8/cscope.out")
-  set nocsverb
-  cs add /usr/include/pcl-1.8/cscope.out
-  set csverb
-endif
-
-if filereadable("/usr/include/ifm3d/cscope.out")
-  set nocsverb
-  cs add /usr/include/ifm3d/cscope.out
-  set csverb
 endif
 
 if filereadable("/usr/include/eigen3/cscope.out")
@@ -33,25 +39,22 @@ if filereadable("/usr/include/eigen3/cscope.out")
   set csverb
 endif
 
-if filereadable("/usr/include/opencv/cscope.out")
+if isdirectory('/usr/include/eigen3')
+  set path+=/usr/include/eigen3
+endif
+
+"SSBA-4.0
+if filereadable("/home/hum/Projects/SSBA-4.0/src/tags")
+  set tags+=/home/hum/Projects/SSBA-4.0/src/tags
+endif
+
+if filereadable("/home/hum/Projects/SSBA-4.0/src/cscope.out")
   set nocsverb
-  cs add /usr/include/opencv/cscope.out
+  cs add /home/hum/Projects/SSBA-4.0/src/cscope.out
   set csverb
 endif
 
-if isdirectory('/usr/include/c++/4.6')
-  set path+=/usr/include/c++/4.6
-endif
-
-if isdirectory('/usr/include/c++/5.4.0')
-  set path+=/usr/include/c++/5.4.0
-endif
-
-if isdirectory('/usr/include/c++/7')
-  set path+=/usr/include/c++/7
-endif
-
-if isdirectory('/usr/include/c++/8')
-  set path+=/usr/include/c++/8
+if isdirectory('/home/hum/Projects/SSBA-4.0/src')
+  set path+=/home/hum/Projects/SSBA-4.0/src
 endif
 

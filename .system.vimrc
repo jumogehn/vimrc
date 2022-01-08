@@ -1,12 +1,5 @@
 
-if isdirectory('/usr/include/c++/4.6')
-  set path+=/usr/include/c++/4.6
+if isdirectory('/usr/include/c++/9')
+  set path+=/usr/include/c++/9
 endif
 
-if isdirectory('/usr/include/c++/5.4.0')
-  set path+=/usr/include/c++/5.4.0
-endif
-
-if isdirectory('/usr/include/c++/8')
-  set path+=/usr/include/c++/8
-endif
