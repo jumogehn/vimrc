@@ -1,11 +1,11 @@
 "opencv-2.4
-if filereadable("/home/hum/Projects/opencv-2.4/build/tags")
-  set tags+=/home/hum/Projects/opencv-2.4/build/tags
+if filereadable("/home/hum/Projects/opencv-2.4/src/modules/tags")
+  set tags+=/home/hum/Projects/opencv-2.4/src/modules/tags
 endif
 
-if filereadable("/home/hum/Projects/opencv-2.4/build/cscope.out")
+if filereadable("/home/hum/Projects/opencv-2.4/src/modules/cscope.out")
   set nocsverb
-  cs add /home/hum/Projects/opencv-2.4/build/cscope.out
+  cs add /home/hum/Projects/opencv-2.4/src/modules/cscope.out
   set csverb
 endif
 
