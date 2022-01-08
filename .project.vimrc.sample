@@ -9,9 +9,106 @@ if filereadable("/home/hum/Projects/opencv-2.4/build/cscope.out")
   set csverb
 endif
 
-if isdirectory('/home/hum/Projects/opencv-2.4/build')
-  set path+=/home/hum/Projects/opencv-2.4/build
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/calib3d/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/calib3d/include
 endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/core/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/core/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/features2d/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/features2d/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/gpu/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/gpu/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/imgproc/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/imgproc/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/legacy/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/legacy/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/nonfree/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/nonfree/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/ocl/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/ocl/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/python/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/python/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/stitching/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/stitching/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/ts/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/ts/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/videostab/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/videostab/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/world/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/world/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/androidcamera/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/androidcamera/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/contrib/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/contrib/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/dynamicuda/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/dynamicuda/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/flann/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/flann/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/highgui/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/highgui/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/java/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/java/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/ml/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/ml/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/objdetect/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/objdetect/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/photo/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/photo/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/superres/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/superres/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/video/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/video/include
+endif
+
+if isdirectory('/home/hum/Projects/opencv-2.4/src/modules/viz/include')
+  set path+=/home/hum/Projects/opencv-2.4/src/modules/viz/include
+endif
+
 
 "pcl-1.10
 if filereadable("/usr/include/pcl-1.10/tags")
