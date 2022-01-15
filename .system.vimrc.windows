@@ -1,6 +1,7 @@
 colorscheme darkblue
 set belloff=all
 set guifont=굴림체:h16:cHANGEUL:qDRAFT
+set clipboard=unnamed
 
 
 if isdirectory('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include')
