@@ -1,7 +1,8 @@
 
 del cscope.files cscope.out
 
-where /r "%CD%" *.c *.cpp *.cc *.h *.hpp *.java *.s *.S *.inc *.def > cscope.files
+rem *.inc *.def
+where /r "%CD%" *.c *.cpp *.cc *.h *.hpp > cscope.files
 
 cscope -i cscope.files
 

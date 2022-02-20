@@ -2,6 +2,6 @@
 
 rm -rf tags
 
-ctags --langmap=C++:+.inc+.def --c++-kinds=+p --fields=+iaS --sort=foldcase -R .
+# --langmap=C++:+.inc+.def  << file extensions and language mappings can be added like this
 
-
+ctags --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ --sort=foldcase --links=no -R .
