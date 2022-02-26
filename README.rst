@@ -29,7 +29,7 @@ About
 .vimrc
 ------
 
-- Makes vim more useful to work on C/C++/Java projects
+- Makes vim more useful to work on C/C++ projects
   (and possibly other projects too)
 - Includes many useful short-cut key mappings
 - Includes many useful vim plugins (via Vundle)
@@ -37,17 +37,17 @@ About
 mkcscope.sh
 -----------
 
-- Script to generate cscope.out
+- Script to generate **cscope.out**
 
 mkctags.sh
 ----------
 
-- Script to generate ctags
+- Script to generate **ctags**
 
 rmtags.sh
 ---------
 
-- Script to remove ctags, cscope.out and cscope.files
+- Script to remove **ctags**, **cscope.out**
 
 .cncpp.vimrc
 -----------
@@ -112,5 +112,5 @@ References
 
 - http://kldp.org/node/125263
 
-Jeonghum Joh
+Jumogehn H
 
