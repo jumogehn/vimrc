@@ -1,5 +1,4 @@
+let g:gcpp_headers_path = system("g++ --version | grep g++ | awk '{print \"/usr/include/c++/\"$NF}'")
 
-if isdirectory('/usr/include/c++/9')
-  set path+=/usr/include/c++/9
-endif
+execute 'set path+=' . g:gcpp_headers_path
 
