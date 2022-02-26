@@ -42,7 +42,8 @@ echo F | xcopy .cncpp.vimrc  /A /Y %HOME%\.cncpp.vimrc
 echo F | xcopy .system.vimrc.windows /A /Y %HOME%\.system.vimrc
 
 rem Install Vundle
-git clone https://github.com/VundleVim/Vundle.vim.git %HOME%/.vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ^
+%HOME%/.vim/bundle/Vundle.vim
 
 
 rem Removing previously installed directory .vim_tools
@@ -54,28 +55,37 @@ echo F | xcopy rmtags.bat /A /Y   %HOME%\.vim_tools\rmtags.bat
 echo F | xcopy vim.bat /A /Y      %HOME%\.vim_tools\vim.bat
 echo F | xcopy vi.bat /A /Y       %HOME%\.vim_tools\vi.bat
 
-rem curl -o %HOME%\.vim_tools\cscope-15.8a-win32rev1-static.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cscope-win32/cscope-15.8a-win32rev1-static.zip
-curl -o %HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/cscope-win32/cscope-15.8a-win64rev1-static.zip
+curl -o %HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip ^
+https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com^
+/cscope-win32/cscope-15.8a-win64rev1-static.zip
+
 if not exist "%HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip" (
   echo DOWNLOADING OF CSCOPE HAS BEEN FAILED!
   goto quit
   )
-C:\"Program Files"\7-Zip\7z x %HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip -o%HOME%\.vim_tools
+
+C:\"Program Files"\7-Zip\7z x ^
+%HOME%\.vim_tools\cscope-15.8a-win64rev1-static.zip -o%HOME%\.vim_tools
+
 if not exist %HOME%\.vim_tools\cscope.exe (
   echo UNZIPPING CSCOPE HAS BEEN FAILED!
   goto quit
   )
 
-curl -o %HOME%\.vim_tools\ctags58.zip https://jaist.dl.sourceforge.net/project/ctags/ctags/5.8/ctags58.zip?viasf=1
+curl -o %HOME%\.vim_tools\ctags58.zip ^
+https://jaist.dl.sourceforge.net/project/ctags/ctags/5.8/ctags58.zip?viasf=1
+
 if not exist "%HOME%\.vim_tools\ctags58.zip" (
   echo DOWNLOADING OF CTAGS HAS BEEN FAILED!
   goto quit
   )
+
 C:\"Program Files"\7-Zip\7z x %HOME%\.vim_tools\ctags58.zip -o%HOME%\.vim_tools
 if not exist %HOME%\.vim_tools\ctags58 (
   echo UNZIPPING CTAGS HAS BEEN FAILED!
   goto quit
   )
+
 echo F | xcopy %HOME%\.vim_tools\ctags58\ctags.exe %HOME%\.vim_tools\ctags.exe
 if not exist %HOME%\.vim_tools\ctags.exe (
   echo COPYING CTAGS HAS BEEN FAILED!
