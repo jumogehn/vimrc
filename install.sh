@@ -39,7 +39,8 @@ fi
 # Create new symbolic links to the *.vimrc files
 ln -s -T `pwd`/.vimrc $HOME/.vimrc
 ln -s -T `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
-ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
+#ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
+ln -s -T `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
 #mkdir -p $HOME/.vim/syntax
 #ln -s -T `pwd`/php.vim $HOME/.vim/syntax/php.vim

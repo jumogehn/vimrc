@@ -1,0 +1,14 @@
+let g:VIM_ANDROID_TOP="/home/jeonghum/Projects/android-13.0.0_r67"
+
+"RESET INCLUDE header file paths
+set path=
+
+"ADD INCLUDE header file paths
+if isdirectory(expand(VIM_ANDROID_TOP).'/bionic/libc/include')
+  exec 'set path+='.expand(VIM_ANDROID_TOP).'/bionic/libc/include'
+endif
+
+if isdirectory(expand(VIM_ANDROID_TOP).'/bionic/libstdc++/include')
+  exec 'set path+='.expand(VIM_ANDROID_TOP).'/bionic/libstdc++/include'
+endif
+

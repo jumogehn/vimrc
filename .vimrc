@@ -126,7 +126,7 @@ endif
 
 "============ system specific settings if any =============
 "Make sure c++ include path in included in this.
-if filereadable(expand('~/.system.vimrc')) "need for c++ include path setting
+if filereadable(expand('~/.system.vimrc')) "need for c/c++ include path setting
   source ~/.system.vimrc
 endif
 
