@@ -1,0 +1,10 @@
+let g:VIM_FFMPEG_TOP="/opt/ffmpeg"
+
+"RESET INCLUDE header file paths
+set path=
+
+"ADD INCLUDE header file paths
+if isdirectory(expand(VIM_FFMPEG_TOP).'/include')
+  exec 'set path+='.expand(VIM_FFMPEG_TOP).'/include'
+endif
+
