@@ -58,27 +58,21 @@ echo
 echo ==============================================
 echo You must Open vim and :PluginInstall yourself!
 echo ==============================================
-echo
 
+mkdir -p ~/.bin
 # Remove previously installed symbolic links
-if [ -L "/usr/local/bin/mkctags.sh" ]; then
-  sudo rm -f /usr/local/bin/mkctags.sh
-fi
-
-if [ -L "/usr/local/bin/mkcscope.sh" ]; then
-  sudo rm -f /usr/local/bin/mkcscope.sh
-fi
-
-if [ -L "/usr/local/bin/rmtags.sh" ]; then
-  sudo rm -f /usr/local/bin/rmtags.sh
-fi
+rm -f ~/.bin/mkctags.sh
+rm -f ~/.bin/mkcscope.sh
+rm -f ~/.bin/rmtags.sh
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
-sudo ln -s -T `pwd`/mkctags.sh /usr/local/bin/mkctags.sh
-sudo ln -s -T `pwd`/mkcscope.sh /usr/local/bin/mkcscope.sh
-sudo ln -s -T `pwd`/rmtags.sh /usr/local/bin/rmtags.sh
-sudo chown -h `whoami`:`whoami` /usr/local/bin/mkctags.sh
-sudo chown -h `whoami`:`whoami` /usr/local/bin/mkcscope.sh
-sudo chown -h `whoami`:`whoami` /usr/local/bin/rmtags.sh
+ln -s -T `pwd`/mkctags.sh ~/.bin/mkctags.sh
+ln -s -T `pwd`/mkcscope.sh ~/.bin/mkcscope.sh
+ln -s -T `pwd`/rmtags.sh ~/.bin/rmtags.sh
+
+echo ==============================================
+echo You must make sure ~/.bin is in your PATH env.
+echo ==============================================
+echo
 
 fi
