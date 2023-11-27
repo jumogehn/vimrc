@@ -28,7 +28,7 @@ if v:version >= 703
       set cc=
     endif
   endfunction
-  nmap ,7 :call Ht()<cr>
+  noremap <Leader>7 :call Ht()<cr>
   highlight ColorColumn ctermbg=DarkYellow guibg=DarkYellow
   " Whitespace at the end of a line. This little dance suppresses
   " whitespace that has just been typed.
@@ -102,37 +102,57 @@ augroup END
 " function definition is supported only after version 5 of vim
 if version >= 500
 
+  "tag select [ident]
+  func! Ts()
+    let wd = expand("<cword>")
+    exe "ts ".wd
+  endfunc
+  noremap <Leader>ts :call Ts()<cr>
+
+  "split + tag select [ident]
   func! Sts()
-    let st = expand("<cword>")
-    exe "sts ".st
+    let wd = expand("<cword>")
+    exe "sts ".wd
   endfunc
-  nmap ,st :call Sts()<cr>
+  noremap <Leader>st :call Sts()<cr>
 
+"tag list
+  "tag jump
   func! Tj()
-    let st = expand("<cword>")
-    exe "tj ".st
+    let wd = expand("<cword>")
+    exe "tj ".wd
   endfunc
-  nmap ,tj :call Tj()<cr>
+  noremap <Leader>tj :call Tj()<cr>
 
+  "tag next
   func! Tn()
     exe "tn"
   endfunc
-  nmap ,tn :call Tn()<cr>
+  noremap <Leader>tn :call Tn()<cr>
 
+  "tag previous
   func! Tp()
     exe "tp"
   endfunc
-  nmap ,tp :call Tp()<cr>
+  noremap <Leader>tp :call Tp()<cr>
 
+  "tag rewind
   func! Tr()
     exe "tr"
   endfunc
-  nmap ,tr :call Tr()<cr>
+  noremap <Leader>tr :call Tr()<cr>
 
+  "tag first
+  func! Tf()
+    exe "tf"
+  endfunc
+  noremap <Leader>tf :call Tf()<cr>
+
+  "tag last
   func! Tl()
     exe "tl"
   endfunc
-  nmap ,tl :call Tl()<cr>
+  noremap <Leader>tl :call Tl()<cr>
 
 endif
 
@@ -143,90 +163,171 @@ set cst
 
 if version >= 500
 
-  func! Csw()
+  func! Cw()
     exe "cs show"
   endfunc
-  nmap ,csw :call Csw()<cr>
+  noremap <Leader>cw :call Cw()<cr>
 
-  func! Csc()
-    let csc = expand("<cword>")
+  func! Cc()
+    let wd = expand("<cword>")
     new
-    exe "cs find c ".csc
+    exe "cs find c ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,csc :call Csc()<cr>
+  noremap <Leader>cc :call Cc()<cr>
 
-  func! Csd()
-    let csd = expand("<cword>")
+  func! Cd()
+    let wd = expand("<cword>")
     new
-    exe "cs find d ".csd
+    exe "cs find d ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,csd :call Csd()<cr>
+  noremap <Leader>cd :call Cd()<cr>
 
-  func! Cse()
-    let cse = expand("<cword>")
+  func! Ce()
+    let wd = expand("<cword>")
     new
-    exe "cs find e ".cse
+    exe "cs find e ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,cse :call Cse()<cr>
+  noremap <Leader>ce :call Ce()<cr>
 
-  func! Csf()
-    let csf = expand("<cword>")
+  func! Cf()
+    let wd = expand("<cword>")
     new
-    exe "cs find f ".csf
+    exe "cs find f ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,csf :call Csf()<cr>
+  noremap <Leader>cf :call Cf()<cr>
 
-  func! Csg()
-    let csg = expand("<cword>")
+  func! Cg()
+    let wd = expand("<cword>")
     new
-    exe "cs find g ".csg
+    exe "cs find g ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,csg :call Csg()<cr>
+  noremap <Leader>cg :call Cg()<cr>
 
-  func! Csi()
-    let csi = expand("<cword>")
+  func! Ci()
+    let wd = expand("<cword>")
     new
-    exe "cs find i ".csi
+    exe "cs find i ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,csi :call Csi()<cr>
+  noremap <Leader>ci :call Ci()<cr>
 
-  func! Css()
-    let css = expand("<cword>")
+  func! Cs()
+    let wd = expand("<cword>")
     new
-    exe "cs find s ".css
+    exe "cs find s ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,css :call Css()<cr>
+  noremap <Leader>cs :call Cs()<cr>
 
-  func! Cst()
-    let cst = expand("<cword>")
+  func! Ct()
+    let wd = expand("<cword>")
     new
-    exe "cs find t ".cst
+    exe "cs find t ".wd
     if getline(1) == " "
       exe "q!"
     endif
   endfunc
-  nmap ,cst :call Cst()<cr>
+  noremap <Leader>ct :call Ct()<cr>
+
+
+  func! Ccv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find c ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>ccv :call Ccv()<cr>
+
+  func! Cdv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find d ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>cdv :call Cdv()<cr>
+
+  func! Cev()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find e ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>cev :call Cev()<cr>
+
+  func! Cfv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find f ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>cfv :call Cfv()<cr>
+
+  func! Cgv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find g ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>cgv :call Cgv()<cr>
+
+  func! Civ()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find i ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>civ :call Civ()<cr>
+
+  func! Csv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find s ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>csv :call Csv()<cr>
+
+  func! Ctv()
+    let wd = expand("<cword>")
+    vnew
+    exe "cs find t ".wd
+    if getline(1) == " "
+      exe "q!"
+    endif
+  endfunc
+  noremap <Leader>ctv :call Ctv()<cr>
 
 endif
 
@@ -241,10 +342,10 @@ if version >= 500
 
   "============ man page setting =============
   func! Man()
-    let sm = expand("<cword>")
-    exe "!man -S 2:3:4:5:6:7:8:9:tcl:n:l:p:o ".sm
+    let wd = expand("<cword>")
+    exe "!man -S 2:3:4:5:6:7:8:9:tcl:n:l:p:o ".wd
   endfunc
-  nmap ,ma :call Man()<cr><cr>
+  noremap <Leader>ma :call Man()<cr><cr>
 
   "============ make setting =============
   let startdir = getcwd()
@@ -252,7 +353,7 @@ if version >= 500
     exe "!cd ".startdir
     exe "make"
   endfunc
-  nmap ,mk :call Make()<cr><cr>
+  noremap <Leader>mk :call Make()<cr><cr>
 
   "============ clean make setting =============
   func! CleanMake()
@@ -260,7 +361,7 @@ if version >= 500
     exe "make clean"
     exe "make"
   endfunc
-  nmap ,cmk :call CleanMake()<cr><cr>
+  noremap <Leader>cmk :call CleanMake()<cr><cr>
 
 endif
 

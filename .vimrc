@@ -1,3 +1,4 @@
+let mapleader = ","
 "============ sourcing vimrc for C & C++ =============
 source ~/.cncpp.vimrc
 
@@ -5,9 +6,9 @@ source ~/.cncpp.vimrc
 
 "============ now general vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
-nmap ,6 :set invpaste paste?<CR>
+noremap <Leader>6 :set invpaste paste?<CR>
 
-set pastetoggle=,6
+set pastetoggle=<Leader>6
 set showmode
 set fencs=ucs-bom,utf-8,cp949,euc-kr
 set bg=dark
@@ -51,36 +52,36 @@ let NERDTreeWinPos='right'
 let g:tagbar_left = 1
 let g:tagbar_width = 30
 
-"========= key mapping ==========
+"========= key noremapping ==========
 
-nmap ,2 v]}zf
-nmap ,3 zo
+noremap <Leader>2 v]}zf
+noremap <Leader>3 zo
 
-"nmap ,4 :Tlist<CR><C-W><C-W>
-nmap ,4 :TagbarToggle<CR>
-nmap ,5 :NERDTreeToggle<CR>
-"nmap ,6 :look at the beginning
-"nmap ,7 :look at .cncpp.vimrc
+"noremap <Leader>4 :Tlist<CR><C-W><C-W>
+noremap <Leader>4 :TagbarToggle<CR>
+noremap <Leader>5 :NERDTreeToggle<CR>
+"noremap <Leader>6 :look at the beginning
+"noremap <Leader>7 :look at .cncpp.vimrc
 
-nmap ,9 :BufExplorer<cr>
+noremap <Leader>9 :BufExplorer<cr>
 
-map <PageUp> <C-U><C-U>
-map <PageDown> <C-D><C-D>
+noremap <PageUp> <C-U><C-U>
+noremap <PageDown> <C-D><C-D>
 
-nmap <C-H> <C-W>h
-nmap <C-J> <C-W>j
-nmap <C-K> <C-W>k
-nmap <C-L> <C-W>l
+noremap <C-H> <C-W>h
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-L> <C-W>l
 
-nmap <S-H> <C-W><<C-W><<C-W><<C-W><
-nmap <S-J> <C-W>-<C-W>-<C-W>-<C-W>-
-nmap <S-K> <C-W>+<C-W>+<C-W>+<C-W>+
-nmap <S-L> <C-W>><C-W>><C-W>><C-W>>
+noremap <S-H> <C-W><<C-W><<C-W><<C-W><
+noremap <S-J> <C-W>-<C-W>-<C-W>-<C-W>-
+noremap <S-K> <C-W>+<C-W>+<C-W>+<C-W>+
+noremap <S-L> <C-W>><C-W>><C-W>><C-W>>
 
 "========= switch between file buffers ========
-map ,x :bn!<CR>	  " Switch to Next File Buffer
-map ,z :bp!<CR>	  " Switch to Previous File Buffer
-map ,w :bw<CR>	  " Close Current File Buffer
+noremap <Leader>x :bn!<CR>	  " Switch to Next File Buffer
+noremap <Leader>z :bp!<CR>	  " Switch to Previous File Buffer
+noremap <Leader>w :bw<CR>	  " Close Current File Buffer
 
 
 if version >= 500
@@ -96,7 +97,7 @@ if version >= 500
       exe "%!xxd -r"
     endif
   endfunc
-  nmap ,h :call Hv()<cr>
+  noremap <Leader>h :call Hv()<cr>
 
   "============ file buffer CleanClose =============
   func! CleanClose(tosave)
@@ -117,10 +118,10 @@ if version >= 500
     exe "bd".todelbufNr
   endfunc
 
-  nmap ,cf :call CleanClose(0)<cr>
+  noremap <Leader>cf :call CleanClose(0)<cr>
 
   "============ open CWD =============
-  nmap ,od :e ./<cr>
+  noremap <Leader>od :e ./<cr>
 
 endif
 
