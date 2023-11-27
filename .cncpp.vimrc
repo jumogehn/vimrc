@@ -116,6 +116,19 @@ if version >= 500
   endfunc
   noremap <Leader>st :call Sts()<cr>
 
+"tag stack
+  "tag stack previous(pop)
+  func! Tsp()
+    exe "po"
+  endfunc
+  noremap <Leader>tsp :call Tsp()<cr>
+
+  "tag stack next
+  func! Tsn()
+    exe "ta"
+  endfunc
+  noremap <Leader>tsn :call Tsn()<cr>
+
 "tag list
   "tag jump
   func! Tj()
