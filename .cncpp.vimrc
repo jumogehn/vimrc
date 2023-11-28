@@ -103,68 +103,68 @@ augroup END
 if version >= 500
 
   "tag select [ident]
-  func! Ts()
+  function! Ts()
     let wd = expand("<cword>")
     exe "ts ".wd
-  endfunc
+  endfunction
   noremap <Leader>ts :call Ts()<cr>
 
   "split + tag select [ident]
-  func! Sts()
+  function! Sts()
     let wd = expand("<cword>")
     exe "sts ".wd
-  endfunc
+  endfunction
   noremap <Leader>st :call Sts()<cr>
 
 "tag stack
   "tag stack previous(pop)
-  func! Tsp()
+  function! Tsp()
     exe "po"
-  endfunc
+  endfunction
   noremap <Leader>tsp :call Tsp()<cr>
 
   "tag stack next
-  func! Tsn()
+  function! Tsn()
     exe "ta"
-  endfunc
+  endfunction
   noremap <Leader>tsn :call Tsn()<cr>
 
 "tag list
   "tag jump
-  func! Tj()
+  function! Tj()
     let wd = expand("<cword>")
     exe "tj ".wd
-  endfunc
+  endfunction
   noremap <Leader>tj :call Tj()<cr>
 
   "tag next
-  func! Tn()
+  function! Tn()
     exe "tn"
-  endfunc
+  endfunction
   noremap <Leader>tn :call Tn()<cr>
 
   "tag previous
-  func! Tp()
+  function! Tp()
     exe "tp"
-  endfunc
+  endfunction
   noremap <Leader>tp :call Tp()<cr>
 
   "tag rewind
-  func! Tr()
+  function! Tr()
     exe "tr"
-  endfunc
+  endfunction
   noremap <Leader>tr :call Tr()<cr>
 
   "tag first
-  func! Tf()
+  function! Tf()
     exe "tf"
-  endfunc
+  endfunction
   noremap <Leader>tf :call Tf()<cr>
 
   "tag last
-  func! Tl()
+  function! Tl()
     exe "tl"
-  endfunc
+  endfunction
   noremap <Leader>tl :call Tl()<cr>
 
 endif
@@ -176,170 +176,122 @@ set cst
 
 if version >= 500
 
-  func! Cw()
+  function! Cw()
     exe "cs show"
-  endfunc
+  endfunction
   noremap <Leader>cw :call Cw()<cr>
 
-  func! Cc()
+  function! Cc()
     let wd = expand("<cword>")
     new
     exe "cs find c ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cc :call Cc()<cr>
 
-  func! Cd()
+  function! Cd()
     let wd = expand("<cword>")
     new
     exe "cs find d ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cd :call Cd()<cr>
 
-  func! Ce()
+  function! Ce()
     let wd = expand("<cword>")
     new
     exe "cs find e ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>ce :call Ce()<cr>
 
-  func! Cf()
+  function! Cf()
     let wd = expand("<cword>")
     new
     exe "cs find f ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cf :call Cf()<cr>
 
-  func! Cg()
+  function! Cg()
     let wd = expand("<cword>")
     new
     exe "cs find g ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cg :call Cg()<cr>
 
-  func! Ci()
+  function! Ci()
     let wd = expand("<cword>")
     new
     exe "cs find i ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>ci :call Ci()<cr>
 
-  func! Cs()
+  function! Cs()
     let wd = expand("<cword>")
     new
     exe "cs find s ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cs :call Cs()<cr>
 
-  func! Ct()
+  function! Ct()
     let wd = expand("<cword>")
     new
     exe "cs find t ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>ct :call Ct()<cr>
 
 
-  func! Ccv()
+  function! Ccv()
     let wd = expand("<cword>")
     vnew
     exe "cs find c ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>ccv :call Ccv()<cr>
 
-  func! Cdv()
+  function! Cdv()
     let wd = expand("<cword>")
     vnew
     exe "cs find d ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cdv :call Cdv()<cr>
 
-  func! Cev()
+  function! Cev()
     let wd = expand("<cword>")
     vnew
     exe "cs find e ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cev :call Cev()<cr>
 
-  func! Cfv()
+  function! Cfv()
     let wd = expand("<cword>")
     vnew
     exe "cs find f ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cfv :call Cfv()<cr>
 
-  func! Cgv()
+  function! Cgv()
     let wd = expand("<cword>")
     vnew
     exe "cs find g ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>cgv :call Cgv()<cr>
 
-  func! Civ()
+  function! Civ()
     let wd = expand("<cword>")
     vnew
     exe "cs find i ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>civ :call Civ()<cr>
 
-  func! Csv()
+  function! Csv()
     let wd = expand("<cword>")
     vnew
     exe "cs find s ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>csv :call Csv()<cr>
 
-  func! Ctv()
+  function! Ctv()
     let wd = expand("<cword>")
     vnew
     exe "cs find t ".wd
-    if getline(1) == " "
-      exe "q!"
-    endif
-  endfunc
+  endfunction
   noremap <Leader>ctv :call Ctv()<cr>
 
 endif
@@ -354,26 +306,26 @@ endif
 if version >= 500
 
   "============ man page setting =============
-  func! Man()
+  function! Man()
     let wd = expand("<cword>")
     exe "!man -S 2:3:4:5:6:7:8:9:tcl:n:l:p:o ".wd
-  endfunc
+  endfunction
   noremap <Leader>ma :call Man()<cr><cr>
 
   "============ make setting =============
   let startdir = getcwd()
-  func! Make()
+  function! Make()
     exe "!cd ".startdir
     exe "make"
-  endfunc
+  endfunction
   noremap <Leader>mk :call Make()<cr><cr>
 
   "============ clean make setting =============
-  func! CleanMake()
+  function! CleanMake()
     exe "!cd ".startdir
     exe "make clean"
     exe "make"
-  endfunc
+  endfunction
   noremap <Leader>cmk :call CleanMake()<cr><cr>
 
 endif

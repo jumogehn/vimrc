@@ -88,7 +88,7 @@ if version >= 500
 
   "============ hexViewer setting =============
   let g:hexViewer = 0
-  func! Hv()
+  function! Hv()
     if (g:hexViewer == 0)
       let g:hexViewer = 1
       exe "%!xxd"
@@ -96,11 +96,11 @@ if version >= 500
       let g:hexViewer = 0
       exe "%!xxd -r"
     endif
-  endfunc
+  endfunction
   noremap <Leader>h :call Hv()<cr>
 
   "============ file buffer CleanClose =============
-  func! CleanClose(tosave)
+  function! CleanClose(tosave)
     if (a:tosave == 1)
       w!
     endif
@@ -116,7 +116,7 @@ if version >= 500
       new
     endif
     exe "bd".todelbufNr
-  endfunc
+  endfunction
 
   noremap <Leader>cf :call CleanClose(0)<cr>
 
