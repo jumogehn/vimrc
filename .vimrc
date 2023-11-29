@@ -83,6 +83,9 @@ noremap <Leader>x :bn!<CR>	  " Switch to Next File Buffer
 noremap <Leader>z :bp!<CR>	  " Switch to Previous File Buffer
 noremap <Leader>w :bw<CR>	  " Close Current File Buffer
 
+"========= split ========
+noremap <Leader>i :vs<cr>
+noremap <Leader>- :sp<cr>
 
 if version >= 500
 
