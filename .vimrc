@@ -49,8 +49,9 @@ call vundle#end()
 filetype plugin indent on     " required!
 
 let NERDTreeWinPos='right'
-let g:tagbar_left = 1
-let g:tagbar_width = 30
+let g:NERDTreeWinSize=50
+let g:tagbar_left=1
+let g:tagbar_width=50
 
 "========= key noremapping ==========
 
