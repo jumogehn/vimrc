@@ -74,10 +74,69 @@ noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-L> <C-W>l
 
-noremap <S-H> <C-W><<C-W><<C-W><<C-W><
-noremap <S-J> <C-W>-<C-W>-<C-W>-<C-W>-
-noremap <S-K> <C-W>+<C-W>+<C-W>+<C-W>+
-noremap <S-L> <C-W>><C-W>><C-W>><C-W>>
+noremap <S-H> <C-W>4<
+noremap <S-J> <C-W>4-
+noremap <S-K> <C-W>4+
+noremap <S-L> <C-W>4>
+
+"명령모드
+"CTRL-W s :[N]sp[plit] 현재 파일을 두 개의 수평 창으로 나눔
+"CTRL-W v :[N]vs[plit] 현재 파일을 두 개의 수직 창으로 나눔
+"CTRL-W n :new 새로운 수평 창 생성
+"CTRL-W ^ 또는 CTRL-W CTRL-^ 수평 창으로 나누고 이전 파일의 오픈
+"CTRL-W f 창을 수평으로 나누고 커서 위치의 파일 오픈
+"CTRL-W i 커서 위치의 단어가 정의된 파일을 오픈
+"
+"창삭제
+"CTRL-W q :q[uit]! 현재 커서의 창을 종료
+"CTRL-W c :close 현재 커서의 창 닫기
+"CTRL-W o :on[ly] 현재 커서의 창만 남기고 모든 창 삭제
+"
+"창이동
+"CTRL-W h 왼쪽 창으로 커서 이동
+"CTRL-W j 아래쪽 창으로 커서 이동
+"CTRL-W k 위쪽 창으로 커서 이동
+"CTRL-W l 오른쪽 창으로 커서 이동
+"CTRL-W w 창을 순차적으로 이동
+"CTRL-W p 가장 최근에 이동한 방향으로 이동
+"CTRL-W t 최상위 창으로 이동
+"CTRL-W b 최하위 창으로 이동
+"
+"창이동
+"CTRL-W r 순착으로 창의 위치를 순환
+"CTRL-W x 이전 창과 위치를 바꿈
+"CTRL-W H 현재창을 왼쪽 큰화면으로 이동
+"CTRL-W J 현재창을 아래쪽 큰화면으로 이동
+"CTRL-W K 현재창을 위쪽 큰화면으로 이동
+"CTRL-W L 현재창을 오른쪽 큰화면으로 이동
+"
+"창 크기 조정
+"
+"CTRL-W =
+"창의 크기를 모두 균등하게 함
+"
+"CTRL-W _
+"수평 분할에서 창의 크기를 최대화
+"
+"CTRL-W |
+"수직 분할에서 창의 크기를 최대화
+"
+"CTRL-W [N]+
+":res[ize] +N
+"창의 크기를 N행 만큼 증가
+"
+"CTRL-W [N]-
+":res[ize] -N
+"창의 크기를 N행 만큼 감소
+"
+"CTRL-W [N]>
+"창의 크기를 오른쪽으로 N칸 만큼 증가
+"
+"CTRL-W [N]<
+"창의 크기를 오른쪽으로 N칸 만큼 감소
+"
+"다중창 사용의 경우 대부분 붙여서 사용하는 명령어는 CTRL을 같이 눌러도 똑같은 역활을 하는 경우가 많다.
+"예) CTRL-W j 는 CTRL-W CTRL-J와 같다.
 
 "========= switch between file buffers ========
 noremap <Leader>x :bn!<CR>	  " Switch to Next File Buffer
