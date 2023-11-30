@@ -79,6 +79,10 @@ noremap <S-J> <C-W>4-
 noremap <S-K> <C-W>4+
 noremap <S-L> <C-W>4>
 
+"for NERDTree
+noremap <S-N> <C-W>4<
+noremap <S-M> <C-W>4>
+
 "명령모드
 "CTRL-W s :[N]sp[plit] 현재 파일을 두 개의 수평 창으로 나눔
 "CTRL-W v :[N]vs[plit] 현재 파일을 두 개의 수직 창으로 나눔
