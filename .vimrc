@@ -1,4 +1,4 @@
-let mapleader = ","
+let g:mapleader = ","
 "============ sourcing vimrc for C & C++ =============
 source ~/.cncpp.vimrc
 
@@ -48,7 +48,7 @@ call vundle#end()
 
 filetype plugin indent on     " required!
 
-let NERDTreeWinPos='right'
+let g:NERDTreeWinPos='right'
 let g:NERDTreeWinSize=50
 let g:tagbar_left=1
 let g:tagbar_width=50
@@ -77,14 +77,51 @@ noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-L> <C-W>l
 
-noremap <S-H> <C-W>4<
-noremap <S-J> <C-W>4-
-noremap <S-K> <C-W>4+
-noremap <S-L> <C-W>4>
+noremap HH <C-W>4<
+noremap JJ <C-W>4-
+noremap KK <C-W>4+
+noremap LL <C-W>4>
 
-"for NERDTree
-noremap <S-N> <C-W>4<
-noremap <S-M> <C-W>4>
+"noremap <Leader>4 :TagbarToggle<CR>
+"noremap <Leader>5 :NERDTreeToggle<CR>
+
+let g:nerdtree_open = 0
+let g:tagbar_open = 0
+
+function! CloseThe2()
+  " Detect which plugins are open
+  if exists('t:NERDTreeBufName')
+    let g:nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
+  else
+    let g:nerdtree_open = 0
+  endif
+  let g:tagbar_open = bufwinnr('__Tagbar__') != -1
+
+  " Perform the appropriate action
+  if g:nerdtree_open
+    NERDTreeClose
+  endif
+  if g:tagbar_open
+    TagbarClose
+  endif
+endfunction
+
+function! RecoverThe2()
+  " Perform the appropriate action
+  if g:nerdtree_open
+    NERDTree
+    let g:nerdtree_open = 0
+  endif
+  if g:tagbar_open
+    TagbarOpen
+    let g:tagbar_open = 0
+  endif
+endfunction
+
+noremap <C-W>HH :call CloseThe2()<cr><C-W>H :call RecoverThe2()<cr>
+noremap <C-W>JJ :call CloseThe2()<cr><C-W>J :call RecoverThe2()<cr>
+noremap <C-W>KK :call CloseThe2()<cr><C-W>K :call RecoverThe2()<cr>
+noremap <C-W>LL :call CloseThe2()<cr><C-W>L :call RecoverThe2()<cr>
 
 "명령모드
 "CTRL-W s :[N]sp[plit] 현재 파일을 두 개의 수평 창으로 나눔
@@ -112,6 +149,8 @@ noremap <S-M> <C-W>4>
 "창이동
 "CTRL-W r 순착으로 창의 위치를 순환
 "CTRL-W x 이전 창과 위치를 바꿈
+"
+"아래 4개는 오버라이딩됨
 "CTRL-W H 현재창을 왼쪽 큰화면으로 이동
 "CTRL-W J 현재창을 아래쪽 큰화면으로 이동
 "CTRL-W K 현재창을 위쪽 큰화면으로 이동
