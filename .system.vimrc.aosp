@@ -1,4 +1,4 @@
-let g:VIM_ANDROID_TOP="/home/jeonghum/Projects/android-13.0.0_r67"
+let g:VIM_ANDROID_TOP="$HOME/Projects/android-13.0.0_r67"
 
 "RESET INCLUDE header file paths
 set path=
