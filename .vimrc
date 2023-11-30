@@ -58,6 +58,9 @@ let g:tagbar_width=50
 noremap <Leader>2 v]}zf
 noremap <Leader>3 zo
 
+"note for NERDTree tagbar
+"https://stackoverflow.com/questions/6624043/how-to-open-or-close-nerdtree-and-tagbar-with-leader
+
 "noremap <Leader>4 :Tlist<CR><C-W><C-W>
 noremap <Leader>4 :TagbarToggle<CR>
 noremap <Leader>5 :NERDTreeToggle<CR>
