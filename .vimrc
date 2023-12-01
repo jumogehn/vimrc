@@ -82,10 +82,11 @@ noremap <C-J> <C-W>j
 noremap <C-K> <C-W>k
 noremap <C-L> <C-W>l
 
-noremap HH <C-W>4<
-noremap JJ <C-W>4-
-noremap KK <C-W>4+
-noremap LL <C-W>4>
+noremap <S-H> <C-W>4<
+noremap <S-J> <C-W>4-
+noremap <S-K> <C-W>4+
+noremap <S-L> <C-W>4>
+noremap <S-M> <C-W>4>
 
 "noremap <Leader>4 :TagbarToggle<CR>
 "noremap <Leader>5 :NERDTreeToggle<CR>
