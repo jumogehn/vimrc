@@ -69,6 +69,9 @@ noremap <Leader>5 :NERDTreeToggle<CR>
 noremap <Leader>e :E<CR>
 noremap <Leader>q <C-W>o<C-W>q
 
+noremap <Leader>n <C-W>n
+noremap <Leader>v <C-W>v
+
 noremap <Leader>9 :BufExplorer<CR>
 
 noremap <PageUp> <C-U><C-U>
