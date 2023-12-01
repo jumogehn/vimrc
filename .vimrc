@@ -66,8 +66,10 @@ noremap <Leader>4 :TagbarToggle<CR>
 noremap <Leader>5 :NERDTreeToggle<CR>
 "noremap <Leader>6 :look at the beginning
 "noremap <Leader>7 :look at .cncpp.vimrc
+noremap <Leader>e :E<CR>
+noremap <Leader>q <C-W>o<C-W>q
 
-noremap <Leader>9 :BufExplorer<cr>
+noremap <Leader>9 :BufExplorer<CR>
 
 noremap <PageUp> <C-U><C-U>
 noremap <PageDown> <C-D><C-D>
@@ -121,10 +123,10 @@ function! RecoverThe2()
   endif
 endfunction
 
-noremap <C-W>HH :call CloseThe2()<cr><C-W>H :call RecoverThe2()<cr>
-noremap <C-W>JJ :call CloseThe2()<cr><C-W>J :call RecoverThe2()<cr>
-noremap <C-W>KK :call CloseThe2()<cr><C-W>K :call RecoverThe2()<cr>
-noremap <C-W>LL :call CloseThe2()<cr><C-W>L :call RecoverThe2()<cr>
+noremap <C-W>HH :call CloseThe2()<CR><C-W>H :call RecoverThe2()<CR>
+noremap <C-W>JJ :call CloseThe2()<CR><C-W>J :call RecoverThe2()<CR>
+noremap <C-W>KK :call CloseThe2()<CR><C-W>K :call RecoverThe2()<CR>
+noremap <C-W>LL :call CloseThe2()<CR><C-W>L :call RecoverThe2()<CR>
 
 "명령모드
 "CTRL-W s :[N]sp[plit] 현재 파일을 두 개의 수평 창으로 나눔
@@ -193,8 +195,8 @@ noremap <Leader>z :bp!<CR>	  " Switch to Previous File Buffer
 noremap <Leader>w :bw<CR>	  " Close Current File Buffer
 
 "========= split ========
-noremap <Leader>i :vs<cr>
-noremap <Leader>- :sp<cr>
+noremap <Leader>i :vs<CR>
+noremap <Leader>- :sp<CR>
 
 if version >= 500
 
@@ -209,7 +211,7 @@ if version >= 500
       exe "%!xxd -r"
     endif
   endfunction
-  noremap <Leader>h :call Hv()<cr>
+  noremap <Leader>h :call Hv()<CR>
 
   "============ file buffer CleanClose =============
   function! CleanClose(tosave)
@@ -230,10 +232,10 @@ if version >= 500
     exe "bd".todelbufNr
   endfunction
 
-  noremap <Leader>cf :call CleanClose(0)<cr>
+  noremap <Leader>cf :call CleanClose(0)<CR>
 
   "============ open CWD =============
-  noremap <Leader>od :e ./<cr>
+  noremap <Leader>od :e ./<CR>
 
 endif
 
