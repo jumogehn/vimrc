@@ -71,6 +71,7 @@ noremap <Leader>q <C-W>o<C-W>q
 
 noremap <Leader>n <C-W>n
 noremap <Leader>v <C-W>v
+noremap <Leader>s <C-W>s
 
 noremap <Leader>9 :BufExplorer<CR>
 
