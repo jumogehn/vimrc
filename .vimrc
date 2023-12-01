@@ -85,6 +85,9 @@ noremap LL <C-W>4>
 "noremap <Leader>4 :TagbarToggle<CR>
 "noremap <Leader>5 :NERDTreeToggle<CR>
 
+"For those interested in this function(CloseThe2, RecoverThe2) and
+"keymap(<C-W>HH) I now want some advice in the stackoverflow :
+"https://stackoverflow.com/questions/77578019/vimscript-for-managing-windows-need-some-review
 let g:nerdtree_open = 0
 let g:tagbar_open = 0
 
