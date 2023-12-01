@@ -91,46 +91,42 @@ noremap <S-M> <C-W>4>
 "noremap <Leader>4 :TagbarToggle<CR>
 "noremap <Leader>5 :NERDTreeToggle<CR>
 
-"For those interested in this function(CloseThe2, RecoverThe2) and
-"keymap(<C-W>HH) I now want some advice in the stackoverflow :
+"The keymap below can be implemented with the help of stackoverflow and it's
+"member romainl (https://stackoverflow.com/users/546861/romainl)
 "https://stackoverflow.com/questions/77578019/vimscript-for-managing-windows-need-some-review
-let g:nerdtree_open = 0
-let g:tagbar_open = 0
-
-function! CloseThe2()
-  " Detect which plugins are open
+function! MoveTheWindowAllTheWayTo(direction)
+  "Detect which plugins are open
   if exists('t:NERDTreeBufName')
-    let g:nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
+    let l:nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
   else
-    let g:nerdtree_open = 0
+    let l:nerdtree_open = 0
   endif
-  let g:tagbar_open = bufwinnr('__Tagbar__') != -1
+  let l:tagbar_open = bufwinnr('__Tagbar__') != -1
 
-  " Perform the appropriate action
-  if g:nerdtree_open
+  "Close any open one
+  if l:nerdtree_open
     NERDTreeClose
   endif
-  if g:tagbar_open
+  if l:tagbar_open
     TagbarClose
   endif
-endfunction
 
-function! RecoverThe2()
-  " Perform the appropriate action
-  if g:nerdtree_open
+  "Move the Window the cursor is in
+  exe "wincmd " .. a:direction
+
+  "Reopen any temporarily closed one
+  if l:nerdtree_open
     NERDTree
-    let g:nerdtree_open = 0
   endif
-  if g:tagbar_open
+  if l:tagbar_open
     TagbarOpen
-    let g:tagbar_open = 0
   endif
 endfunction
 
-noremap <C-W>HH :call CloseThe2()<CR><C-W>H :call RecoverThe2()<CR>
-noremap <C-W>JJ :call CloseThe2()<CR><C-W>J :call RecoverThe2()<CR>
-noremap <C-W>KK :call CloseThe2()<CR><C-W>K :call RecoverThe2()<CR>
-noremap <C-W>LL :call CloseThe2()<CR><C-W>L :call RecoverThe2()<CR>
+noremap <C-W>HH :call MoveTheWindowAllTheWayTo('H')<CR>
+noremap <C-W>JJ :call MoveTheWindowAllTheWayTo('J')<CR>
+noremap <C-W>KK :call MoveTheWindowAllTheWayTo('K')<CR>
+noremap <C-W>LL :call MoveTheWindowAllTheWayTo('L')<CR>
 
 "명령모드
 "CTRL-W s :[N]sp[plit] 현재 파일을 두 개의 수평 창으로 나눔
