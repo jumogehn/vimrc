@@ -89,9 +89,6 @@ noremap <S-K> <C-W>4+
 noremap <S-L> <C-W>4>
 noremap <S-M> <C-W>4>
 
-"noremap <Leader>4 :TagbarToggle<CR>
-"noremap <Leader>5 :NERDTreeToggle<CR>
-
 "The keymap below can be implemented with the help of stackoverflow and it's
 "member romainl (https://stackoverflow.com/users/546861/romainl)
 "https://stackoverflow.com/questions/77578019/vimscript-for-managing-windows-need-some-review
