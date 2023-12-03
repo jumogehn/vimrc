@@ -216,18 +216,18 @@ if version >= 500
     if (a:tosave == 1)
       w!
     endif
-    let todelbufNr = bufnr("%")
-    let newbufNr = bufnr("#")
-    if ((newbufNr != -1) && (newbufNr != todelbufNr) && buflisted(newbufNr))
-      exe "b".newbufNr
+    let l:todelbufNr = bufnr("%")
+    let l:newbufNr = bufnr("#")
+    if ((l:newbufNr != -1) && (l:newbufNr != l:todelbufNr) && buflisted(l:newbufNr))
+      exe "b".l:newbufNr
     else
       bnext
     endif
 
-    if (bufnr("%") == todelbufNr)
+    if (bufnr("%") == l:todelbufNr)
       new
     endif
-    exe "bd".todelbufNr
+    exe "bd".l:todelbufNr
   endfunction
 
   noremap <Leader>cf :call CleanClose(0)<CR>
