@@ -110,7 +110,7 @@ function! MoveTheWindowAllTheWayTo(direction)
   endif
 
   "Move the Window the cursor is in
-  exe "wincmd " .. a:direction
+  execute "wincmd " .. a:direction
 
   "Reopen any temporarily closed one
   if l:nerdtree_open
@@ -203,10 +203,10 @@ if version >= 500
   function! Hv()
     if (g:hexViewer == 0)
       let g:hexViewer = 1
-      exe "%!xxd"
+      execute "%!xxd"
     else
       let g:hexViewer = 0
-      exe "%!xxd -r"
+      execute "%!xxd -r"
     endif
   endfunction
   noremap <Leader>h :call Hv()<CR>
@@ -219,7 +219,7 @@ if version >= 500
     let l:todelbufNr = bufnr("%")
     let l:newbufNr = bufnr("#")
     if ((l:newbufNr != -1) && (l:newbufNr != l:todelbufNr) && buflisted(l:newbufNr))
-      exe "b".l:newbufNr
+      execute "b".l:newbufNr
     else
       bnext
     endif
@@ -227,7 +227,7 @@ if version >= 500
     if (bufnr("%") == l:todelbufNr)
       new
     endif
-    exe "bd".l:todelbufNr
+    execute "bd".l:todelbufNr
   endfunction
 
   noremap <Leader>cf :call CleanClose(0)<CR>
