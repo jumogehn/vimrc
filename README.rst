@@ -20,7 +20,6 @@ News
 - `Github Page <http://jeonghum.github.io/vimrc/>`_ is added   2013.5.26
 - Install script(install.sh) is added     2013.1.31
 - LLVM vimrc is added                     2013.1.30
-- LICENSE of LLVM is added and applied    2013.1.30
 - Install Guide is updated                2013.1.30
 
 About
@@ -52,18 +51,18 @@ rmtags.sh
 .cncpp.vimrc
 -----------
 
-- Place anything related with C/C++ programming
+- Settings related with C/C++ programming
 
 .project.vimrc
 --------------
 
-- Place anything related with a certain project i.e. include directory and
+- Settings related with a certain project i.e. include directory and
   paths for tags and cscope.out for libraries related with a certain project
 
 .system.vimrc
 --------------
 
-- Place anything related with a certain OS system i.e. the paths for C++
+- Settings related with a certain OS system i.e. the paths for C++
   standard header files
 
 
@@ -75,8 +74,7 @@ Testing environment
 Prerequisite
 ------------
 
-- on Linux : git-core vim cscope (exuberant-ctags or universal-ctags: universal
-  one seems better but sometimes it is unstable so I prefer exuberant one)
+- on Linux : git-core vim cscope exuberant-ctags
 - on Windows : gvim, 7zip and git
 
 Note
@@ -99,12 +97,6 @@ There is a rule to use these scripts.
 To close cscope after cscope finished it's job, press CTRL+D.
 
 - Open vim from the top directory of your project
-
-If you open vim other places than where those tags files exist,
-vim cannot use those tags files.
-
-If you don't need to use tags files along with vim,
-you can open vim anywhere you want.
 
 
 References
