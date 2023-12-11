@@ -1,4 +1,5 @@
-#!/bin/bash
+##!/bin/bash
+##!/bin/ksh
 
 # Must run where those files exist
 if [ -e ".vimrc" -a \
@@ -37,14 +38,10 @@ if [ -e "$HOME/.vimrc" ]; then
 fi
 
 # Create new symbolic links to the *.vimrc files
-ln -s -T `pwd`/.vimrc $HOME/.vimrc
-ln -s -T `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
-#ln -s -T `pwd`/.system.vimrc $HOME/.system.vimrc
-ln -s -T `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
-
-#mkdir -p $HOME/.vim/syntax
-#ln -s -T `pwd`/php.vim $HOME/.vim/syntax/php.vim
-#I'd like to add python syntax later ...
+ln -s `pwd`/.vimrc $HOME/.vimrc
+ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
+ln -s `pwd`/.system.vimrc $HOME/.system.vimrc
+#ln -s `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
 # Install Vundle
 if [ -e "$HOME/.vim/bundle/Vundle.vim" ]; then
@@ -55,9 +52,9 @@ git clone https://github.com/VundleVim/Vundle.vim.git \
 
 # Open vim and :BundleInstall
 echo
-echo ==============================================
-echo You must Open vim and :PluginInstall yourself!
-echo ==============================================
+echo "=============================================="
+echo "You must Open vim and :PluginInstall yourself!"
+echo "=============================================="
 
 mkdir -p ~/.bin
 # Remove previously installed symbolic links
@@ -66,13 +63,13 @@ rm -f ~/.bin/mkcscope.sh
 rm -f ~/.bin/rmtags.sh
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
-ln -s -T `pwd`/mkctags.sh ~/.bin/mkctags.sh
-ln -s -T `pwd`/mkcscope.sh ~/.bin/mkcscope.sh
-ln -s -T `pwd`/rmtags.sh ~/.bin/rmtags.sh
+ln -s `pwd`/mkctags.sh ~/.bin/mkctags.sh
+ln -s `pwd`/mkcscope.sh ~/.bin/mkcscope.sh
+ln -s `pwd`/rmtags.sh ~/.bin/rmtags.sh
 
-echo ==============================================
-echo You must make sure ~/.bin is in your PATH env.
-echo ==============================================
+echo "=============================================="
+echo "You must make sure ~/.bin is in your PATH env."
+echo "=============================================="
 echo
 
 fi
