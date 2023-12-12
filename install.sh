@@ -56,19 +56,19 @@ echo "=============================================="
 echo "You must Open vim and :PluginInstall yourself!"
 echo "=============================================="
 
-mkdir -p ~/.bin
+mkdir -p $HOME/.bin
 # Remove previously installed symbolic links
-rm -f ~/.bin/mkctags.sh
-rm -f ~/.bin/mkcscope.sh
-rm -f ~/.bin/rmtags.sh
+rm -f $HOME/.bin/mkctags.sh
+rm -f $HOME/.bin/mkcscope.sh
+rm -f $HOME/.bin/rmtags.sh
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
-ln -s `pwd`/mkctags.sh ~/.bin/mkctags.sh
-ln -s `pwd`/mkcscope.sh ~/.bin/mkcscope.sh
-ln -s `pwd`/rmtags.sh ~/.bin/rmtags.sh
+ln -s `pwd`/mkctags.sh $HOME/.bin/mkctags.sh
+ln -s `pwd`/mkcscope.sh $HOME/.bin/mkcscope.sh
+ln -s `pwd`/rmtags.sh $HOME/.bin/rmtags.sh
 
 echo "=============================================="
-echo "You must make sure ~/.bin is in your PATH env."
+echo "You must make sure $HOME/.bin is in your PATH env."
 echo "=============================================="
 echo
 
