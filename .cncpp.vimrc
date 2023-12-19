@@ -6,12 +6,12 @@ set nocompatible
 
 " A tab produces a 2-space indentation
 "if filereadable(expand('~/.cshrc')) "Indentation to 4 spaces
-"set softtabstop=4
-"set tabstop=4
-"set shiftwidth=4
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 "else
-set softtabstop=2
-set shiftwidth=2
+"set softtabstop=2
+"set shiftwidth=2
 "endif
 set expandtab
 
