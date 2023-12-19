@@ -1,4 +1,9 @@
 
+set softtabstop=2
+set shiftwidth=2
+
+command! Untab :%s/\t/  /g
+
 "path to C:\wxWidgets-3.1.5\include and tags and cscope.out in it
 
 if isdirectory('C:\wxWidgets-3.1.5\include')

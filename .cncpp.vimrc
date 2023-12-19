@@ -1,20 +1,4 @@
 " VIMRC for C & C++
-" from LLVM coding guidelines conformance for VIM
-
-" It's VIM, not VI
-set nocompatible
-
-" A tab produces a 2-space indentation
-if filereadable(".softtabstop")
-  source .softtabstop
-else
-  set softtabstop=4
-  set tabstop=4
-  set shiftwidth=4
-
-  command! Untab :%s/\t/    /g
-endif
-set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
 if v:version >= 703
@@ -42,7 +26,6 @@ if v:version >= 703
   au InsertLeave * let w:m1=matchadd('WhitespaceEOL', '\s\+$', -1)
 endif
 
-
 " Enable filetype detection
 filetype on
 
@@ -53,12 +36,8 @@ augroup csrc
   autocmd FileType *      set nocindent smartindent
   autocmd FileType c,cpp  set cindent
 augroup END
-" Set a few indentation parameters. See the VIM help for cinoptions-values for
-" details.  These aren't absolute rules; they're just an approximation of
-" common style in LLVM source.
+
 set cinoptions=:0,g0,(0,Ws,l1
-" Add and delete spaces in increments of `shiftwidth' for tabs
-set smarttab
 
 " Highlight syntax in programming languages
 syntax on
@@ -72,17 +51,15 @@ augroup END
 " In Makefiles, don't expand tabs to spaces, since we need the actual tabs
 autocmd FileType make set noexpandtab
 
-" Useful macros for cleaning up code to conform to LLVM coding guidelines
-
 " Delete trailing whitespace and tabs at the end of each line
 command! DeleteTrailingWs :%s/\s\+$//
 
-" Enable syntax highlighting for reStructuredText files. To use, copy
-" rest.vim (http://www.vim.org/scripts/script.php?script_id=973)
-" to ~/.vim/syntax .
-augroup filetype
- au! BufRead,BufNewFile *.rst     set filetype=rest
-augroup END
+"" Enable syntax highlighting for reStructuredText files. To use, copy
+"" rest.vim (http://www.vim.org/scripts/script.php?script_id=973)
+"" to ~/.vim/syntax .
+"augroup filetype
+" au! BufRead,BufNewFile *.rst     set filetype=rest
+"augroup END
 
 
 

@@ -1,3 +1,9 @@
+
+set softtabstop=2
+set shiftwidth=2
+
+command! Untab :%s/\t/  /g
+
 let g:VIM_FFMPEG_TOP="/opt/ffmpeg"
 
 "RESET INCLUDE header file paths

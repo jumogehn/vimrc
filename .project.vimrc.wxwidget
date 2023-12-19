@@ -1,4 +1,9 @@
 
+set softtabstop=2
+set shiftwidth=2
+
+command! Untab :%s/\t/  /g
+
 if isdirectory('/usr/include/wx-2.6')
   set path+=/usr/include/wx-2.8
 endif

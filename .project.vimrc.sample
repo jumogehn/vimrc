@@ -1,3 +1,9 @@
+
+set softtabstop=2
+set shiftwidth=2
+
+command! Untab :%s/\t/  /g
+
 "opencv-2.4
 if filereadable("$HOME/Projects/opencv-2.4/src/modules/tags")
   set tags+=$HOME/Projects/opencv-2.4/src/modules/tags

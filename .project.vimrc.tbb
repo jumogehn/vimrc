@@ -1,4 +1,9 @@
 
+set softtabstop=2
+set shiftwidth=2
+
+command! Untab :%s/\t/  /g
+
 if isdirectory(expand('$TBBROOT'))
   set path+=$TBBROOT/include
 endif

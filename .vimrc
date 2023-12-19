@@ -1,6 +1,35 @@
 let g:mapleader = ","
-"============ sourcing vimrc for C & C++ =============
-source ~/.cncpp.vimrc
+
+" It's VIM, not VI
+set nocompatible
+
+"system specific settings if any
+if filereadable(expand('~/.system.vimrc'))
+  source ~/.system.vimrc
+endif
+
+""project specific settings if any
+"if filereadable(".project.vimrc")
+"  source .project.vimrc
+"endif
+
+" A tab produces a 2-space indentation
+if filereadable(".project.vimrc")
+  source .project.vimrc
+else
+  set softtabstop=4
+  set tabstop=4
+  set shiftwidth=4
+
+  command! Untab :%s/\t/    /g
+endif
+set expandtab
+set smarttab
+
+"C & C++ specific settings if any
+if filereadable(expand('~/.cncpp.vimrc'))
+  source ~/.cncpp.vimrc
+endif
 
 "System and Project specific vimrcs are being sourced at the bottom
 
@@ -235,16 +264,5 @@ if version >= 500
   "============ open CWD =============
   noremap <Leader>od :e ./<CR>
 
-endif
-
-"============ system specific settings if any =============
-"Make sure c++ include path in included in this.
-if filereadable(expand('~/.system.vimrc')) "need for c/c++ include path setting
-  source ~/.system.vimrc
-endif
-
-"============ project specific settings if any =============
-if filereadable(".project.vimrc") "this is an option
-  source .project.vimrc
 endif
 
