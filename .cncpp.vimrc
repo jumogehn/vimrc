@@ -5,14 +5,15 @@
 set nocompatible
 
 " A tab produces a 2-space indentation
-"if filereadable(expand('~/.cshrc')) "Indentation to 4 spaces
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
-"else
-"set softtabstop=2
-"set shiftwidth=2
-"endif
+if filereadable(".softtabstop")
+  source .softtabstop
+else
+  set softtabstop=4
+  set tabstop=4
+  set shiftwidth=4
+
+  command! Untab :%s/\t/    /g
+endif
 set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
@@ -75,13 +76,6 @@ autocmd FileType make set noexpandtab
 
 " Delete trailing whitespace and tabs at the end of each line
 command! DeleteTrailingWs :%s/\s\+$//
-
-" Convert all tab characters to two spaces
-"if filereadable(expand('~/.cshrc')) "Tab to 4 spaces
-"command! Untab :%s/\t/    /g
-"else
-command! Untab :%s/\t/  /g
-"endif
 
 " Enable syntax highlighting for reStructuredText files. To use, copy
 " rest.vim (http://www.vim.org/scripts/script.php?script_id=973)
