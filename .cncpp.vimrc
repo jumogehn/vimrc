@@ -17,8 +17,8 @@ set expandtab
 
 " Highlight trailing whitespace and lines longer than 80 columns.
 if v:version >= 703
-  let g:hitog = 1
-  set cc=81
+  let g:hitog = 0
+  set cc=
   function! Ht() "Highlight toggle
     if (g:hitog == 0)
       let g:hitog = 1
