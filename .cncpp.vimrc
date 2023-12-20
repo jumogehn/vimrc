@@ -1,7 +1,7 @@
 " VIMRC for C & C++
 
-" Highlight trailing whitespace and lines longer than 80 columns.
 if v:version >= 703
+  " Highlight characters over the 80 columns.
   let g:hitog = 0
   set cc=
   function! Ht() "Highlight toggle
@@ -14,6 +14,8 @@ if v:version >= 703
     endif
   endfunction
   noremap <Leader>7 :call Ht()<CR>
+
+  " Highlight trailing whitespace.
   highlight ColorColumn ctermbg=DarkYellow guibg=DarkYellow
   " Whitespace at the end of a line. This little dance suppresses
   " whitespace that has just been typed.
@@ -43,7 +45,7 @@ set cinoptions=:0,g0,(0,Ws,l1
 syntax on
 
 " LLVM Makefiles can have names such as Makefile.rules or TEST.nightly.Makefile,
-" so it's important to categorize them as such.
+" so it's needed to categorize them as such.
 augroup filetype
   au! BufRead,BufNewFile *Makefile* set filetype=make
 augroup END
@@ -71,7 +73,7 @@ command! DeleteTrailingWs :%s/\s\+$//
 "set tags=./tags;/.
 
 " function definition is supported only after version 5 of vim
-if version >= 500
+if v:version >= 500
 
   "tag select [ident]
   function! Ts()
@@ -145,7 +147,7 @@ endif
 set csto=0
 set cst
 
-if version >= 500
+if v:version >= 500
 
   function! Cw()
     execute "cs show"
@@ -274,7 +276,7 @@ if filereadable("cscope.out")
 endif
 
 
-if version >= 500
+if v:version >= 500
 
   "============ man page setting =============
   function! Man()

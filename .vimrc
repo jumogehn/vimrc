@@ -8,15 +8,11 @@ if filereadable(expand('~/.system.vimrc'))
   source ~/.system.vimrc
 endif
 
-""project specific settings if any
-"if filereadable(".project.vimrc")
-"  source .project.vimrc
-"endif
-
-" A tab produces a 2-space indentation
 if filereadable(".project.vimrc")
+  "project specific settings if any
   source .project.vimrc
 else
+  "A tab produces a 4-space indentation by default
   set softtabstop=4
   set tabstop=4
   set shiftwidth=4
@@ -30,8 +26,6 @@ set smarttab
 if filereadable(expand('~/.cncpp.vimrc'))
   source ~/.cncpp.vimrc
 endif
-
-"System and Project specific vimrcs are being sourced at the bottom
 
 "============ now general vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
@@ -225,7 +219,7 @@ noremap <Leader>w :bw<CR>	  " Close Current File Buffer
 noremap <Leader>i :vs<CR>
 noremap <Leader>- :sp<CR>
 
-if version >= 500
+if v:version >= 500
 
   "============ hexViewer setting =============
   let g:hexViewer = 0
