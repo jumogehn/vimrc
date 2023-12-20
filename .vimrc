@@ -75,6 +75,7 @@ let g:NERDTreeWinPos='right'
 let g:NERDTreeWinSize=50
 let g:tagbar_left=1
 let g:tagbar_width=50
+let g:tagbar_sort=0
 
 "========= key noremapping ==========
 
