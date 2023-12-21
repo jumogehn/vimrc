@@ -67,6 +67,9 @@ Plugin 'vim-airline/vim-airline'
 "Plugin 'rmartinho/vim-cpp11'
 "Plugin 'XDebug-DBGp-client-for-PHP'
 
+" Cscope Key Map
+Plugin 'dr-kino/cscope-maps'
+
 call vundle#end()
 
 filetype plugin indent on     " required!

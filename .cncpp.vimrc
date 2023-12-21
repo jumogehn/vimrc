@@ -63,7 +63,58 @@ command! DeleteTrailingWs :%s/\s\+$//
 " au! BufRead,BufNewFile *.rst     set filetype=rest
 "augroup END
 
+" function definition is supported only after version 5 of vim
+if v:version >= 500
 
+  "========= cscope setting ========
+  "cscope related are sourced from a plugin below :
+  "$HOME/.vim/bundle/cscope-maps/plugin/cscope_maps.vim
+  set cscopequickfix=s-,c-,d-,i-,t-,e-
+
+  let g:quickfixtog = 0
+  function! OpenQuickFixWindow()
+    if (g:quickfixtog == 0)
+      let g:quickfixtog = 1
+      "Detect which plugins are open
+      if exists('t:NERDTreeBufName')
+        let l:nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
+      else
+        let l:nerdtree_open = 0
+      endif
+      let l:tagbar_open = bufwinnr('__Tagbar__') != -1
+      "Close any open one
+      if l:nerdtree_open
+        NERDTreeClose
+      endif
+      if l:tagbar_open
+        TagbarClose
+      endif
+      "Move the Window the cursor is in
+      execute "cw"
+      "Reopen any temporarily closed one
+      if l:nerdtree_open
+        NERDTree
+      endif
+      if l:tagbar_open
+        TagbarOpen
+      endif
+    else
+      let g:quickfixtog = 0
+      "Move the Window the cursor is in
+      execute "ccl"
+    endif
+  endfunction
+  noremap <Leader>cw :call OpenQuickFixWindow()<CR>
+
+  function! Cnext()
+    execute "cn"
+  endfunction
+  noremap <Leader>cn :call Cnext()<CR>
+
+  function! Cprevious()
+    execute "cp"
+  endfunction
+  noremap <Leader>cp :call Cprevious()<CR>
 
 "========= ctags setting ========
 "Upon vim open a file buffer, CWD is switched to the position of the current
@@ -71,9 +122,6 @@ command! DeleteTrailingWs :%s/\s\+$//
 "autocmd BufEnter * silent! lcd %:p:h:gs/ /\\/
 
 "set tags=./tags;/.
-
-" function definition is supported only after version 5 of vim
-if v:version >= 500
 
   "tag select [ident]
   function! Ts()
@@ -140,144 +188,6 @@ if v:version >= 500
   endfunction
   noremap <Leader>tl :call Tl()<CR>
 
-endif
-
-"======== cscope setting ========
-"set csprg=/usr/bin/cscope
-set csto=0
-set cst
-
-if v:version >= 500
-
-  function! Cw()
-    execute "cs show"
-  endfunction
-  noremap <Leader>cw :call Cw()<CR>
-
-  function! Cc()
-    let wd = expand("<cword>")
-    new
-    execute "cs find c ".wd
-  endfunction
-  noremap <Leader>cc :call Cc()<CR>
-
-  function! Cd()
-    let wd = expand("<cword>")
-    new
-    execute "cs find d ".wd
-  endfunction
-  noremap <Leader>cd :call Cd()<CR>
-
-  function! Ce()
-    let wd = expand("<cword>")
-    new
-    execute "cs find e ".wd
-  endfunction
-  noremap <Leader>ce :call Ce()<CR>
-
-  function! Cf()
-    let wd = expand("<cword>")
-    new
-    execute "cs find f ".wd
-  endfunction
-  noremap <Leader>cf :call Cf()<CR>
-
-  function! Cg()
-    let wd = expand("<cword>")
-    new
-    execute "cs find g ".wd
-  endfunction
-  noremap <Leader>cg :call Cg()<CR>
-
-  function! Ci()
-    let wd = expand("<cword>")
-    new
-    execute "cs find i ".wd
-  endfunction
-  noremap <Leader>ci :call Ci()<CR>
-
-  function! Cs()
-    let wd = expand("<cword>")
-    new
-    execute "cs find s ".wd
-  endfunction
-  noremap <Leader>cs :call Cs()<CR>
-
-  function! Ct()
-    let wd = expand("<cword>")
-    new
-    execute "cs find t ".wd
-  endfunction
-  noremap <Leader>ct :call Ct()<CR>
-
-
-  function! Ccv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find c ".wd
-  endfunction
-  noremap <Leader>ccv :call Ccv()<CR>
-
-  function! Cdv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find d ".wd
-  endfunction
-  noremap <Leader>cdv :call Cdv()<CR>
-
-  function! Cev()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find e ".wd
-  endfunction
-  noremap <Leader>cev :call Cev()<CR>
-
-  function! Cfv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find f ".wd
-  endfunction
-  noremap <Leader>cfv :call Cfv()<CR>
-
-  function! Cgv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find g ".wd
-  endfunction
-  noremap <Leader>cgv :call Cgv()<CR>
-
-  function! Civ()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find i ".wd
-  endfunction
-  noremap <Leader>civ :call Civ()<CR>
-
-  function! Csv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find s ".wd
-  endfunction
-  noremap <Leader>csv :call Csv()<CR>
-
-  function! Ctv()
-    let wd = expand("<cword>")
-    vnew
-    execute "cs find t ".wd
-  endfunction
-  noremap <Leader>ctv :call Ctv()<CR>
-
-endif
-
-if filereadable("cscope.out")
-  set nocsverb
-  cs add cscope.out
-  set csverb
-endif
-
-
-if v:version >= 500
-
   "============ man page setting =============
   function! Man()
     let wd = expand("<cword>")
@@ -302,4 +212,3 @@ if v:version >= 500
   noremap <Leader>cmk :call CleanMake()<CR><CR>
 
 endif
-
