@@ -1,5 +1,5 @@
-##!/bin/bash
-##!/bin/ksh
+#####!/bin/bash
+#####!/bin/zsh
 
 # Must run where those files exist
 if [ -e ".vimrc" -a \
