@@ -70,18 +70,6 @@ Plugin 'vim-airline/vim-airline'
 " Cscope Key Map
 Plugin 'dr-kino/cscope-maps'
 
-"Settings for YCM
-"sudo apt install build-essential cmake vim python3-dev
-"(apt-cache search clangd)
-"sudo apt-get install clangd-15
-"sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-15 100
-"(ls -alh /usr/bin/clangd)
-"(ls -alh /etc/alternatives/clangd)
-"(:PluginInstall)
-"cd $HOME/.vim/bundle/youcompleteme/
-"python3 install.py --clangd-completer
-
-Plugin 'valloric/youcompleteme'
 call vundle#end()
 
 filetype plugin indent on     " required!
