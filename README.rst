@@ -16,6 +16,7 @@ On Windows
 News
 ====
 
+- Install script(install2.sh) is added     2023.12.27
 - `Wiki <https://github.com/Jeonghum/vimrc/wiki>`_ is added   2018.4.5
 - `Github Page <http://jeonghum.github.io/vimrc/>`_ is added   2013.5.26
 - Install script(install.sh) is added     2013.1.31
@@ -74,7 +75,8 @@ Testing environment
 Prerequisite
 ------------
 
-- on Linux : git-core vim cscope exuberant-ctags
+- on Linux : git-core vim cscope exuberant-ctags build-essential cmake
+             python3-dev clangd-15(highest version of clangd) vim-nox bear
 - on Windows : gvim, 7zip and git
 
 Note
