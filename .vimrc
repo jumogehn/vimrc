@@ -45,34 +45,42 @@ set ignorecase
 set smartcase
 set printoptions=portrait:y,wrap:y,duplex:off
 
-"========= vundle setting =========
-filetype off                   " required!
+""""""""========= vundle setting =========
+"""""""filetype off                   " required!
+"""""""
+"""""""set rtp+=~/.vim/bundle/Vundle.vim
+"""""""
+"""""""call vundle#begin()
+"""""""
+"""""""Plugin 'VundleVim/Vundle.vim'
+"""""""Plugin 'scrooloose/nerdtree'
+""""""""Plugin 'taglist.vim'
+"""""""Plugin 'bufexplorer.zip'
+"""""""Plugin 'majutsushi/tagbar'
+"""""""Plugin 'vim-airline/vim-airline'
+""""""""Plugin 'tpope/vim-fugitive'
+"""""""
+""""""""Plugin 'snipMate'
+""""""""Plugin 'L9'
+""""""""Plugin 'FuzzyFinder'
+""""""""Plugin 'DirDiff.vim'
+""""""""Plugin 'rmartinho/vim-cpp11'
+""""""""Plugin 'XDebug-DBGp-client-for-PHP'
+"""""""
+"""""""" Cscope Key Map
+"""""""Plugin 'dr-kino/cscope-maps'
+"""""""
+"""""""call vundle#end()
+"""""""
+"""""""filetype plugin indent on     " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scrooloose/nerdtree'
-"Plugin 'taglist.vim'
-Plugin 'bufexplorer.zip'
-Plugin 'majutsushi/tagbar'
-Plugin 'vim-airline/vim-airline'
-"Plugin 'tpope/vim-fugitive'
-
-"Plugin 'snipMate'
-"Plugin 'L9'
-"Plugin 'FuzzyFinder'
-"Plugin 'DirDiff.vim'
-"Plugin 'rmartinho/vim-cpp11'
-"Plugin 'XDebug-DBGp-client-for-PHP'
-
-" Cscope Key Map
-Plugin 'dr-kino/cscope-maps'
-
-call vundle#end()
-
-filetype plugin indent on     " required!
+call plug#begin('~/.vim/plugged')
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/bufexplorer.zip'
+Plug 'majutsushi/tagbar'
+Plug 'vim-airline/vim-airline'
+Plug 'dr-kino/cscope-maps'
+call plug#end()
 
 let g:NERDTreeWinPos='right'
 let g:NERDTreeWinSize=50

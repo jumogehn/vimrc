@@ -43,17 +43,13 @@ ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
 ln -s `pwd`/.system.vimrc $HOME/.system.vimrc
 #ln -s `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
-# Install Vundle
-if [ -e "$HOME/.vim/bundle/Vundle.vim" ]; then
-  rm -rf $HOME/.vim/bundle/Vundle.vim
-fi
-git clone https://github.com/VundleVim/Vundle.vim.git \
-  $HOME/.vim/bundle/Vundle.vim
+## Install vim-plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# Open vim and :BundleInstall
+# Open vim and :PlugInstall
 echo
 echo "=============================================="
-echo "You must Open vim and :PluginInstall yourself!"
+echo "You must Open vim and :PlugInstall yourself!"
 echo "=============================================="
 
 mkdir -p $HOME/.bin
@@ -67,9 +63,9 @@ ln -s `pwd`/mkctags.sh $HOME/.bin/mkctags.sh
 ln -s `pwd`/mkcscope.sh $HOME/.bin/mkcscope.sh
 ln -s `pwd`/rmtags.sh $HOME/.bin/rmtags.sh
 
-echo "=============================================="
+echo "=================================================="
 echo "You must make sure $HOME/.bin is in your PATH env."
-echo "=============================================="
+echo "=================================================="
 echo
 
 fi
