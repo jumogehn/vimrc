@@ -55,6 +55,10 @@ Plug 'dr-kino/cscope-maps'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+if filereadable(expand('~/.coc.nvimrc'))
+  source ~/.coc.nvimrc
+endif
+
 let g:NERDTreeWinPos='right'
 let g:NERDTreeWinSize=50
 let g:tagbar_left=1

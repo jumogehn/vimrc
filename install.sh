@@ -13,6 +13,7 @@
 # Must run where those files exist
 if [ -e ".vimrc" -a \
   -e ".cncpp.vimrc" -a \
+  -e ".coc.nvimrc" -a \
   -e ".system.vimrc" -a \
   -e "mkctags.sh" -a \
   -e "mkcscope.sh" -a \
@@ -24,6 +25,9 @@ if [ -L "$HOME/.vimrc" ]; then
 fi
 if [ -L "$HOME/.cncpp.vimrc" ]; then
   rm -f $HOME/.cncpp.vimrc
+fi
+if [ -L "$HOME/.coc.nvimrc" ]; then
+  rm -f $HOME/.coc.nvimrc
 fi
 if [ -L "$HOME/.system.vimrc" ]; then
   rm -f $HOME/.system.vimrc
@@ -49,6 +53,7 @@ fi
 # Create new symbolic links to the *.vimrc files
 ln -s `pwd`/.vimrc $HOME/.vimrc
 ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
+ln -s `pwd`/.coc.nvimrc $HOME/.coc.nvimrc
 ln -s `pwd`/.system.vimrc $HOME/.system.vimrc
 #ln -s `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
@@ -59,7 +64,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 echo
 echo "=============================================="
 echo "You must Open vim and \":PlugInstall\" first"
-echo ",and then \":CocInstall coc-clangd\""
+echo ",and then \":CocInstall coc-clangd coc-json\""
 echo "=============================================="
 
 mkdir -p $HOME/.bin
