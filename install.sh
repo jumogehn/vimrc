@@ -1,6 +1,15 @@
 #####!/bin/bash
 #####!/bin/zsh
 
+# PREREQUISITES ======================================
+# Make sure use Vim >= 8.1.1719
+# Install nodejs >= 14.14:
+
+# YOU MUST INSTALL NODEJS AS A ROOT (VIA 'sudo su'):
+# $curl -sL install-node.vercel.app/lts | bash
+# AND THEN REBOOT THE SYSTEM
+# ====================================================
+
 # Must run where those files exist
 if [ -e ".vimrc" -a \
   -e ".cncpp.vimrc" -a \
@@ -49,7 +58,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 # Open vim and :PlugInstall
 echo
 echo "=============================================="
-echo "You must Open vim and :PlugInstall yourself!"
+echo "You must Open vim and \":PlugInstall\" first"
+echo ",and then \":CocInstall coc-clangd\""
 echo "=============================================="
 
 mkdir -p $HOME/.bin
