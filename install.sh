@@ -58,14 +58,21 @@ ln -s `pwd`/.system.vimrc $HOME/.system.vimrc
 #ln -s `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
 ## Install vim-plug
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Open vim and :PlugInstall
 echo
-echo "=============================================="
-echo "You must Open vim and \":PlugInstall\" first"
-echo ",and then \":CocInstall coc-clangd coc-json\""
-echo "=============================================="
+echo "==================================================================="
+echo "You must Open vim and "
+echo " - \":PlugInstall\""
+echo " - \":CocInstall coc-clangd coc-json\""
+echo " - \":CocConfig\"(Optional)"
+echo "Refer to :"
+echo " - https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim"
+echo " - https://github.com/neoclide/coc.nvim/wiki/Language-servers#ccobjective-c"
+echo " - https://80000coding.oopy.io/62d92ae6-545a-4727-8dcb-6b31d148e732"
+echo "==================================================================="
 
 mkdir -p $HOME/.bin
 # Remove previously installed symbolic links
