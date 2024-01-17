@@ -47,13 +47,13 @@ Plug 'vim-scripts/bufexplorer.zip'
 Plug 'majutsushi/tagbar'
 Plug 'vim-airline/vim-airline'
 Plug 'dr-kino/cscope-maps'
-if filereadable(".coc.nvimrc")
+if filereadable("compile_commands.json")
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 endif
 call plug#end()
 
-if filereadable(".coc.nvimrc")
-  source .coc.nvimrc
+if filereadable("compile_commands.json")
+  source ~/.coc.nvimrc
 endif
 
 let g:NERDTreeWinPos='right'

@@ -23,6 +23,9 @@ fi
 if [ -L "$HOME/.cncpp.vimrc" ]; then
   rm -f $HOME/.cncpp.vimrc
 fi
+if [ -L "$HOME/.coc.nvimrc" ]; then
+  rm -f $HOME/.coc.nvimrc
+fi
 
 # Backup your original .vim/ and .vimrc in your home directory if they exist
 # Make sure ONLY THE FIRST ORIGINAL .VIM/ AND .VIMRC is being backed up
@@ -44,6 +47,7 @@ fi
 # Create new symbolic links to the *.vimrc files
 ln -s `pwd`/.vimrc $HOME/.vimrc
 ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
+ln -s `pwd`/.coc.nvimrc $HOME/.coc.nvimrc
 
 ## Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
