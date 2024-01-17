@@ -14,7 +14,6 @@
 if [ -e ".vimrc" -a \
   -e ".cncpp.vimrc" -a \
   -e ".coc.nvimrc" -a \
-  -e ".system.vimrc" -a \
   -e "mkctags.sh" -a \
   -e "mkcscope.sh" -a \
   -e "rmtags.sh" ]; then
@@ -28,9 +27,6 @@ if [ -L "$HOME/.cncpp.vimrc" ]; then
 fi
 if [ -L "$HOME/.coc.nvimrc" ]; then
   rm -f $HOME/.coc.nvimrc
-fi
-if [ -L "$HOME/.system.vimrc" ]; then
-  rm -f $HOME/.system.vimrc
 fi
 
 # Backup your original .vim/ and .vimrc in your home directory if they exist
@@ -54,8 +50,6 @@ fi
 ln -s `pwd`/.vimrc $HOME/.vimrc
 ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
 ln -s `pwd`/.coc.nvimrc $HOME/.coc.nvimrc
-ln -s `pwd`/.system.vimrc $HOME/.system.vimrc
-#ln -s `pwd`/.system.vimrc.aosp $HOME/.system.vimrc
 
 ## Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

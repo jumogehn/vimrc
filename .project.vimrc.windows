@@ -1,22 +1,15 @@
+colorscheme darkblue
+set belloff=all
+set guifont=굴림체:h16:cHANGEUL:qDRAFT
+set clipboard=unnamed
 
-set softtabstop=2
-set shiftwidth=2
 
-command! Untab :%s/\t/  /g
-
-"path to C:\wxWidgets-3.1.5\include and tags and cscope.out in it
-
-if isdirectory('C:\wxWidgets-3.1.5\include')
-  set path+=C:\\wxWidgets-3.1.5\\include
+if isdirectory('C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include')
+  set path+=C:\\Program\\\ Files\\\ (x86)\\Microsoft\\\ Visual\\\ Studio\\\ 14.0\\VC\\include
 endif
 
-if filereadable('C:\wxWidgets-3.1.5\include\cscope.out')
-  set nocsverb
-  cs add C:\\wxWidgets-3.1.5\\include\\cscope.out
-  set csverb
+if isdirectory('C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt')
+  set path+=C:\\Program\\\ Files\\\ (x86)\\Windows\\\ Kits\\10\\Include\\10.0.10240.0\\ucrt
 endif
 
-if filereadable('C:\wxWidgets-3.1.5\include\tags')
-  set tags+=C:\\wxWidgets-3.1.5\\include\\tags
-endif
 

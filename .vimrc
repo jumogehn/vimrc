@@ -3,11 +3,6 @@ let g:mapleader = ","
 " It's VIM, not VI
 set nocompatible
 
-"system specific settings if any
-if filereadable(expand('~/.system.vimrc'))
-  source ~/.system.vimrc
-endif
-
 if filereadable(".project.vimrc")
   "project specific settings if any
   source .project.vimrc
