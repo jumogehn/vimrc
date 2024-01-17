@@ -12,8 +12,6 @@
 
 # Must run where those files exist
 if [ -e ".vimrc" -a \
-  -e ".cncpp.vimrc" -a \
-  -e ".coc.nvimrc" -a \
   -e "mkctags.sh" -a \
   -e "mkcscope.sh" -a \
   -e "rmtags.sh" ]; then
@@ -24,9 +22,6 @@ if [ -L "$HOME/.vimrc" ]; then
 fi
 if [ -L "$HOME/.cncpp.vimrc" ]; then
   rm -f $HOME/.cncpp.vimrc
-fi
-if [ -L "$HOME/.coc.nvimrc" ]; then
-  rm -f $HOME/.coc.nvimrc
 fi
 
 # Backup your original .vim/ and .vimrc in your home directory if they exist
@@ -49,7 +44,6 @@ fi
 # Create new symbolic links to the *.vimrc files
 ln -s `pwd`/.vimrc $HOME/.vimrc
 ln -s `pwd`/.cncpp.vimrc $HOME/.cncpp.vimrc
-ln -s `pwd`/.coc.nvimrc $HOME/.coc.nvimrc
 
 ## Install vim-plug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -58,7 +52,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 # Open vim and :PlugInstall
 echo
 echo "==================================================================="
-echo "You must Open vim and "
+echo "You must Open vim in this place and "
 echo " - \":PlugInstall\""
 echo " - \":CocInstall coc-clangd coc-json\""
 echo " - \":CocConfig\"(Optional)"
