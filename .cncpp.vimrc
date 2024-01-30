@@ -71,10 +71,16 @@ if v:version >= 500
   "$HOME/.vim/bundle/cscope-maps/plugin/cscope_maps.vim
   set cscopequickfix=s-,c-,d-,i-,t-,e-
 
-  let g:quickfixtog = 0
-  function! OpenQuickFixWindow()
-    if (g:quickfixtog == 0)
-      let g:quickfixtog = 1
+  "https://vi.stackexchange.com/questions/44009/
+  "how-can-i-detect-if-quickfix-window-is-open
+  function! WinnrQuickFixWindow()
+    let wins = filter(getwininfo(), 'v:val.quickfix && !v:val.loclist')
+    " assert(len(wins) <= 1)
+    return empty(wins) ? 0 : wins[0].winnr
+  endfunction
+
+  function! ToggleQuickFixWindow()
+    if (WinnrQuickFixWindow() == 0)
       "Detect which plugins are open
       if exists('t:NERDTreeBufName')
         let l:nerdtree_open = bufwinnr(t:NERDTreeBufName) != -1
@@ -99,12 +105,11 @@ if v:version >= 500
         TagbarOpen
       endif
     else
-      let g:quickfixtog = 0
       "Move the Window the cursor is in
       execute "ccl"
     endif
   endfunction
-  noremap <Leader>cw :call OpenQuickFixWindow()<CR>
+  noremap <Leader>cw :call ToggleQuickFixWindow()<CR>
 
   function! Cnext()
     execute "cn"
