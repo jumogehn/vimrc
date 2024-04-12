@@ -109,7 +109,7 @@ if v:version >= 500
       execute "ccl"
     endif
   endfunction
-  noremap <Leader>cw :call ToggleQuickFixWindow()<CR>
+  noremap <Leader>qw :call ToggleQuickFixWindow()<CR>
 
   function! Cnext()
     execute "cn"
