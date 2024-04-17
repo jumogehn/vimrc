@@ -84,6 +84,8 @@ noremap <Leader>s <C-W>s
 
 noremap <Leader>9 :BufExplorer<CR>
 
+noremap <Leader>r :source ~/.vimrc<CR>
+
 noremap <PageUp> <C-U><C-U>
 noremap <PageDown> <C-D><C-D>
 
