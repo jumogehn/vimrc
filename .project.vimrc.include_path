@@ -1,8 +1,8 @@
 
-#dirname `find -name *.h` | uniq > uniq.txt
-#vim uniq.txt
-#insert pwd infront of each lines
-#:%s/\n/\,/g
+"dirname `find -name *.h` | uniq > uniq.txt
+"vim uniq.txt
+"insert pwd infront of each lines
+":%s/\n/\,/g
 
 let g:my_headers_path=system("cat uniq.txt")
 execute 'set path+=' . g:my_headers_path
