@@ -75,7 +75,13 @@ noremap <Leader>4 :TagbarToggle<CR>
 noremap <Leader>5 :NERDTreeToggle<CR>
 "noremap <Leader>6 :look at the beginning
 "noremap <Leader>7 :look at .cncpp.vimrc
+
 noremap <Leader>e :E<CR>
+"Netrw — Vim 파일 탐색기
+"d : 새 디렉터리 생성, 이름 입력 가능
+"D : 디렉터리 또는 파일 삭제, 삭제 전 확인
+"R : 디렉터리 또는 파일 이름 수정
+
 noremap <Leader>q <C-W>o<C-W>q
 
 noremap <Leader>n <C-W>n
