@@ -1,3 +1,5 @@
+set tabstop=4
+set shiftwidth=4
 
 "dirname `find -name *.h` | uniq > uniq.txt
 "vim uniq.txt
