@@ -3,6 +3,11 @@ let g:mapleader = ","
 " It's VIM, not VI
 set nocompatible
 
+"C & C++ specific settings if any
+if filereadable(expand('~/.cncpp.vimrc'))
+  source ~/.cncpp.vimrc
+endif
+
 if filereadable(".project.vimrc")
   "project specific settings if any
   source .project.vimrc
@@ -16,11 +21,6 @@ else
 endif
 set expandtab
 set smarttab
-
-"C & C++ specific settings if any
-if filereadable(expand('~/.cncpp.vimrc'))
-  source ~/.cncpp.vimrc
-endif
 
 "============ now general vimrc begins =============
 "http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
