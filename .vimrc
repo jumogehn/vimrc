@@ -3,6 +3,10 @@ let g:mapleader = ","
 " It's VIM, not VI
 set nocompatible
 
+" make visual bell do nothing
+set visualbell
+set t_vb=
+
 "C & C++ specific settings if any
 if filereadable(expand('~/.cncpp.vimrc'))
   source ~/.cncpp.vimrc

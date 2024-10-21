@@ -2,7 +2,7 @@
 
 rm -rf cscope.files cscope.out
 
-find `pwd` \( -name '*.c' -o \
+find `pwd` $* \( -name '*.c' -o \
   -name '*.cpp' -o \
   -name '*.cc' -o \
   -name '*.h' -o \
