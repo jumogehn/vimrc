@@ -86,7 +86,7 @@ noremap <Leader>e :E<CR>
 "D : 디렉터리 또는 파일 삭제, 삭제 전 확인
 "R : 디렉터리 또는 파일 이름 수정
 
-noremap <Leader>q <C-W>o<C-W>q
+noremap <Leader>f <C-W>o<C-W>q
 
 noremap <Leader>n <C-W>n
 noremap <Leader>v <C-W>v
