@@ -12,6 +12,7 @@
 
 # Must run where those files exist
 if [ -e ".vimrc" -a \
+  -e "mktags.sh" -a \
   -e "mkctags.sh" -a \
   -e "mkcscope.sh" -a \
   -e "rmtags.sh" ]; then
@@ -68,11 +69,13 @@ echo "==================================================================="
 
 mkdir -p $HOME/.bin
 # Remove previously installed symbolic links
+rm -f $HOME/.bin/mktags.sh
 rm -f $HOME/.bin/mkctags.sh
 rm -f $HOME/.bin/mkcscope.sh
 rm -f $HOME/.bin/rmtags.sh
 
 # Create new symbolic links to mkcscope.sh and mkctags.sh and rmtags.sh
+ln -s `pwd`/mktags.sh $HOME/.bin/mktags.sh
 ln -s `pwd`/mkctags.sh $HOME/.bin/mkctags.sh
 ln -s `pwd`/mkcscope.sh $HOME/.bin/mkcscope.sh
 ln -s `pwd`/rmtags.sh $HOME/.bin/rmtags.sh

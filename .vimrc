@@ -80,11 +80,22 @@ noremap <Leader>5 :NERDTreeToggle<CR>
 "noremap <Leader>6 :look at the beginning
 "noremap <Leader>7 :look at .cncpp.vimrc
 
+"Explorer(Netrw) - Vim 파일 탐색기
 noremap <Leader>e :E<CR>
-"Netrw — Vim 파일 탐색기
 "d : 새 디렉터리 생성, 이름 입력 가능
 "D : 디렉터리 또는 파일 삭제, 삭제 전 확인
 "R : 디렉터리 또는 파일 이름 수정
+"% : 현재 디렉터리에 새 파일 열기, 파일 이름 입력
+"o : 커서 위치의 디렉터리 또는 파일을 상하 스플릿 된 새 창으로 띄우기
+"v : 커서 위치의 디렉터리 또는 파일을 좌우 스플릿 된 새 창으로 띄우기
+"t : 커서 위치의 디렉터리 또는 파일을 새 탭으로 띄우기
+"u : 최근에 방문한 디렉터리로 이동 (뒤로 가기)
+"U : u 와 반대로 이동
+"s : 정렬 순서 변경(이름, 시간, 파일 사이즈, 확장자 / 상단에 표기)
+":e . : Explorer 시작하기
+":Vexplore : 화면 세로 분할 후 Explorer 시작하기
+":Sexplore : 화면 가로 분할 후 Explorer 시작하기
+"https://zcqggntwsd.medium.com/netrw-vim-%ED%8C%8C%EC%9D%BC-%ED%83%90%EC%83%89%EA%B8%B0-3ea7e345c96b
 
 noremap <Leader>f <C-W>o<C-W>q
 
