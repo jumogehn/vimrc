@@ -32,7 +32,8 @@ noremap <Leader>6 :set invpaste paste?<CR>
 
 set pastetoggle=<Leader>6
 set showmode
-set fencs=ucs-bom,utf-8,cp949,euc-kr
+set encoding=utf-8
+set fileencodings=ucs-bom,utf-8,cp949,euc-kr
 set bg=dark
 set ruler
 set number
@@ -43,6 +44,8 @@ set incsearch
 set ignorecase
 set smartcase
 set printoptions=portrait:y,wrap:y,duplex:off
+
+
 
 "vim-plug(https://github.com/junegunn/vim-plug)
 call plug#begin('~/.vim/plugged')
